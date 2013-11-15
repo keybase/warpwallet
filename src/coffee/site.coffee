@@ -6,9 +6,6 @@ params =
   r     : 8
   dkLen : 256/8
 
-progress_hook = (o) ->
-  $("#progress").html JSON.stringify o
-
 class Warper
 
   constructor: ->
@@ -20,11 +17,9 @@ class Warper
   attach_ux: ->
     $('#btn-submit').on 'click',            => @click_submit()
     $('#salt').on       'change',           => @salt_change()
-    $('#salt').on       'keydown',          => @salt_change()
     $('#salt').on       'keyup',            => @salt_change()
     $('#checkbox-salt-confirm').on 'click', => @any_change()
     $('#passphrase').on 'change',           => @any_change()
-    $('#passphrase').on 'keydown',          => @any_change()
     $('#passphrase').on 'keyup',            => @any_change()
 
   any_change: ->
@@ -65,16 +60,23 @@ class Warper
       $('.salt-confirm').hide()
     @any_change()
 
+  progress_hook: (o) ->
+    $(".progress-form").html JSON.stringify o
+
   click_submit: ->
-    $('.output-form').show()
+    $('#btn-submit').attr('disabled', true).html 'Running...'
+
+    $('.progress-form').show()
 
     d = {}
     (d[k] = v for k,v of params)
     d.salt = new warpwallet.WordArray.from_utf8 $('#salt').val()
     d.key  = new warpwallet.WordArray.from_utf8 $('#passphrase').val()
-    d.progress_hook = progress_hook
+    d.progress_hook = (o) => @progress_hook o
 
-    warpwallet.scrypt d, (words) ->
+    warpwallet.scrypt d, (words) =>
+
+      $('.output-form').show()
       out = warpwallet.generate words.to_buffer()
       $('#public-address').val out.public
       $('#private-key').val    out.private

@@ -19,7 +19,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 <script type="text/javascript">
 (function() {
-  var Warper, params, progress_hook;
+  var Warper, params;
 
 
 
@@ -29,10 +29,6 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     p: 1,
     r: 8,
     dkLen: 256 / 8
-  };
-
-  progress_hook = function(o) {
-    return $("#progress").html(JSON.stringify(o));
   };
 
   Warper = (function() {
@@ -54,9 +50,6 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       $('#salt').on('change', function() {
         return _this.salt_change();
       });
-      $('#salt').on('keydown', function() {
-        return _this.salt_change();
-      });
       $('#salt').on('keyup', function() {
         return _this.salt_change();
       });
@@ -64,9 +57,6 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
         return _this.any_change();
       });
       $('#passphrase').on('change', function() {
-        return _this.any_change();
-      });
-      $('#passphrase').on('keydown', function() {
         return _this.any_change();
       });
       return $('#passphrase').on('keyup', function() {
@@ -119,9 +109,15 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       return this.any_change();
     };
 
+    Warper.prototype.progress_hook = function(o) {
+      return $(".progress-form").html(JSON.stringify(o));
+    };
+
     Warper.prototype.click_submit = function() {
-      var d, k, v;
-      $('.output-form').show();
+      var d, k, v,
+        _this = this;
+      $('#btn-submit').attr('disabled', true).html('Running...');
+      $('.progress-form').show();
       d = {};
       for (k in params) {
         v = params[k];
@@ -129,9 +125,12 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
       }
       d.salt = new warpwallet.WordArray.from_utf8($('#salt').val());
       d.key = new warpwallet.WordArray.from_utf8($('#passphrase').val());
-      d.progress_hook = progress_hook;
+      d.progress_hook = function(o) {
+        return _this.progress_hook(o);
+      };
       return warpwallet.scrypt(d, function(words) {
         var out;
+        $('.output-form').show();
         out = warpwallet.generate(words.to_buffer());
         $('#public-address').val(out["public"]);
         return $('#private-key').val(out["private"]);
@@ -12500,7 +12499,7 @@ License, etc., info to come here soon.
 
 <div class="container">
 
-  <div class="row">
+  <div class="row"> 
     <div class="col-md-8 col-md-offset-2">
       <h1>Warp<span class="second-half">Wallet</span></h1>
       <div class="form-container">
@@ -12519,6 +12518,9 @@ License, etc., info to come here soon.
         </div>
         <div class="form-group">
           <button class="btn btn-success" id="btn-submit">Generate</button>
+        </div>
+        <div class="progress-form" style="display:none;">
+          running..
         </div>
         <div class="output-form" style="display:none;">
           <div class="progress">
