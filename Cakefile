@@ -2,9 +2,29 @@ fs   = require 'fs'
 path = require 'path'
 coff = require 'iced-coffee-script'
 
+# -----------------------------------------------------------
 #
 # Build with "icake build" which requires iced-coffee-script.
 #
+# Or use "icake watch" to put cake into a recompile loop
+# while actively developing
+# -----------------------------------------------------------
+
+build = (cb) ->
+  await fs.readFile "./warp.io_src.html", {encoding: "utf8"}, defer err, html
+  await token_build_and_drop html, defer html
+  await fs.readFile "./warp.io.html", {encoding: "utf8"}, defer err, old_html
+  if err? or (old_html isnt html)
+    console.log "Writing #{html.length} chars." + if old_html? then "(Changed from #{old_html.length} chars" else ""
+    await fs.writeFile "./warp.io.html", html, {encoding: "utf8"}, defer err
+  cb() if typeof cb is 'function'
+
+task 'build', "build the html file", build
+
+task 'watch', "build repeatedly", (cb) ->  
+  while true
+    await build defer()
+    await setTimeout defer(), 500
 
 compile_token = (p, cb) ->
   switch path.extname p
@@ -43,18 +63,4 @@ token_build_and_drop = (html, cb) ->
         html = html[0...pos] + replacement + html[(pos+str.length)...]
   cb html
 
-build = (cb) ->
-  await fs.readFile "./warp.io_src.html", {encoding: "utf8"}, defer err, html
-  await token_build_and_drop html, defer html
-  await fs.readFile "./warp.io.html", {encoding: "utf8"}, defer err, old_html
-  if err? or (old_html isnt html)
-    console.log "Writing #{html.length} chars." + if old_html? then "(Changed from #{old_html.length} chars" else ""
-    await fs.writeFile "./warp.io.html", html, {encoding: "utf8"}, defer err
-  cb() if typeof cb is 'function'
 
-task 'build', "build the html file", build
-
-task 'watch', "build repeatedly", (cb) ->  
-  while true
-    await build defer()
-    await setTimeout defer(), 500
