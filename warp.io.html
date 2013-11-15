@@ -51,6 +51,9 @@ window.params = {
       $('#btn-submit').on('click', function() {
         return _this.click_submit();
       });
+      $('#btn-reset').on('click', function() {
+        return _this.click_reset();
+      });
       $('#salt').on('change', function() {
         return _this.salt_change();
       });
@@ -63,13 +66,21 @@ window.params = {
       $('#passphrase').on('change', function() {
         return _this.any_change();
       });
-      return $('#passphrase').on('keyup', function() {
+      $('#passphrase').on('keyup', function() {
         return _this.any_change();
+      });
+      $('#public-address').on('click', function() {
+        return $(this).select();
+      });
+      return $('#private-key').on('click', function() {
+        return $(this).select();
       });
     };
 
     Warper.prototype.any_change = function() {
       var chk, err, pp, salt, warn;
+      $('#private-key').val('');
+      $('#public-address').val('');
       pp = $('#passphrase').val();
       salt = $('#salt').val();
       chk = $('#checkbox-salt-confirm').is(":checked");
@@ -97,9 +108,7 @@ window.params = {
     Warper.prototype.salt_change = function() {
       var mom, salt;
       salt = $('#salt').val();
-      salt = salt.replace(/[\/\.]/g, '-').replace(/[^0-9\-]/g, '');
       $('#checkbox-salt-confirm').attr('checked', false);
-      $('#salt').val(salt);
       if (!salt.length) {
         $('.salt-confirm').hide();
       }
@@ -117,10 +126,21 @@ window.params = {
       return $(".progress-form").html(JSON.stringify(o));
     };
 
+    Warper.prototype.click_reset = function() {
+      $('#btn-submit').attr('disabled', true).show().html('Generate');
+      $('#passphrase, #salt, #public-address, #private-key').val('');
+      $('.output-form').hide();
+      $('#checkbox-salt-confirm').attr('checked', false);
+      $('.salt-confirm').hide();
+      $('.salt-summary').html('');
+      return this.any_change();
+    };
+
     Warper.prototype.click_submit = function() {
       var d, k, v, _ref,
         _this = this;
       $('#btn-submit').attr('disabled', true).html('Running...');
+      $('#btn-reset').attr('disabled', true).html('Running...');
       $('.progress-form').show();
       d = {};
       _ref = window.params;
@@ -137,6 +157,9 @@ window.params = {
       return warpwallet.scrypt(d, function(words) {
         var out;
         $('.output-form').show();
+        $('.progress-form').hide();
+        $('#btn-submit').hide();
+        $('#btn-reset').attr('disabled', false).html('Clear &amp; reset');
         out = warpwallet.generate(words.to_buffer());
         $('#public-address').val(out["public"]);
         return $('#private-key').val(out["private"]);
@@ -12489,6 +12512,10 @@ h1 .second-half {
 .salt-summary {
   text-decoration: underline
 }
+#public-address, #private-key {
+  cursor:pointer;
+  background-color: #fff
+}
 </style>
 
 <meta charset="utf-8">
@@ -12519,11 +12546,12 @@ License, etc., info to come here soon.
         </div>
         <div class="checkbox salt-confirm" style="display:none;">
           <label>
-            <input type="checkbox" id="checkbox-salt-confirm"> I confirm <span class="salt-summary"></span>
+            <input type="checkbox" id="checkbox-salt-confirm"> Sanity check: I confirm <span class="salt-summary"></span>
           </label>
         </div>
         <div class="form-group">
           <button class="btn btn-success" id="btn-submit">Generate</button>
+          <button class="btn btn-danger" id="btn-reset">Clear &amp; reset</button>
         </div>
         <div class="progress-form" style="display:none;">
           running..
@@ -12533,11 +12561,11 @@ License, etc., info to come here soon.
           </div>
           <div class="form-group">
             <label for="public-address">Public Bitcoin Address</label>
-            <input id="public-address" class="form-control">
+            <input id="public-address" readonly class="form-control">
           </div>
           <div class="form-group">
             <label for="private-key">Private Key (DO NOT SHARE)</label>
-            <input id="private-key" class="form-control">
+            <input id="private-key" readonly class="form-control">
           </div>
         </div>
       </div>
