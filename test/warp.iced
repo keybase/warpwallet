@@ -11,6 +11,3 @@ exports.run = run = ({passphrase, salt}, cb) ->
   await scrypt d, defer res
   cb res.to_buffer()
 
-await run { salt : 's', passphrase : 'p' }, defer x
-console.log x
-
