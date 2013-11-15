@@ -1,0 +1,38 @@
+body {
+  font-family: 'helvetica neue', 'helvetica', 'arial';
+  background-image: url({::src/img/earth.jpg::});
+  background-repeat: repeat-x repeat-y;
+}
+h1 {
+  font-size:3em;
+  color:#000;
+  font-weight:bold;
+  text-align: center;
+  margin-bottom:30px;
+  text-shadow: -2px 0 #864, 0 2px #864, 2px 0 #864, 0 -2px #864;
+}
+h1 .second-half {
+  color:#000;
+  font-style: italic;
+}
+.container {
+  margin-top:50px;
+}
+.form-container {
+  border: 3px solid #864;
+  border-radius:10px;
+  background-color: #fff;
+  padding:20px;
+}
+
+.sub-row {
+  color:#333;
+}
+.sub-row .col {
+  margin-top:50px;
+}
+.sub-row .col h4 {
+  padding-bottom:3px;
+  border-bottom:1px solid #864;
+  margin-bottom:10px;
+}

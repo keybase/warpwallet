@@ -1,0 +1,22 @@
+{
+  "name": "warpwallet",
+  "version": "0.0.1",
+  "description": "Open Source JavaScript Client-Side Bitcoin Wallet Generator Using scrypt",
+  "dependencies": {
+    "iced-coffee-script": "",
+    "iced-utils": ""
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/keybase/warpwallet"
+  },
+  "keywords": [
+    "bitcoin address wallet generator"
+  ],
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/keybase/warpwallet/issues"
+  }
+}
