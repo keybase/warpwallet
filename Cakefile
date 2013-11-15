@@ -1,7 +1,7 @@
-fs   = require 'fs'
-path = require 'path'
-coff = require 'iced-coffee-script'
-browserify = require 'browserify'
+fs          = require 'fs'
+path        = require 'path'
+coff        = require 'iced-coffee-script'
+browserify  = require 'browserify'
 
 # -----------------------------------------------------------
 #
