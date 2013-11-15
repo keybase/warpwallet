@@ -22,6 +22,7 @@ class Warper
   any_change: ->
     $('#private-key').val ''
     $('#public-address').val ''
+    $('#btn-submit').attr('disabled', false).show().html 'Generate'
     pp   = $('#passphrase').val()
     salt = $('#salt').val()
     chk  = $('#checkbox-salt-confirm').is ":checked"    
@@ -62,7 +63,7 @@ class Warper
 
 
   click_reset: ->
-    $('#btn-submit').attr('disabled', true).show().html 'Generate'
+    $('#btn-submit').attr('disabled', false).show().html 'Generate'
     $('#passphrase, #salt, #public-address, #private-key').val ''
     $('.output-form').hide()
     $('#checkbox-salt-confirm').attr 'checked', false
