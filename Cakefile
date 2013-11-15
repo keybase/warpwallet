@@ -30,7 +30,7 @@ task 'watch', "build repeatedly", (cb) ->
 
 compile_token = (p, cb) ->
   switch path.extname p
-    when '.js'
+    when '.js', '.json'
       await fs.readFile p, {encoding: "utf8"}, defer err, res
     when '.css'
       await fs.readFile p, {encoding: "utf8"}, defer err, res
