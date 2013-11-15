@@ -78,7 +78,6 @@ class Warper
 
     d = {}
     (d[k] = v for k,v of window.params)
-    console.log d
     d.salt = new warpwallet.WordArray.from_utf8 $('#salt').val()
     d.key  = new warpwallet.WordArray.from_utf8 $('#passphrase').val()
     d.progress_hook = (o) => @progress_hook o
