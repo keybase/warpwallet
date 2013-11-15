@@ -41,3 +41,7 @@ h1 .second-half {
 .salt-summary {
   text-decoration: underline
 }
+#public-address, #private-key {
+  cursor:pointer;
+  background-color: #fff
+}

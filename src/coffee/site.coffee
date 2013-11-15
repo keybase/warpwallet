@@ -16,16 +16,21 @@ class Warper
 
   attach_ux: ->
     $('#btn-submit').on 'click',            => @click_submit()
+    $('#btn-reset').on 'click',            => @click_reset()
     $('#salt').on       'change',           => @salt_change()
     $('#salt').on       'keyup',            => @salt_change()
     $('#checkbox-salt-confirm').on 'click', => @any_change()
     $('#passphrase').on 'change',           => @any_change()
     $('#passphrase').on 'keyup',            => @any_change()
+    $('#public-address').on 'click',        -> $(@).select()
+    $('#private-key').on    'click',        -> $(@).select()
 
   any_change: ->
+    $('#private-key').val ''
+    $('#public-address').val ''
     pp   = $('#passphrase').val()
     salt = $('#salt').val()
-    chk  = $('#checkbox-salt-confirm').is ":checked"
+    chk  = $('#checkbox-salt-confirm').is ":checked"    
     err  = null
     warn = null
     if not pp.length
@@ -47,9 +52,7 @@ class Warper
 
   salt_change: ->
     salt = $('#salt').val()
-    salt = salt.replace(/// [/\.] ///g , '-').replace /// [^0-9\-] ///g , ''
     $('#checkbox-salt-confirm').attr 'checked', false
-    $('#salt').val salt
     if not salt.length
       $('.salt-confirm').hide()
     if salt.match /// ^[0-9]{4}-[0-9]{2}-[0-9]{2} $///
@@ -63,8 +66,19 @@ class Warper
   progress_hook: (o) ->
     $(".progress-form").html JSON.stringify o
 
+
+  click_reset: ->
+    $('#btn-submit').attr('disabled', true).show().html 'Generate'
+    $('#passphrase, #salt, #public-address, #private-key').val ''
+    $('.output-form').hide()
+    $('#checkbox-salt-confirm').attr 'checked', false
+    $('.salt-confirm').hide()
+    $('.salt-summary').html ''
+    @any_change()
+
   click_submit: ->
     $('#btn-submit').attr('disabled', true).html 'Running...'
+    $('#btn-reset').attr('disabled', true).html 'Running...'
 
     $('.progress-form').show()
 
@@ -77,6 +91,9 @@ class Warper
     warpwallet.scrypt d, (words) =>
 
       $('.output-form').show()
+      $('.progress-form').hide()
+      $('#btn-submit').hide()
+      $('#btn-reset').attr('disabled', false).html 'Clear &amp; reset'
       out = warpwallet.generate words.to_buffer()
       $('#public-address').val out.public
       $('#private-key').val    out.private
