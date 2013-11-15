@@ -1,4 +1,4 @@
 
 exports.scrypt = require('triplesec').scrypt;
-exports.Buffer = require('triplesec').Buffer;
+exports.WordArray = require('triplesec').WordArray;
 exports.generate = require('keybase-bitcoin').generate;
