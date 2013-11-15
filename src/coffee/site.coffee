@@ -1,10 +1,4 @@
 
-params = 
-  N     : (1 << 18)
-  c1    : (1 << 16)
-  p     : 1
-  r     : 8
-  dkLen : 256/8
 
 progress_hook = (o) ->
   $("#progress").html JSON.stringify o
@@ -69,7 +63,7 @@ class Warper
     $('.output-form').show()
 
     d = {}
-    (d[k] = v for k,v of params)
+    (d[k] = v for k,v of window.params)
     d.salt = new warpwallet.WordArray.from_utf8 $('#salt').val()
     d.key  = new warpwallet.WordArray.from_utf8 $('#passphrase').val()
     d.progress_hook = progress_hook
