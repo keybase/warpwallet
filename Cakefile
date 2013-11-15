@@ -1,6 +1,7 @@
 fs   = require 'fs'
 path = require 'path'
 coff = require 'iced-coffee-script'
+browserify = require 'browserify'
 
 #
 # Build with "icake build" which requires iced-coffee-script.
@@ -44,6 +45,7 @@ token_build_and_drop = (html, cb) ->
   cb html
 
 build = (cb) ->
+  await do_browserify defer()
   await fs.readFile "./warp.io_src.html", {encoding: "utf8"}, defer err, html
   await token_build_and_drop html, defer html
   await fs.readFile "./warp.io.html", {encoding: "utf8"}, defer err, old_html
@@ -51,6 +53,15 @@ build = (cb) ->
     console.log "Writing #{html.length} chars." + if old_html? then "(Changed from #{old_html.length} chars" else ""
     await fs.writeFile "./warp.io.html", html, {encoding: "utf8"}, defer err
   cb() if typeof cb is 'function'
+
+do_browserify = (cb) ->
+  b = browserify()
+  b.add("./src/browserify/top.js")
+  await b.bundle { standalone : 'warpwallet' }, defer err, res
+  throw err if err?
+  await fs.writeFile "./src/js/deps.js", res, { encoding : "utf8" }, defer err
+  throw err if err?
+  cb() 
 
 task 'build', "build the html file", build
 
