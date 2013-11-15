@@ -18,18 +18,22 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 </script>
 
 <script type="text/javascript">
+window.params = { 
+	"N"     : 18,
+	"c1"    : 0x10000,
+	"p"     : 1,
+	"r"     : 8,
+	"dkLen" : 32
+}
+
+;
+</script>
+
+<script type="text/javascript">
 (function() {
-  var Warper, params;
+  var Warper;
 
 
-
-  params = {
-    N: 1 << 18,
-    c1: 1 << 16,
-    p: 1,
-    r: 8,
-    dkLen: 256 / 8
-  };
 
   Warper = (function() {
     function Warper() {
@@ -114,15 +118,17 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
     };
 
     Warper.prototype.click_submit = function() {
-      var d, k, v,
+      var d, k, v, _ref,
         _this = this;
       $('#btn-submit').attr('disabled', true).html('Running...');
       $('.progress-form').show();
       d = {};
-      for (k in params) {
-        v = params[k];
+      _ref = window.params;
+      for (k in _ref) {
+        v = _ref[k];
         d[k] = v;
       }
+      console.log(d);
       d.salt = new warpwallet.WordArray.from_utf8($('#salt').val());
       d.key = new warpwallet.WordArray.from_utf8($('#passphrase').val());
       d.progress_hook = function(o) {
