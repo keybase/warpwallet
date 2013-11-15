@@ -7,6 +7,10 @@
 </script>
 
 <script type="text/javascript">
+{::src/js/moment.min.js::}
+</script>
+
+<script type="text/javascript">
 {::src/coffee/site.coffee::}
 </script>
 
@@ -45,11 +49,16 @@ License, etc., info to come here soon.
           <input id="passphrase" class="form-control">
         </div>
         <div class="form-group">
-          <label for="salt">Birthdate (YYYY-MM-DD)</label>
+          <label for="salt">Optional salt <span class="sub-label">&nbsp; your birthdate (YYYY-MM-DD)</span></label>
           <input id="salt" class="form-control">
         </div>
+        <div class="checkbox salt-confirm" style="display:none;">
+          <label>
+            <input type="checkbox" id="checkbox-salt-confirm"> I confirm <span class="salt-summary"></span>
+          </label>
+        </div>
         <div class="form-group">
-          <button class="btn btn-success" id="btn-submit">Generate / Lookup</button>
+          <button class="btn btn-success" id="btn-submit">Generate</button>
         </div>
         <div class="output-form" style="display:none;">
           <div class="progress">
