@@ -19,8 +19,8 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 <script type="text/javascript">
 window.params = { 
-	"N"        : 18,
-	"c1"       : 65536,
+	"N"        : 10,
+	"c1"       : 6536,
 	"p"        : 1,
 	"r"        : 8,
 	"dkLen"    : 32
@@ -142,8 +142,7 @@ window.params = {
       $('.output-form').hide();
       $('#checkbox-salt-confirm').attr('checked', false);
       $('.salt-confirm').hide();
-      $('.salt-summary').html('');
-      return this.any_change();
+      return $('.salt-summary').html('');
     };
 
     Warper.prototype.click_submit = function() {
@@ -12511,7 +12510,10 @@ h1 .second-half {
   background-color: #f8f8f8;
   padding:20px;
 }
-.sub-label {
+.form-container label {
+  color:#666;
+}
+.form-container .sub-label {
   color:#999;
   font-weight:normal;
 }
@@ -12532,6 +12534,9 @@ h1 .second-half {
 #public-address, #private-key {
   cursor:pointer;
   background-color: #fff
+}
+.progress-form {
+  margin: 20px 2px 20px 2px;
 }
 .progress-form .bar {
   background-color:#ee6;
@@ -12560,41 +12565,54 @@ License, etc., info to come here soon.
 <div class="container">
 
   <div class="row"> 
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-sm-12">
       <h1>Warp<span class="second-half">Wallet</span></h1>
-      <div class="form-container">
+      <form class="form-horizontal form-container" role="form">
         <div class="form-group">
-          <label for="passphrase">Passphrase</label>
-          <input id="passphrase" class="form-control">
+          <label for="passphrase" class="col-sm-4 control-label">Passphrase</label>
+          <div class="col-sm-8">
+            <input id="passphrase" class="form-control">
+          </div>  
         </div>
         <div class="form-group">
-          <label for="salt">Optional salt <span class="sub-label">&nbsp; your birthdate (YYYY-MM-DD)</span></label>
-          <input id="salt" class="form-control">
+          <label for="salt" class="col-sm-4 control-label">Optional birthday salt YYYY-MM-DD</label>
+          <div class="col-sm-8">
+            <input id="salt" class="form-control">
+          </div>
         </div>
-        <div class="checkbox salt-confirm" style="display:none;">
-          <label>
-            <input type="checkbox" id="checkbox-salt-confirm"> Sanity check: I confirm <span class="salt-summary"></span>
-          </label>
+        <div class="form-group salt-confirm chefckbox" style="display:none;">
+          <div class="col-sm-8 col-sm-offset-4">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="checkbox-salt-confirm"> Sanity check: I confirm <span class="salt-summary"></span>
+              </label>
+            </div>
+          </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-success" id="btn-submit">Generate</button>
-          <button class="btn btn-danger" id="btn-reset">Clear &amp; reset</button>
+          <div class="col-sm-8 col-sm-offset-4">
+            <button class="btn btn-success" id="btn-submit">Generate</button>
+            <button class="btn btn-danger" id="btn-reset">Clear &amp; reset</button>
+          </div>
         </div>
         <div class="form-group progress-form" style="display:none;">
           <div class="bar"></div>
-
         </div>
         <div class="output-form" style="display:none;">
           <div class="form-group">
-            <label for="public-address">Public Bitcoin Address</label>
-            <input id="public-address" readonly class="form-control">
+            <label for="public-address" class="col-sm-4 control-label">Public bitcoin address</label>
+            <div class="col-sm-8">
+              <input id="public-address" readonly class="form-control">
+            </div>
           </div>
           <div class="form-group">
-            <label for="private-key">Private Key <span class="sub-label">(DO NOT SHARE)</span></label>
-            <input id="private-key" readonly class="form-control">
+            <label for="private-key" class="col-sm-4 control-label">Private Key <span class="sub-label">(DO NOT SHARE)</span></label>
+            <div class="col-sm-8">
+              <input id="private-key" readonly class="form-control">
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div><!-- /row -->
 

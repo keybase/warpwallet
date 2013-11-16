@@ -71,14 +71,13 @@ class Warper
       $('.progress-form .bar').css('width', "#{w}%").html "pbkdf2 #{@commas o.i} of #{@commas o.total}"
 
   click_reset: ->
-    $('.progress-form').hide()
     $('#btn-submit').attr('disabled', false).show().html 'Generate'
     $('#passphrase, #salt, #public-address, #private-key').val ''
-    $('.output-form').hide()
     $('#checkbox-salt-confirm').attr 'checked', false
-    $('.salt-confirm').hide()
     $('.salt-summary').html ''
-    @any_change()
+    $('.salt-confirm').hide()
+    $('.progress-form').hide()
+    $('.output-form').hide()
 
   click_submit: ->
     $('#btn-submit').attr('disabled', true).html 'Running...'
