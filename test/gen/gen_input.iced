@@ -14,7 +14,7 @@ out = []
 for spec in specs 
   for i in [0...spec.num]
     out.push {
-      password : gen_randos(spec.password)
-      salt     : gen_randos(spec.salt)
+      passphrase : gen_randos(spec.password)
+      salt       : gen_randos(spec.salt)
     }
 console.log JSON.stringify out, null, 4
