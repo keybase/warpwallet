@@ -115,7 +115,7 @@ class Warper
       $('#btn-reset').attr('disabled', false).html 'Clear &amp; reset'
       out = warpwallet.generate words.to_buffer()
       $('#public-address').val out.public
-      $('#private-key').val    out.private
+      $('#private-key').val out.private
 
 $ ->
   new Warper()

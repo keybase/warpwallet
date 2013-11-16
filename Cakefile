@@ -14,19 +14,17 @@ crypto      = require('crypto')
 # while actively developing
 # -----------------------------------------------------------
 
-hash_file = (fn, cb) ->
-  fd = fs.ReadStream fn
-  hasher = crypto.createHash('SHA256')
-  fd.on 'data', (d) ->
-    hasher.update d
-  await fd.on 'end', defer()
-  ret = hasher.digest('hex')
-  cb ret
-
 hash_data = (data) ->
   hasher = crypto.createHash('SHA256')
   hasher.update data
   hasher.digest('hex')
+
+clean_old_ones = (new_one, cb) ->
+  await fs.readdir ".", defer err, files
+  rxx = "warp.io_#{version}_SHA256_([a-f0-9]+)\.html"
+  for file in files when ((m = file.match rxx)? and (m[1] isnt new_one))
+    await fs.unlink "./#{file}", defer err
+  cb()
 
 build = (cb) ->
   latest = "./warp.io_latest.html"    
@@ -35,7 +33,11 @@ build = (cb) ->
   await token_build_and_drop html, defer html
   await fs.readFile latest, {encoding: "utf8"}, defer err, old_html
   if err? or (old_html isnt html)
-    console.log "Writing #{html.length} chars." + if old_html? then "(Changed from #{old_html.length} chars" else ""
+    # Clean out the old symlink
+    unless err?
+      await fs.unlink latest, defer err
+      throw err if err?
+    console.log "Writing #{html.length} chars." + if old_html? then " (Changed from #{old_html.length} chars)" else ""
     sha256 = hash_data html
     fullname = "./warp.io_#{version}_SHA256_#{sha256}.html"       
     await fs.writeFile fullname, html, {encoding: "utf8"}, defer err
@@ -45,7 +47,6 @@ build = (cb) ->
     # delete any old copies of this version
     await clean_old_ones sha256, defer err
     throw err if err?
-    await exec "rm -rf ./warp.io_#{version}_SHA256_*.html", defer error, stdout, stdin    
   cb() if typeof cb is 'function'
 
 task 'build', "build the html file", build
