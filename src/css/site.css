@@ -1,7 +1,7 @@
 body {
   font-family: 'helvetica neue', 'helvetica', 'arial';
   background-repeat: repeat-x repeat-y;
-  background-color:#060;
+  background-color:#ccc;
 }
 h1 {
   font-size:5em;
@@ -18,7 +18,7 @@ h1 .second-half {
   margin-top:10px;
 }
 .form-container {
-  border: 2px solid #050;
+  border: 2px solid #bbb;
   border-radius:10px;
   background-color: #f8f8f8;
   padding:40px;
