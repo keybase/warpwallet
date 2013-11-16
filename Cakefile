@@ -3,8 +3,7 @@ path        = require 'path'
 coff        = require 'iced-coffee-script'
 browserify  = require 'browserify'
 exec        = require('child_process').exec
-params      = eval("(" + fs.readFileSync('./src/json/params.json', 'utf8') + ")")
-version     = params.version
+{version}   = require('./package.json')
 
 # -----------------------------------------------------------
 #
