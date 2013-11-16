@@ -6,6 +6,9 @@ bu = process.argv[3]
 params = require '../../src/json/params.json'
 pkg = require '../../package.json'
 input = require './input.json'
+colors = require 'colors'
+
+CHECK = "\u2714"
 
 ##=====================================================================
 
@@ -21,6 +24,7 @@ class Runner
     out = []
     for v,i in @input
       await @make_vector v, defer out[i]
+      console.error "#{CHECK} Done with vector #{i+1} of #{@input.length}".green
     cb out
 
   #-------------------
