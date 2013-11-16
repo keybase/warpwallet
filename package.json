@@ -9,7 +9,9 @@
     "triplesec" : "keybase/triplesec#header_v3",
     "browserify" : "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+     "iced-error" : "*"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/keybase/warpwallet"
