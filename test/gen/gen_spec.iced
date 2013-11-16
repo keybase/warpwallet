@@ -7,15 +7,23 @@ params = require '../../src/json/params.json'
 pkg = require '../../package.json'
 input = require './input.json'
 
+##=====================================================================
 
 class Runner
-  constructor : ({@scrypt, @bu}) ->
+
+  #-------------------
+
+  constructor : ({@input, @scrypt, @bu}) ->
+
+  #-------------------
 
   make_vectors : (cb) ->
     out = []
-    for v,i in input[0...1]
+    for v,i in @input
       await @make_vector v, defer out[i]
     cb out
+
+  #-------------------
 
   run : (cb) ->
     out = { 
@@ -25,6 +33,8 @@ class Runner
     }
     await @make_vectors defer out.vectors
     cb out
+
+  #-------------------
 
   run_scrypt : (input, cb) ->
     args = [
@@ -48,11 +58,35 @@ class Runner
     ret = if (m = out[0].match x)? then m[1] else null
     cb ret
 
+  #-------------------
+
   run_bu : (seed, cb) ->
-    cb {
-      "private"  : 1,
-      "public" : 2
+    args = [ seed ] 
+    opts = { 
+      quiet : true 
+      interp : @bu
     }
+    child = new Child args, opts
+    out = []
+    child.filter (l, which) -> out.push l
+    await child.run().wait defer status
+
+    bu_out = {}
+    primary_key = null
+    for line in out.join("\n").split(/\n+/) when line.length
+      [key,val] = line.split(/:\s+/)
+      if key[0] is ' '
+        bu_out[last_key][key.replace(/\s+/, '')] = val
+      else
+        last_key = key
+        bu_out[key] = { _ : val}
+
+    cb {
+      "private"  : bu_out.WIF.uncompressed
+      "public" : bu_out['Bitcoin address'].uncompressed
+    }
+
+  #-------------------
 
   make_vector : (input, cb) ->
     await @run_scrypt input, defer seed
@@ -63,7 +97,9 @@ class Runner
     out.keys = keys
     cb out
 
-r = new Runner { scrypt, bu }
+##=====================================================================
+
+r = new Runner { input, scrypt, bu }
 await r.run defer out
 console.log JSON.stringify out, null, 4
 
