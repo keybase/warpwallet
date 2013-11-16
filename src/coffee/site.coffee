@@ -4,6 +4,10 @@ class Warper
 
   constructor: ->
     @attach_ux()
+    if window.SALT_DEFAULT?
+      $('#salt').val window.SALT_DEFAULT
+      $('#salt').attr 'disabled', true
+      $('.salt-label').text 'Prefilled salt'      
 
   attach_ux: ->
     $('#btn-submit').on 'click',            => @click_submit()
@@ -28,7 +32,7 @@ class Warper
     warn = null
     if not pp.length
       err = "Please enter a passphrase"
-    else if salt?.length and not chk
+    else if salt?.length and (not chk) and (not window.SALT_DEFAULT?)
       err = "Fix and accept your salt"
     else if pp.length < 12
       warn = "Consider a larger passphrase"
@@ -53,7 +57,9 @@ class Warper
     $('#checkbox-salt-confirm').attr 'checked', false
     if not salt.length
       $('.salt-confirm').hide()
-    if salt.match /// ^[0-9]{4}-[0-9]{2}-[0-9]{2} $///
+    if window.SALT_DEFAULT?
+      $('.salt-confirm').hide()      
+    else if salt.match /// ^[0-9]{4}-[0-9]{2}-[0-9]{2} $///
       mom = moment salt, "YYYY-MM-DD"
       $('.salt-confirm').show()
       $('.salt-summary').html mom.format "MMMM Do, YYYY"
@@ -74,7 +80,9 @@ class Warper
 
   click_reset: ->
     $('#btn-submit').attr('disabled', false).show().html 'Please enter a passphrase'
-    $('#passphrase, #salt, #public-address, #private-key').val ''
+    $('#passphrase, #public-address, #private-key').val ''
+    if not window.SALT_DEFAULT?
+      $('#salt').val ''
     $('#checkbox-salt-confirm').attr 'checked', false
     $('.salt-summary').html ''
     $('.salt-confirm').hide()
@@ -98,7 +106,9 @@ class Warper
 
     warpwallet.scrypt d, (words) =>
 
-      $('#passphrase, #salt, checkbox-salt-confirm').attr 'disabled', false
+      $('#passphrase, #checkbox-salt-confirm').attr 'disabled', false
+      if not window.SALT_DEFAULT?
+        $('#salt').attr 'disabled', false
       $('.progress-form').hide()
       $('.output-form').show()
       $('#btn-submit').hide()

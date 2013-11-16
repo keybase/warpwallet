@@ -3,6 +3,26 @@
 <head>
 
 <script type="text/javascript">
+ // -------------------------------------------------------
+ // Hello, WarpWallet friend!
+ //
+ // If you are saving an offline copy of this file 
+ // and would like your salt always pre-filled for
+ // convenience, assign the default value here. You
+ // don't have to stick to the YYYY-MM-DD format in that case.
+ // Consider your phone number, email, name, or some other simple code.
+ //
+ // A salt shouldn't make you lazy with your passphrase, of course.
+ //
+ // Just don't lose your saved copy and forget your chosen salt.
+ // -------------------------------------------------------
+
+ var SALT_DEFAULT = null; // assign it to a string and save this file.
+
+</script>
+
+
+<script type="text/javascript">
 {::src/js/jquery-1.10.2.min.js::}
 </script>
 
@@ -55,7 +75,7 @@ License, etc., info to come here soon.
           </div>  
         </div>
         <div class="form-group">
-          <label for="salt" class="col-sm-4 control-label">Optional birthday salt YYYY-MM-DD</label>
+          <label for="salt" class="col-sm-4 control-label salt-label">Optional birthday salt YYYY-MM-DD</label>
           <div class="col-sm-8">
             <input id="salt" class="form-control">
           </div>
