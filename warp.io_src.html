@@ -65,18 +65,17 @@ License, etc., info to come here soon.
           <button class="btn btn-success" id="btn-submit">Generate</button>
           <button class="btn btn-danger" id="btn-reset">Clear &amp; reset</button>
         </div>
-        <div class="progress-form" style="display:none;">
-          running..
+        <div class="form-group progress-form" style="display:none;">
+          <div class="bar"></div>
+
         </div>
         <div class="output-form" style="display:none;">
-          <div class="progress">
-          </div>
           <div class="form-group">
             <label for="public-address">Public Bitcoin Address</label>
             <input id="public-address" readonly class="form-control">
           </div>
           <div class="form-group">
-            <label for="private-key">Private Key (DO NOT SHARE)</label>
+            <label for="private-key">Private Key <span class="sub-label">(DO NOT SHARE)</span></label>
             <input id="private-key" readonly class="form-control">
           </div>
         </div>

@@ -5,12 +5,9 @@ class Warper
   constructor: ->
     @attach_ux()
 
-  const: ->
-    OLDEST_DATE: new Date(1900,0,1)
-
   attach_ux: ->
     $('#btn-submit').on 'click',            => @click_submit()
-    $('#btn-reset').on 'click',            => @click_reset()
+    $('#btn-reset').on 'click',             => @click_reset()
     $('#salt').on       'change',           => @salt_change()
     $('#salt').on       'keyup',            => @salt_change()
     $('#checkbox-salt-confirm').on 'click', => @any_change()
@@ -20,6 +17,7 @@ class Warper
     $('#private-key').on    'click',        -> $(@).select()
 
   any_change: ->
+    $('.progress-form').hide()
     $('#private-key').val ''
     $('#public-address').val ''
     $('#btn-submit').attr('disabled', false).show().html 'Generate'
@@ -45,6 +43,11 @@ class Warper
     $('#public-address').val ''
     $('#private-key').val ''
 
+  commas: (n) ->
+    while (/(\d+)(\d{3})/.test(n.toString()))
+      n = n.toString().replace /(\d+)(\d{3})/, '$1,$2'
+    n
+
   salt_change: ->
     salt = $('#salt').val()
     $('#checkbox-salt-confirm').attr 'checked', false
@@ -59,10 +62,16 @@ class Warper
     @any_change()
 
   progress_hook: (o) ->
-    $(".progress-form").html JSON.stringify o
+    if o.what is 'scrypt'
+      w = (o.i / o.total) * 50
+      $('.progress-form .bar').css('width', "#{w}%").html "scrypt #{@commas o.i} of #{@commas o.total}"
 
+    else if o.what is 'pbkdf2 (pass 2)'
+      w = 50 + (o.i / o.total) * 50
+      $('.progress-form .bar').css('width', "#{w}%").html "pbkdf2 #{@commas o.i} of #{@commas o.total}"
 
   click_reset: ->
+    $('.progress-form').hide()
     $('#btn-submit').attr('disabled', false).show().html 'Generate'
     $('#passphrase, #salt, #public-address, #private-key').val ''
     $('.output-form').hide()
@@ -74,7 +83,7 @@ class Warper
   click_submit: ->
     $('#btn-submit').attr('disabled', true).html 'Running...'
     $('#btn-reset').attr('disabled', true).html 'Running...'
-
+    $('#passphrase, #salt, checkbox-salt-confirm').attr 'disabled', true
     $('.progress-form').show()
 
     d = {}
@@ -83,10 +92,14 @@ class Warper
     d.key  = new warpwallet.WordArray.from_utf8 $('#passphrase').val()
     d.progress_hook = (o) => @progress_hook o
 
+    $('.progress-form').show()
+    $('.progress-form .bar').html ''
+
     warpwallet.scrypt d, (words) =>
 
+      $('#passphrase, #salt, checkbox-salt-confirm').attr 'disabled', false
+
       $('.output-form').show()
-      $('.progress-form').hide()
       $('#btn-submit').hide()
       $('#btn-reset').attr('disabled', false).html 'Clear &amp; reset'
       out = warpwallet.generate words.to_buffer()

@@ -39,12 +39,6 @@ window.params = {
       this.attach_ux();
     }
 
-    Warper.prototype["const"] = function() {
-      return {
-        OLDEST_DATE: new Date(1900, 0, 1)
-      };
-    };
-
     Warper.prototype.attach_ux = function() {
       var _this = this;
       $('#btn-submit').on('click', function() {
@@ -78,6 +72,7 @@ window.params = {
 
     Warper.prototype.any_change = function() {
       var chk, err, pp, salt, warn;
+      $('.progress-form').hide();
       $('#private-key').val('');
       $('#public-address').val('');
       $('#btn-submit').attr('disabled', false).show().html('Generate');
@@ -105,6 +100,13 @@ window.params = {
       return $('#private-key').val('');
     };
 
+    Warper.prototype.commas = function(n) {
+      while (/(\d+)(\d{3})/.test(n.toString())) {
+        n = n.toString().replace(/(\d+)(\d{3})/, '$1,$2');
+      }
+      return n;
+    };
+
     Warper.prototype.salt_change = function() {
       var mom, salt;
       salt = $('#salt').val();
@@ -123,10 +125,18 @@ window.params = {
     };
 
     Warper.prototype.progress_hook = function(o) {
-      return $(".progress-form").html(JSON.stringify(o));
+      var w;
+      if (o.what === 'scrypt') {
+        w = (o.i / o.total) * 50;
+        return $('.progress-form .bar').css('width', "" + w + "%").html("scrypt " + (this.commas(o.i)) + " of " + (this.commas(o.total)));
+      } else if (o.what === 'pbkdf2 (pass 2)') {
+        w = 50 + (o.i / o.total) * 50;
+        return $('.progress-form .bar').css('width', "" + w + "%").html("pbkdf2 " + (this.commas(o.i)) + " of " + (this.commas(o.total)));
+      }
     };
 
     Warper.prototype.click_reset = function() {
+      $('.progress-form').hide();
       $('#btn-submit').attr('disabled', false).show().html('Generate');
       $('#passphrase, #salt, #public-address, #private-key').val('');
       $('.output-form').hide();
@@ -141,6 +151,7 @@ window.params = {
         _this = this;
       $('#btn-submit').attr('disabled', true).html('Running...');
       $('#btn-reset').attr('disabled', true).html('Running...');
+      $('#passphrase, #salt, checkbox-salt-confirm').attr('disabled', true);
       $('.progress-form').show();
       d = {};
       _ref = window.params;
@@ -153,10 +164,12 @@ window.params = {
       d.progress_hook = function(o) {
         return _this.progress_hook(o);
       };
+      $('.progress-form').show();
+      $('.progress-form .bar').html('');
       return warpwallet.scrypt(d, function(words) {
         var out;
+        $('#passphrase, #salt, checkbox-salt-confirm').attr('disabled', false);
         $('.output-form').show();
-        $('.progress-form').hide();
         $('#btn-submit').hide();
         $('#btn-reset').attr('disabled', false).html('Clear &amp; reset');
         out = warpwallet.generate(words.to_buffer());
@@ -12520,6 +12533,16 @@ h1 .second-half {
   cursor:pointer;
   background-color: #fff
 }
+.progress-form .bar {
+  background-color:#ee6;
+  width:10%;
+  /*font-size:0.8em;*/
+  color:#f90;
+  overflow:hidden;
+  white-space: nowrap;
+  padding:3px 0 3px 10px;
+  border-radius:5px;
+}
 </style>
 
 <meta charset="utf-8">
@@ -12557,18 +12580,17 @@ License, etc., info to come here soon.
           <button class="btn btn-success" id="btn-submit">Generate</button>
           <button class="btn btn-danger" id="btn-reset">Clear &amp; reset</button>
         </div>
-        <div class="progress-form" style="display:none;">
-          running..
+        <div class="form-group progress-form" style="display:none;">
+          <div class="bar"></div>
+
         </div>
         <div class="output-form" style="display:none;">
-          <div class="progress">
-          </div>
           <div class="form-group">
             <label for="public-address">Public Bitcoin Address</label>
             <input id="public-address" readonly class="form-control">
           </div>
           <div class="form-group">
-            <label for="private-key">Private Key (DO NOT SHARE)</label>
+            <label for="private-key">Private Key <span class="sub-label">(DO NOT SHARE)</span></label>
             <input id="private-key" readonly class="form-control">
           </div>
         </div>

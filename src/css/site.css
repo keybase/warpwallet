@@ -45,3 +45,13 @@ h1 .second-half {
   cursor:pointer;
   background-color: #fff
 }
+.progress-form .bar {
+  background-color:#ee6;
+  width:10%;
+  /*font-size:0.8em;*/
+  color:#f90;
+  overflow:hidden;
+  white-space: nowrap;
+  padding:3px 0 3px 10px;
+  border-radius:5px;
+}
