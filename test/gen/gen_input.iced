@@ -17,4 +17,4 @@ for spec in specs
       password : gen_randos(spec.password)
       salt     : gen_randos(spec.salt)
     }
-console.log out
+console.log JSON.stringify out, null, 4
