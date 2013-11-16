@@ -2,6 +2,9 @@ fs          = require 'fs'
 path        = require 'path'
 coff        = require 'iced-coffee-script'
 browserify  = require 'browserify'
+exec        = require('child_process').exec
+params      = eval("(" + fs.readFileSync('./src/json/params.json', 'utf8') + ")")
+version     = params.version
 
 # -----------------------------------------------------------
 #
@@ -15,10 +18,15 @@ build = (cb) ->
   await do_browserify defer()
   await fs.readFile "./warp.io_src.html", {encoding: "utf8"}, defer err, html
   await token_build_and_drop html, defer html
-  await fs.readFile "./warp.io.html", {encoding: "utf8"}, defer err, old_html
+  await fs.readFile "./warp.io_latest.html", {encoding: "utf8"}, defer err, old_html
   if err? or (old_html isnt html)
     console.log "Writing #{html.length} chars." + if old_html? then "(Changed from #{old_html.length} chars" else ""
-    await fs.writeFile "./warp.io.html", html, {encoding: "utf8"}, defer err
+    await fs.writeFile "./warp.io_latest.html", html, {encoding: "utf8"}, defer err
+    # delete any old copies of this version
+    await exec 'rm -rf ./warp.io_#{version}_SHA256_*.html', defer error, stdout, stdin    
+    await exec 'shasum -a 256 ./warp.io_latest.html', defer error, stdout, stdin
+    sha256 = stdout.split(' ')[0]
+    await fs.writeFile "./warp.io_#{version}_SHA256_#{sha256}.html", html, {encoding:"utf8"}, defer err
   cb() if typeof cb is 'function'
 
 task 'build', "build the html file", build
