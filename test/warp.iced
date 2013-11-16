@@ -14,6 +14,3 @@ exports.run = run = ({passphrase, salt}, cb) ->
   out.seed = seed.toString('hex')
   cb out
 
-await run { passphrase : "hello", "salt" : "hiiii" }, defer stuff
-console.log stuff
-
