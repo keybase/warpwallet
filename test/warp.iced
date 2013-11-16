@@ -13,4 +13,3 @@ exports.run = run = ({passphrase, salt}, cb) ->
   out = generate seed
   out.seed = seed.toString('hex')
   cb out
-
