@@ -48,16 +48,25 @@ h1 .second-half {
   cursor:pointer;
   background-color: #fff
 }
+.form-horizontal .progress-form {
+  margin: 20px 0px 20px 0px;
+} 
 .progress-form {
-  margin: 20px 2px 20px 2px;
+  background-color: #eee;
 }
 .progress-form .bar {
-  background-color:#ee6;
+  background-color:#f8f8f8;
+  border-right:20px solid #666;
   width:10%;
-  /*font-size:0.8em;*/
   color:#f90;
   overflow:hidden;
   white-space: nowrap;
   padding:3px 0 3px 10px;
-  border-radius:5px;
+  font-family: 'courier new',courier,fixed;
+}
+.progress-scrypt {
+  color:#090;
+}
+.progress-pbkdf2 {
+  color:#f90;
 }

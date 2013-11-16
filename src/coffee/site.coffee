@@ -64,14 +64,16 @@ class Warper
   progress_hook: (o) ->
     if o.what is 'scrypt'
       w = (o.i / o.total) * 50
-      $('.progress-form .bar').css('width', "#{w}%").html "scrypt #{@commas o.i} of #{@commas o.total}"
+      $('.progress-form .bar').css('width', "#{w}%")
+      $('.progress-form .bar .progress-scrypt').html "scrypt #{@commas o.i} of #{@commas o.total}"
 
     else if o.what is 'pbkdf2 (pass 2)'
       w = 50 + (o.i / o.total) * 50
-      $('.progress-form .bar').css('width', "#{w}%").html "pbkdf2 #{@commas o.i} of #{@commas o.total}"
+      $('.progress-form .bar').css('width', "#{w}%")
+      $('.progress-form .bar .progress-pbkdf2').html "&nbsp; pbkdf2 #{@commas o.i} of #{@commas o.total}"
 
   click_reset: ->
-    $('#btn-submit').attr('disabled', false).show().html 'Generate'
+    $('#btn-submit').attr('disabled', false).show().html 'Please enter a passphrase'
     $('#passphrase, #salt, #public-address, #private-key').val ''
     $('#checkbox-salt-confirm').attr 'checked', false
     $('.salt-summary').html ''
@@ -92,12 +94,12 @@ class Warper
     d.progress_hook = (o) => @progress_hook o
 
     $('.progress-form').show()
-    $('.progress-form .bar').html ''
+    $('.progress-form .bar span').html ''
 
     warpwallet.scrypt d, (words) =>
 
       $('#passphrase, #salt, checkbox-salt-confirm').attr 'disabled', false
-
+      $('.progress-form').hide()
       $('.output-form').show()
       $('#btn-submit').hide()
       $('#btn-reset').attr('disabled', false).html 'Clear &amp; reset'

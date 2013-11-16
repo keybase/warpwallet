@@ -19,8 +19,8 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 <script type="text/javascript">
 window.params = { 
-	"N"        : 10,
-	"c1"       : 6536,
+	"N"        : 18,
+	"c1"       : 65536,
 	"p"        : 1,
 	"r"        : 8,
 	"dkLen"    : 32
@@ -128,21 +128,23 @@ window.params = {
       var w;
       if (o.what === 'scrypt') {
         w = (o.i / o.total) * 50;
-        return $('.progress-form .bar').css('width', "" + w + "%").html("scrypt " + (this.commas(o.i)) + " of " + (this.commas(o.total)));
+        $('.progress-form .bar').css('width', "" + w + "%");
+        return $('.progress-form .bar .progress-scrypt').html("scrypt " + (this.commas(o.i)) + " of " + (this.commas(o.total)));
       } else if (o.what === 'pbkdf2 (pass 2)') {
         w = 50 + (o.i / o.total) * 50;
-        return $('.progress-form .bar').css('width', "" + w + "%").html("pbkdf2 " + (this.commas(o.i)) + " of " + (this.commas(o.total)));
+        $('.progress-form .bar').css('width', "" + w + "%");
+        return $('.progress-form .bar .progress-pbkdf2').html("&nbsp; pbkdf2 " + (this.commas(o.i)) + " of " + (this.commas(o.total)));
       }
     };
 
     Warper.prototype.click_reset = function() {
-      $('.progress-form').hide();
-      $('#btn-submit').attr('disabled', false).show().html('Generate');
+      $('#btn-submit').attr('disabled', false).show().html('Please enter a passphrase');
       $('#passphrase, #salt, #public-address, #private-key').val('');
-      $('.output-form').hide();
       $('#checkbox-salt-confirm').attr('checked', false);
+      $('.salt-summary').html('');
       $('.salt-confirm').hide();
-      return $('.salt-summary').html('');
+      $('.progress-form').hide();
+      return $('.output-form').hide();
     };
 
     Warper.prototype.click_submit = function() {
@@ -164,10 +166,11 @@ window.params = {
         return _this.progress_hook(o);
       };
       $('.progress-form').show();
-      $('.progress-form .bar').html('');
+      $('.progress-form .bar span').html('');
       return warpwallet.scrypt(d, function(words) {
         var out;
         $('#passphrase, #salt, checkbox-salt-confirm').attr('disabled', false);
+        $('.progress-form').hide();
         $('.output-form').show();
         $('#btn-submit').hide();
         $('#btn-reset').attr('disabled', false).html('Clear &amp; reset');
@@ -12535,18 +12538,27 @@ h1 .second-half {
   cursor:pointer;
   background-color: #fff
 }
+.form-horizontal .progress-form {
+  margin: 20px 0px 20px 0px;
+} 
 .progress-form {
-  margin: 20px 2px 20px 2px;
+  background-color: #eee;
 }
 .progress-form .bar {
-  background-color:#ee6;
+  background-color:#f8f8f8;
+  border-right:20px solid #666;
   width:10%;
-  /*font-size:0.8em;*/
   color:#f90;
   overflow:hidden;
   white-space: nowrap;
   padding:3px 0 3px 10px;
-  border-radius:5px;
+  font-family: 'courier new',courier,fixed;
+}
+.progress-scrypt {
+  color:#090;
+}
+.progress-pbkdf2 {
+  color:#f90;
 }
 </style>
 
@@ -12591,12 +12603,15 @@ License, etc., info to come here soon.
         </div>
         <div class="form-group">
           <div class="col-sm-8 col-sm-offset-4">
-            <button class="btn btn-success" id="btn-submit">Generate</button>
+            <button class="btn btn-success" id="btn-submit" disabled="true">Please enter a passphrase</button>
             <button class="btn btn-danger" id="btn-reset">Clear &amp; reset</button>
           </div>
         </div>
         <div class="form-group progress-form" style="display:none;">
-          <div class="bar"></div>
+          <div class="bar" style="width:10%;">
+            <span class="progress-scrypt"></span>
+            <span class="progress-pbkdf2"></span>
+          </div>
         </div>
         <div class="output-form" style="display:none;">
           <div class="form-group">
@@ -12606,7 +12621,7 @@ License, etc., info to come here soon.
             </div>
           </div>
           <div class="form-group">
-            <label for="private-key" class="col-sm-4 control-label">Private Key <span class="sub-label">(DO NOT SHARE)</span></label>
+            <label for="private-key" class="col-sm-4 control-label">Private key <span class="sub-label">(don't share)</span></label>
             <div class="col-sm-8">
               <input id="private-key" readonly class="form-control">
             </div>
