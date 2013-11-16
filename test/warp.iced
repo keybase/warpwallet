@@ -9,5 +9,11 @@ exports.run = run = ({passphrase, salt}, cb) ->
   d.key = WordArray.from_utf8 passphrase
   d.salt = WordArray.from_utf8 salt
   await scrypt d, defer res
-  cb res.to_buffer()
+  seed = res.to_buffer()
+  out = generate seed
+  out.seed = seed.toString('hex')
+  cb out
+
+await run { passphrase : "hello", "salt" : "hiiii" }, defer stuff
+console.log stuff
 
