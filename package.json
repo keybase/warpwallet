@@ -4,16 +4,14 @@
   "description": "Open Source JavaScript Client-Side Bitcoin Wallet Generator Using scrypt",
   "dependencies": {
     "iced-coffee-script": "",
-    "iced-utils": "",
+    "iced-utils" : ">=0.1.1",
     "keybase-bitcoin": ">=0.0.0",
     "triplesec" : "keybase/triplesec#header_v3",
-    "browserify" : "*"
-  },
-  "devDependencies": {
-     "iced-error" : "*",
-     "iced-test"  : "*",
-     "iced-utils" : ">=0.1.1",
-     "colors" : "*"
+    "browserify" : "*",
+    "iced-error" : "*",
+    "iced-test"  : "*",
+    "colors" : "*",
+    "icsify" : "*"
   },
   "repository": {
     "type": "git",
