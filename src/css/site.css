@@ -3,6 +3,12 @@ body {
   background-repeat: repeat-x repeat-y;
   background-color:#ccc;
 }
+.footer {
+  background-color:#aaa;
+  padding-top:50px;
+  margin-top:50px;
+  min-height: 500px;
+}
 h1 {
   font-size:5em;
   color:#eee;
@@ -13,9 +19,6 @@ h1 {
 h1 .second-half {
   color:#fff;
   font-style: italic;
-}
-.container {
-  margin-top:10px;
 }
 .form-container {
   border: 2px solid #bbb;
@@ -38,7 +41,6 @@ h1 .second-half {
 }
 .sub-row .col h4 {
   padding-bottom:3px;
-  border-bottom:1px solid #ddd;
   margin-bottom:10px;
 }
 .salt-summary {

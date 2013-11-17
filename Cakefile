@@ -6,6 +6,7 @@ exec        = require('child_process').exec
 {version}   = require('./package.json')
 crypto      = require('crypto')
 {make_esc}  = require 'iced-error'
+{brew}      = require 'brew'
 
 # -----------------------------------------------------------
 #
@@ -40,9 +41,22 @@ task 'build', "build the html file", (cb) ->
   cb?()
 
 task 'watch', "build repeatedly", (cb) ->  
+  await build defer err
+  ready = false
+  b = new brew {
+    match:    /^.*$/
+    includes: ['./src/', './warp.io_src.html']
+    compile:  (path, txt, cb)  -> cb null, txt 
+    join:     (strs, cb)       -> cb null, (strs.join "\n") 
+    compress: (str,  cb)    -> cb null, str
+    onChange: ->
+      while not b.isReady()
+        await setTimeout defer(), 500
+        console.log "waiting for build"
+      await build defer err
+  }
   while true
-    await build defer()
-    await setTimeout defer(), 500
+    await setTimeout defer(), 1000
 
 hash_data = (data) ->
   hasher = crypto.createHash('SHA256')

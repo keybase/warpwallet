@@ -10,6 +10,7 @@
     "browserify" : "*",
     "iced-error" : "*",
     "iced-test"  : "*",
+    "brew" : "*",
     "colors" : "*",
     "icsify" : "*"
   },
