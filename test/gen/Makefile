@@ -6,9 +6,9 @@ BU=python/bin/bu
 build-scrypt:
 	(cd ${SCRYPT_DIR} && ./configure && make clean && make)
 
-build-pycoin:
-	mkdir -p python
-	(cd python && (virtualenv . && source bin/activate && pip install pycoin) )
+build-python:
+	mkdir -p py-venv
+	(cd py-venv && (virtualenv . && source bin/activate && pip install pycoin && pip install pycrypto) )
 
 input:
 	iced gen_input.iced > input.json
@@ -16,4 +16,4 @@ input:
 spec:
 	iced gen_spec.iced ${SCRYPT} ${BU} > ../spec.json
 
-.PHONY: build-scrypt build-pycoin
+.PHONY: build-scrypt build-python

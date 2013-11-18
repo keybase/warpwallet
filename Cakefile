@@ -113,6 +113,7 @@ token_build_and_drop = (html, cb) ->
 
 do_browserify = (cb) ->
   b = browserify()
+  b.transform(require 'icsify')
   b.add("./src/iced/top.iced")
   await b.bundle { standalone : 'warpwallet' }, defer err, res
   throw err if err?
