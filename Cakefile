@@ -12,6 +12,10 @@ crypto      = require('crypto')
 #
 # Build with "icake build" which requires iced-coffee-script.
 #
+# This file is somewhat large because it does a bunch of cool
+# things to build the final HTML file, such as converting
+# png's to HTML data, etc.
+#
 # Or use "icake watch" to put cake into a recompile loop
 # while actively developing
 # -----------------------------------------------------------

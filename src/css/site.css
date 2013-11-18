@@ -42,6 +42,26 @@ h1 .second-half {
 .sub-row .col h4 {
   padding-bottom:3px;
   margin-bottom:10px;
+  color: #666;
+  background-color:#bbb;
+  padding:10px;
+  border-radius: 5px;
+}
+.sub-row p {
+  padding: 10px;
+  color: #666;
+}
+.sub-row pre {
+  border: 0px;
+  background-color: #939393;
+}
+.sub-row p a {
+  color: #446;
+  text-decoration: underline;
+}
+.sub-row table {
+  background-color: #939393;
+  text-align:center;
 }
 .salt-summary {
   text-decoration: underline

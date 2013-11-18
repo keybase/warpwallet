@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  <title>WarpWallet - deterministic bitcoin wallet generator</title>
 
 <meta charset="utf-8">
   <!--
@@ -67,7 +68,7 @@ window.params = {::src/json/params.json::};
 
   <div class="row"> 
     <div class="col-sm-12">
-      <h1>W4rp<span class="second-half">Wallet</span></h1>
+      <h1>Warp<span class="second-half">Wallet</span></h1>
       <form class="form-horizontal form-container" role="form">
         <div class="form-group">
           <label for="passphrase" class="col-sm-4 control-label">Passphrase</label>
@@ -126,13 +127,75 @@ window.params = {::src/json/params.json::};
   <div class="container">
     <div class="row sub-row">
       <div class="col col-sm-4">
-        <h4>What isn't WarpWallet?</h4>
+        <h4>What is WarpWallet?</h4>
+        <p>
+          WarpWallet is a deterministic bitcoin wallet generator. 
+          You pick a unique passphrase which is big, but which you can remember. You never have to save
+          or store your bitcoin wallet anywhere -- online or offline. Just remember your passphrase. 
+          Then send money to the public address.  When you want to extract
+          the BTC (and import to an online wallet), just re-generate your private key.
+        </p>
+        <p>
+          This is not an original idea. <a href="https://www.bitaddress.org/">bitaddress.org's brainwallet</a> 
+          is our inspiration.
+        </p>
+        <p>
+          WarpWallet adds two improvements: (1) you can salt your passphrase with your email address. This is trivial for you to remember, so why not? It is optional of course. And (2) WarpWallet uses <a href="http://en.wikipedia.org/wiki/Scrypt">scrypt</a> to make address generation both memory and time-intensive.
+        </p>
+        <p>
+          You can save this self-contained HTML file and access it wherever you like, even on an 
+          air-gapped computer. Heck, email it to 10 friends if you're afraid it will go away. 
+          All the JS, CSS, and images are embedded.
+        </p>
+        <p>
+          If you're a programmer and want to reproduce WarpWallet's output, it's simply:
+        </p>
+<pre>
+  # max to write this part, filler
+  bleah(pbkdf2(scrypt(passphrase, salt)))
+</pre>
       </div>
       <div class="col col-sm-4">
-        <h4>Info</h4>
+        <h4>Authors</h4>
+        <p>
+          We are <a href="https://twitter.com/maxtaco">Max Krohn</a> and
+          <a href="https://twitter.com/malgorithms">Chris Coyne</a>, co-founders
+          of OkCupid, SparkNotes, and a bunch of other toys.
+        </p>
+        <p>
+          You can always see our signed version history at <a href="https://warp.io/versions.txt">https://warp.io/versions.txt</a>
+        </p>
+        <p>
+          <i>WarpWallet</i> is of course offered without any warranty of any kind;
+          if you lose your bitcoins due to a bug in our software, your keystrokes being 
+          recorded on a machine connected to the Internet, or a passphrase which was too weak,
+          we're sorry. 
+        </p>
       </div>
       <div class="col col-sm-4">
         <h4>WarpWallet Challenge</h4>
+        <p>
+          We would like to get an idea of the bitcoin community's ability to crack WarpWallet,
+          so we are making 50 bitcoins available should you crack it.
+        </p>
+        <p>
+          The first couple levels should go quickly. We hope it is impossible to crack a 9 character
+          passphrase by brute force. If we're wrong, and that money is stolen, oh shit, basically. Scrypt
+          is fucked.
+        <p>
+          We generated 5 addresses using <i>unsalted</i> passphrases. All the passphrases are
+          alphanumerics only. For example: 'hY9f' would be a legit 4 character passphrase.
+        </p>
+        <table class="table">
+          <tr><th>Difficulty</th><th>Passphrase Length</th><th>Reward</th><th>Bitcoin Address</th></tr>
+          <tr><td>Level 1</td><td>3</td><td>0.25BTC</td><td></td></tr>
+          <tr><td>Level 2</td><td>4</td><td>0.5BTC</td><td></td></tr>
+          <tr><td>Level 3</td><td>5</td><td>1.0BTC</td><td></td></tr>
+          <tr><td>Level 4</td><td>6</td><td>2.0BTC</td><td></td></tr>
+          <tr><td>Level 5</td><td>7</td><td>4.0BTC</td><td></td></tr>
+          <tr><td>Level 6</td><td>8</td><td>8.0BTC</td><td></td></tr>
+          <tr><td>Level 7</td><td>9</td><td>16.0BTC</td><td></td></tr>
+        </table>
       </div>
     </div>
   </div>
