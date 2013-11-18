@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 
 from Crypto.Protocol.KDF import PBKDF2
 from Crypto.Hash import HMAC

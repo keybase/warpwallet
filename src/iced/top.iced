@@ -21,9 +21,11 @@ exports.run = run = ({passphrase, salt, params, progress_hook}, cb) ->
   }
   await pbkdf2 d2, defer w2
 
+  seed1 = w.to_buffer()
   w.xor w2, {}
+  seed2 = w.to_buffer()
 
-  seed = w.to_buffer()
-  out = generate seed
-  out.seed = seed
+  out = generate seed2
+  out.seed1 = seed1
+  out.seed2 = seed2
   cb out
