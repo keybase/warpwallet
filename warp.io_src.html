@@ -67,23 +67,23 @@ window.params = {::src/json/params.json::};
 <div class="container">
 
   <div class="row"> 
-    <div class="col-sm-12">
+    <div class="col-md-12">
       <h1>Warp<span class="second-half">Wallet</span></h1>
       <form class="form-horizontal form-container" role="form">
         <div class="form-group">
-          <label for="passphrase" class="col-sm-4 control-label">Passphrase</label>
-          <div class="col-sm-8">
+          <label for="passphrase" class="col-md-4 control-label">Passphrase</label>
+          <div class="col-md-8">
             <input id="passphrase" class="form-control">
           </div>  
         </div>
         <div class="form-group">
-          <label for="salt" class="col-sm-4 control-label salt-label">Optional: your email as a salt</label>
-          <div class="col-sm-8">
+          <label for="salt" class="col-md-4 control-label salt-label">Optional: your email as a salt</label>
+          <div class="col-md-8">
             <input id="salt" class="form-control">
           </div>
         </div>
         <div class="form-group salt-confirm chefckbox" style="display:none;">
-          <div class="col-sm-8 col-sm-offset-4">
+          <div class="col-md-8 col-md-offset-4">
             <div class="checkbox">
               <label>
                 <input type="checkbox" id="checkbox-salt-confirm"> Sanity check: I confirm <span class="salt-summary"></span>
@@ -92,7 +92,7 @@ window.params = {::src/json/params.json::};
           </div>
         </div>
         <div class="form-group">
-          <div class="col-sm-8 col-sm-offset-4">
+          <div class="col-md-8 col-md-offset-4">
             <button class="btn btn-success" id="btn-submit" disabled="true">Please enter a passphrase</button>
             <button class="btn btn-danger" id="btn-reset">Clear &amp; reset</button>
           </div>
@@ -105,14 +105,14 @@ window.params = {::src/json/params.json::};
         </div>
         <div class="output-form" style="display:none;">
           <div class="form-group">
-            <label for="public-address" class="col-sm-4 control-label">Public bitcoin address</label>
-            <div class="col-sm-8">
+            <label for="public-address" class="col-md-4 control-label">Public bitcoin address</label>
+            <div class="col-md-8">
               <input id="public-address" readonly class="form-control">
             </div>
           </div>
           <div class="form-group">
-            <label for="private-key" class="col-sm-4 control-label">Private key <span class="sub-label">(don't share)</span></label>
-            <div class="col-sm-8">
+            <label for="private-key" class="col-md-4 control-label">Private key <span class="sub-label">(don't share)</span></label>
+            <div class="col-md-8">
               <input id="private-key" readonly class="form-control">
             </div>
           </div>
@@ -126,25 +126,24 @@ window.params = {::src/json/params.json::};
 
   <div class="container">
     <div class="row sub-row">
-      <div class="col col-sm-4">
+      <div class="col col-md-4">
         <h4>What is WarpWallet?</h4>
         <p>
-          WarpWallet is a deterministic bitcoin wallet generator. 
-          You pick a unique passphrase which is big, but which you can remember. You never have to save
+          WarpWallet is a deterministic bitcoin wallet generator. You never have to save
           or store your bitcoin wallet anywhere -- online or offline. When you want to extract
           the BTC (and import to an online wallet), just re-generate with this page.
+        </p>
+        <p>
+          You can save this self-contained HTML file and access it wherever you like, even on an 
+          air-gapped computer. Heck, email it to 10 friends if you're afraid it will go away. 
+          All the JS, CSS, and images are embedded.
         </p>
         <p>
           This is not an original idea. <a href="https://www.bitaddress.org/">bitaddress.org's brainwallet</a> 
           is our inspiration.
         </p>
         <p>
-          WarpWallet adds two improvements: (1) you can salt your passphrase with your email address. This is trivial for you to remember, so why not? It is optional of course. And (2) WarpWallet uses <a href="http://en.wikipedia.org/wiki/Scrypt">scrypt</a> to make address generation both memory and time-intensive.
-        </p>
-        <p>
-          You can save this self-contained HTML file and access it wherever you like, even on an 
-          air-gapped computer. Heck, email it to 10 friends if you're afraid it will go away. 
-          All the JS, CSS, and images are embedded.
+          WarpWallet adds two improvements: (1) WarpWallet uses <a href="http://en.wikipedia.org/wiki/Scrypt">scrypt</a> to make address generation both memory and time-intensive. And (2) you can salt your passphrase with your email address. This is trivial for you to remember, so why not? It is optional of course.
         </p>
         <p>
           If you're a programmer and want to reproduce WarpWallet's output, it's simply:
@@ -154,28 +153,70 @@ window.params = {::src/json/params.json::};
   bleah(pbkdf2(scrypt(passphrase, salt)))
 </pre>
       </div>
-      <div class="col col-sm-4">
+      <div class="col col-md-4">
         <h4>Authors</h4>
         <p>
           We are <a href="https://twitter.com/maxtaco">Max Krohn</a> and
           <a href="https://twitter.com/malgorithms">Chris Coyne</a>, co-founders
-          of OkCupid, SparkNotes, and a bunch of other toys.
+          of OkCupid, SparkNotes, and a bunch of other toys. Good day to you! We recently left OkCupid after 9 years, so we
+          have a lot of time on our hands.
         </p>
         <p>
-          You can always see our signed version history at <a href="https://warp.io/versions.txt">https://warp.io/release.txt</a>
+          But enough with the pleasantries: you can always see our signed version history at <a href="https://warp.io/versions.txt">https://warp.io/release.txt</a>
         </p>
         <p>
           <i>WarpWallet</i> is of course offered without any warranty of any kind;
           if you lose your bitcoins due to a bug in our software, your keystrokes being 
           recorded on a machine connected to the Internet, or a passphrase which was too weak,
-          we're sorry. 
+          we are sorry but we cannot help you. Of course if you're messing around with bitcoins, you
+          know how dangerous it is.
         </p>
       </div>
-      <div class="col col-sm-4">
+      <div class="col col-md-4">
         <h4>WarpWallet Challenge</h4>
         <p>
-          We are making 50 bitcoins available should you crack it.
+          The following challenges are designed to test the safety of WarpWallet. We put our own bitcoins in
+          for the challenge. We expect the first 3 challenges to go quickly.  If challenges 4 and 5 fall, 
+          WarpWallet is not safe.
         </p>
+
+        <div class="challenge">
+          <h5>Challenge 1</h5>
+          <ul>
+            <li><b>reward</b>: 0.25 BTC</li>
+            <li>
+              <b>hint</b>: This passphrase is the username of the someone in the <a href="https://news.ycombinator.com/leaders">Hacker News top 100 karma</a>
+              list, as of November 19, 2013. However, we have changed the case on his/her name and reordered the characters. For example, 'btilly' might be 'YiLLtB'.
+            </li>
+            <li><b>wallet</b>: <a href="https://blockchain.info/address/1F1k4fXca2L8ew5YV3isDzs7nTSe1oG7uK" target="_new">1F1k4fX...</a></li>
+            <li><b>status</b>: unbroken</li>
+          </ul>
+        </div>
+
+        <div class="challenge">
+          <h5>Challenge 2</h5>
+          <ul>
+            <li><b>reward</b>: 0.5 BTC</li>
+            <li>
+              <b>hint</b>: this passphrase is 4 random alphanumeric characters, such as 'hb2A'.
+            </li>
+            <li><b>wallet</b>: <a href="https://blockchain.info/address/1F1k4fXca2L8ew5YV3isDzs7nTSe1oG7uK" target="_new">1F1k4fX...</a></li>
+            <li><b>status</b>: unbroken</li>
+          </ul>
+        </div>
+
+        <div class="challenge">
+          <h5>Challenge 3</h5>
+          <ul>
+            <li><b>reward</b>: 0.5 BTC</li>
+            <li>
+              <b>hint</b>: this passphrase is 5 random alphanumeric characters, such as '89GPx'.
+            </li>
+            <li><b>wallet</b>: <a href="https://blockchain.info/address/1F1k4fXca2L8ew5YV3isDzs7nTSe1oG7uK" target="_new">1F1k4fX...</a></li>
+            <li><b>status</b>: unbroken</li>
+          </ul>
+        </div>
+
         <p>
           The first couple levels should go quickly. A passphrase with only 4 characters
           and no salt is pretty simple.
