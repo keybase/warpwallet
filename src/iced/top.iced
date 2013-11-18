@@ -12,8 +12,6 @@ exports.run = run = ({passphrase, salt, params, progress_hook}, cb) ->
   await scrypt d, defer w
 
   seed1 = w.to_buffer()
-  console.log seed1.toString('hex')
-  console.log d.salt.to_hex()
 
   d2 = {
     key : w.clone()
@@ -24,11 +22,13 @@ exports.run = run = ({passphrase, salt, params, progress_hook}, cb) ->
     klass : HMAC_SHA256
   }
   await pbkdf2 d2, defer w2
-  console.log w2.to_hex()
 
   w.xor w2, {}
   seed2 = w.to_buffer()
-  console.log seed2.toString('hex')
+
+  w.scrub()
+  w2.scrub()
+  d.key.scrub()
 
   out = generate seed2
   out.seeds = [ seed1, seed2 ]
