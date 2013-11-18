@@ -14,6 +14,7 @@ h1 {
   color:#eee;
   font-weight:bold;
   text-align: center;
+  margin-top:50px;
   margin-bottom:30px;
 }
 h1 .second-half {
@@ -23,8 +24,9 @@ h1 .second-half {
 .form-container {
   border: 2px solid #bbb;
   border-radius:10px;
-  background-color: #f8f8f8;
+  background-color: #f8f8f4;
   padding:40px;
+  margin-bottom:50px;
 }
 .form-container label {
   color:#666;
@@ -76,9 +78,20 @@ h1 .second-half {
   background-color: #939393;
 }
 .sub-row a {
-  color: #ccc;
-  /*text-decoration: underline;*/
+  color: #445;
 }
+.sub-row .wallet-link {
+  font-size:0.8em;
+  color: #445;
+}
+.sub-row .reward-amount {
+  color:#464;
+  font-weight:bold;
+}
+.sub-row .unbroken {
+  color:#464;
+}
+
 .sub-row table {
   background-color: #939393;
   text-align:center;
@@ -118,4 +131,13 @@ h1 .second-half {
 }
 .progress-pbkdf2 {
   color:#f90;
+}
+
+hr { 
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #777;
+    margin: 1em 0; 
+    padding: 0; 
 }
