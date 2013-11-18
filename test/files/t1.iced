@@ -21,4 +21,5 @@ exports.test_spec = (T, cb) ->
   for v,i in spec.vectors
     await run1 T, i, v, defer()
     T.waypoint "Spec vector #{i}"
+    await setTimeout defer(), 10
   cb()

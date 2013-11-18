@@ -76,7 +76,7 @@ class Warper
       $('.progress-form .bar').css('width', "#{w}%")
       $('.progress-form .bar .progress-scrypt').html "scrypt #{@commas o.i} of #{@commas o.total}"
 
-    else if o.what is 'pbkdf2 (pass 2)'
+    else if o.what is 'pbkdf2'
       w = 50 + (o.i / o.total) * 50
       $('.progress-form .bar').css('width', "#{w}%")
       $('.progress-form .bar .progress-pbkdf2').html "&nbsp; pbkdf2 #{@commas o.i} of #{@commas o.total}"
@@ -98,16 +98,12 @@ class Warper
     $('#passphrase, #salt, checkbox-salt-confirm').attr 'disabled', true
     $('.progress-form').show()
 
-    d = {}
-    (d[k] = v for k,v of window.params)
-    d.salt = new warpwallet.WordArray.from_utf8 $('#salt').val()
-    d.key  = new warpwallet.WordArray.from_utf8 $('#passphrase').val()
-    d.progress_hook = (o) => @progress_hook o
-
-    $('.progress-form').show()
-    $('.progress-form .bar span').html ''
-
-    warpwallet.scrypt d, (words) =>
+    warpwallet.run { 
+      passphrase : $('#passphrase').val()
+      salt : $('#salt').val()
+      progress_hook : (o) => @progress_hook o
+      params : window.params
+    }, (res) =>
 
       $('#passphrase, #checkbox-salt-confirm').attr 'disabled', false
       if not window.SALT_DEFAULT?
@@ -116,9 +112,8 @@ class Warper
       $('.output-form').show()
       $('#btn-submit').hide()
       $('#btn-reset').attr('disabled', false).html 'Clear &amp; reset'
-      out = warpwallet.generate words.to_buffer()
-      $('#public-address').val out.public
-      $('#private-key').val out.private
+      $('#public-address').val res.public
+      $('#private-key').val res.private
 
 $ ->
   new Warper()
