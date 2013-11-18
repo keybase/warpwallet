@@ -30,8 +30,10 @@ class Warper
     warn = null
     if not pp.length
       err = "Please enter a passphrase"
+    else if salt?.length and not @salt_ok()
+      err = "Fix your salt"
     else if salt?.length and (not chk) and (not window.SALT_DEFAULT?)
-      err = "Fix and accept your salt"
+      err = "Confirm your salt"
     else if pp.length < 12
       warn = "Consider a larger passphrase"
 
@@ -50,6 +52,10 @@ class Warper
       n = n.toString().replace /(\d+)(\d{3})/, '$1,$2'
     n
 
+  salt_ok: ->
+    salt = $('#salt').val()
+    return (salt.match /^[\S]+@[\S]+\.[\S]+$/) or window.SALT_DEFAULT?
+
   salt_change: ->
     salt = $('#salt').val()
     $('#checkbox-salt-confirm').attr 'checked', false
@@ -57,10 +63,9 @@ class Warper
       $('.salt-confirm').hide()
     if window.SALT_DEFAULT?
       $('.salt-confirm').hide()      
-    else if salt.match /// ^[0-9]{4}-[0-9]{2}-[0-9]{2} $///
-      mom = moment salt, "YYYY-MM-DD"
+    else if @salt_ok() 
       $('.salt-confirm').show()
-      $('.salt-summary').html mom.format "MMMM Do, YYYY"
+      $('.salt-summary').html salt
     else
       $('.salt-confirm').hide()
     @any_change()

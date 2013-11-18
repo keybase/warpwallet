@@ -117,8 +117,10 @@ window.params = {
       warn = null;
       if (!pp.length) {
         err = "Please enter a passphrase";
+      } else if ((salt != null ? salt.length : void 0) && !this.salt_ok()) {
+        err = "Fix your salt";
       } else if ((salt != null ? salt.length : void 0) && (!chk) && (window.SALT_DEFAULT == null)) {
-        err = "Fix and accept your salt";
+        err = "Confirm your salt";
       } else if (pp.length < 12) {
         warn = "Consider a larger passphrase";
       }
@@ -141,8 +143,14 @@ window.params = {
       return n;
     };
 
+    Warper.prototype.salt_ok = function() {
+      var salt;
+      salt = $('#salt').val();
+      return (salt.match(/^[\S]+@[\S]+\.[\S]+$/)) || (window.SALT_DEFAULT != null);
+    };
+
     Warper.prototype.salt_change = function() {
-      var mom, salt;
+      var salt;
       salt = $('#salt').val();
       $('#checkbox-salt-confirm').attr('checked', false);
       if (!salt.length) {
@@ -150,10 +158,9 @@ window.params = {
       }
       if (window.SALT_DEFAULT != null) {
         $('.salt-confirm').hide();
-      } else if (salt.match(/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/)) {
-        mom = moment(salt, "YYYY-MM-DD");
+      } else if (this.salt_ok()) {
         $('.salt-confirm').show();
-        $('.salt-summary').html(mom.format("MMMM Do, YYYY"));
+        $('.salt-summary').html(salt);
       } else {
         $('.salt-confirm').hide();
       }
@@ -12588,11 +12595,18 @@ h1 .second-half {
   background-color: #939393;
 }
 .sub-row p a {
-  color: #446;
-  text-decoration: underline;
+  color: #ccc;
+  /*text-decoration: underline;*/
 }
 .sub-row table {
   background-color: #939393;
+  text-align:center;
+  border-radius: 5px;
+}
+.sub-row table tr td, .sub-row table tr th {
+  border-width:0px;
+}
+.sub-row th {
   text-align:center;
 }
 .salt-summary {
@@ -12644,7 +12658,7 @@ h1 .second-half {
           </div>  
         </div>
         <div class="form-group">
-          <label for="salt" class="col-sm-4 control-label salt-label">Optional birthday salt YYYY-MM-DD</label>
+          <label for="salt" class="col-sm-4 control-label salt-label">Optional: your email as a salt</label>
           <div class="col-sm-8">
             <input id="salt" class="form-control">
           </div>
@@ -12698,9 +12712,8 @@ h1 .second-half {
         <p>
           WarpWallet is a deterministic bitcoin wallet generator. 
           You pick a unique passphrase which is big, but which you can remember. You never have to save
-          or store your bitcoin wallet anywhere -- online or offline. Just remember your passphrase. 
-          Then send money to the public address.  When you want to extract
-          the BTC (and import to an online wallet), just re-generate your private key.
+          or store your bitcoin wallet anywhere -- online or offline. When you want to extract
+          the BTC (and import to an online wallet), just re-generate with this page.
         </p>
         <p>
           This is not an original idea. <a href="https://www.bitaddress.org/">bitaddress.org's brainwallet</a> 
@@ -12730,7 +12743,7 @@ h1 .second-half {
           of OkCupid, SparkNotes, and a bunch of other toys.
         </p>
         <p>
-          You can always see our signed version history at <a href="https://warp.io/versions.txt">https://warp.io/versions.txt</a>
+          You can always see our signed version history at <a href="https://warp.io/versions.txt">https://warp.io/release.txt</a>
         </p>
         <p>
           <i>WarpWallet</i> is of course offered without any warranty of any kind;
@@ -12742,27 +12755,30 @@ h1 .second-half {
       <div class="col col-sm-4">
         <h4>WarpWallet Challenge</h4>
         <p>
-          We would like to get an idea of the bitcoin community's ability to crack WarpWallet,
-          so we are making 50 bitcoins available should you crack it.
+          We are making 50 bitcoins available should you crack it.
         </p>
         <p>
-          The first couple levels should go quickly. We hope it is impossible to crack a 9 character
-          passphrase by brute force. If we're wrong, and that money is stolen, oh shit, basically. Scrypt
-          is fucked.
+          The first couple levels should go quickly. A passphrase with only 4 characters
+          and no salt is pretty simple.
         <p>
           We generated 5 addresses using <i>unsalted</i> passphrases. All the passphrases are
           alphanumerics only. For example: 'hY9f' would be a legit 4 character passphrase.
         </p>
         <table class="table">
-          <tr><th>Difficulty</th><th>Passphrase Length</th><th>Reward</th><th>Bitcoin Address</th></tr>
-          <tr><td>Level 1</td><td>3</td><td>0.25BTC</td><td></td></tr>
-          <tr><td>Level 2</td><td>4</td><td>0.5BTC</td><td></td></tr>
-          <tr><td>Level 3</td><td>5</td><td>1.0BTC</td><td></td></tr>
-          <tr><td>Level 4</td><td>6</td><td>2.0BTC</td><td></td></tr>
-          <tr><td>Level 5</td><td>7</td><td>4.0BTC</td><td></td></tr>
-          <tr><td>Level 6</td><td>8</td><td>8.0BTC</td><td></td></tr>
-          <tr><td>Level 7</td><td>9</td><td>16.0BTC</td><td></td></tr>
+          <tr><th>Chars</th><th>Reward</th><th>Address</th><th>Cracked?</th></tr>
+          <tr><td>3</td><td>0.25BTC</td><td></td><td>-</td></tr>
+          <tr><td>4</td><td>0.5BTC</td><td></td> <td>-</td></tr>
+          <tr><td>5</td><td>1.0BTC</td><td></td> <td>-</td></tr>
+          <tr><td>6</td><td>2.0BTC</td><td></td> <td>-</td></tr>
+          <tr><td>7</td><td>4.0BTC*</td><td></td> <td>-</td></tr>
+          <tr><td>8</td><td>8.0BTC*</td><td></td> <td>-</td></tr>
+          <tr><td>9</td><td>16.0BTC*</td><td></td><td>-</td></tr>
         </table>
+        <p>
+          * the last 3 levels have half-balance in them, and we will send
+          the remainder to whoever discovers the private key, on the condition
+          you tell us how you did it.
+        </p>
       </div>
     </div>
   </div>

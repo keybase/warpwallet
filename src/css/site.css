@@ -56,11 +56,18 @@ h1 .second-half {
   background-color: #939393;
 }
 .sub-row p a {
-  color: #446;
-  text-decoration: underline;
+  color: #ccc;
+  /*text-decoration: underline;*/
 }
 .sub-row table {
   background-color: #939393;
+  text-align:center;
+  border-radius: 5px;
+}
+.sub-row table tr td, .sub-row table tr th {
+  border-width:0px;
+}
+.sub-row th {
   text-align:center;
 }
 .salt-summary {
