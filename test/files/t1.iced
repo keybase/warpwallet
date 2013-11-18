@@ -11,8 +11,8 @@ run1 = (T, i, vec, cb) ->
     salt : vec.salt
     params
   }, defer ret
-  T.equal ret.seeds[0].toString('hex'), vec.seeds[0], "v#{i}: seeds[0] matches"
-  T.equal ret.seeds[1].toString('hex'), vec.seeds[1], "v#{i}: seeds[1] matches"
+  for s,j in ret.seeds
+    T.equal s.toString('hex'), vec.seeds[j], "v#{i}: seeds[#{j}] matches"
   T.equal ret.private, vec.keys.private, "v#{i}: private key matches"
   T.equal ret.public, vec.keys.public, "v#{i}: public key matches"
   cb()

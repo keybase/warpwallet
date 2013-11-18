@@ -50,7 +50,7 @@ class Runner
       "-N", @params.N,
       "-p", @params.p,
       "-r", @params.r,
-      "-d", @params.dkLen,
+      "-d", @params.dkLen*2,
       "-c", @params.c1,
       "-P", input.passphrase,
       "-s", input.salt
@@ -69,13 +69,13 @@ class Runner
 
   #-------------------
 
-  run_pbkdf2 : (input, seed1, cb) ->
+  run_pbkdf2 : (input, s1, s2, cb) ->
     args = [
-      "-c", params.pbkdf2c,
-      "-d", params.dkLen,
-      "-k", seed1,
+      "-c", @params.pbkdf2c,
+      "-d", @params.dkLen,
+      "-k", s2,
       "-s", hexlify(input.salt),
-      "-b", seed1
+      "-b", s1
     ]
     opts = { 
       quiet : true 
@@ -85,9 +85,8 @@ class Runner
     out = []
     child.filter (l, which) -> out.push l
     await child.run().wait defer status
-    x = /([0-9a-f]+)/
-    ret = if (m = out[0].match x)? then m[1] else null
-    cb ret
+    [s3, s4] = out.join('\n').split /\n/
+    cb s3, s4
 
   #-------------------
 
@@ -120,12 +119,13 @@ class Runner
   #-------------------
 
   make_vector : (input, cb) ->
-    await @run_scrypt input, defer seed1
-    await @run_pbkdf2 input, seed1, defer seed2
-    await @run_bu seed2, defer keys
+    await @run_scrypt input, defer s0
+    [s1,s2] = [ s0[0...@params.dkLen*2], s0[@params.dkLen*2...] ]
+    await @run_pbkdf2 input, s1, s2, defer s3, s4
+    await @run_bu s4, defer keys
     out = {}
     (out[k] = v for k,v of input)
-    out.seeds = [ seed1, seed2 ]
+    out.seeds = [ s0, s3, s4 ]
     out.keys = keys
     cb out
 
