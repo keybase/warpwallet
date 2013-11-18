@@ -181,12 +181,14 @@ window.package = {::package.json::};
         <p>
           For safety, we've implemented WarpWallet outside of JavaScript and confirmed it generates the same output. (It's a step in our test suite.) If you're a programmer and want to implement WarpWallet yourself...
         </p>
-<pre>
-  s1 = scrypt(key=passphrase, salt=salt, N=2^18, r=1, p=8, dkLen=32)
-  s2 = pbkdf2(key=s1, salt=salt, c=2^16, dkLen=32)
-  seed = s1^s2
-  keypair = generate_bitcoin_keypair(seed)
-</pre>
+
+        <table class="table table-condensed" style="font-size:1.0em;">
+          <tr><td valign="top" align="right">s1</td>     <td valign="top">=</td><td valign="top" align="left">scrypt(key=passphrase, salt=salt, N=2^18, r=1, p=8, dkLen=32)</td></tr>
+          <tr><td valign="top" align="right">s2</td>     <td valign="top">=</td><td valign="top" align="left">pbkdf2(key=s1, salt=salt, c=2^16, dkLen=32)</td></tr>
+          <tr><td valign="top" align="right">seed</td>   <td valign="top">=</td><td valign="top" align="left">s1^s2</td></tr>
+          <tr><td valign="top" align="right">keypair</td><td valign="top">=</td><td valign="top" align="left">generate_bitcoin_keypair(seed)</td></tr>
+        </table>
+
       </div>
       <div class="col col-md-4">
         <h4>WarpWallet Challenge</h4>
