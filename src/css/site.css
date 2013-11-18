@@ -39,7 +39,7 @@ h1 .second-half {
   padding:3px;
   margin-bottom:10px;
   color: #666;
-  background-color:#999;
+  background-color:#ddddd8;
   padding:10px;
   border-radius: 5px;  
 }
@@ -116,6 +116,11 @@ h1 .second-half {
   cursor:pointer;
   background-color: #fff
 }
+.col-private-key-qr, #private-key-qr {
+  float:right;
+  text-align:right;
+}
+
 .form-horizontal .progress-form {
   margin: 20px 0px 20px 0px;
 } 

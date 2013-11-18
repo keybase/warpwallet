@@ -46,6 +46,7 @@
   bootstrap (CSS)       https://github.com/twbs/bootstrap/blob/master/LICENSE
   browserify            https://github.com/substack/node-browserify/blob/master/LICENSE
   bitaddress.org        http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
+  qrcode.js             MIT (http://davidshimjs.github.io/qrcodejs/)
 
   In turn, bitaddress.org has some inline dependencies, which it references
 
@@ -67,6 +68,10 @@
 
   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
+
+<script type="text/javascript">
+{::src/js/qrcode.js::}
+</script>
 
 <script type="text/javascript">
 {::src/js/jquery-1.10.2.min.js::}
@@ -149,6 +154,17 @@ window.package = {::package.json::};
             <div class="col-md-8">
               <input id="private-key" readonly class="form-control">
             </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-6">
+              <h5>Public address QR Code</h5>
+              <div id="public-address-qr"></div>
+            </div>
+            <div class="col-md-6 col-private-key-qr">
+              <h5>Private key QR Code (Wallet Import Format)</h5>
+              <div id="private-key-qr"></div>
+            </div>
+
           </div>
         </div>
       </form>

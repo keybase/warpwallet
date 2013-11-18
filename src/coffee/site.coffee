@@ -44,8 +44,8 @@ class Warper
     else  
       $('#btn-submit').attr('disabled', false).html "Generate"
     $('.output-form').hide()
-    $('#public-address').val ''
-    $('#private-key').val ''
+    $('#public-address-qr').html ''
+    $('#private-key-qr').html ''
 
   commas: (n) ->
     while (/(\d+)(\d{3})/.test(n.toString()))
@@ -91,6 +91,17 @@ class Warper
     $('.salt-confirm').hide()
     $('.progress-form').hide()
     $('.output-form').hide()
+    $('#public-address-qr').html ''
+    $('#private-key-qr').html ''
+
+  write_qrs: (pub, priv) ->
+    params =
+      width:        256
+      height:       256
+      colorLight:   "#f8f8f4"
+      correctLevel: QRCode.CorrectLevel.H
+    (new QRCode "public-address-qr", params).makeCode pub
+    (new QRCode "private-key-qr", params).makeCode priv
 
   click_submit: ->
     $('#btn-submit').attr('disabled', true).html 'Running...'
@@ -114,6 +125,8 @@ class Warper
       $('#btn-reset').attr('disabled', false).html 'Clear &amp; reset'
       $('#public-address').val res.public
       $('#private-key').val res.private
+      @write_qrs res.public, res.private
+      console.log 
 
 $ ->
   new Warper()
