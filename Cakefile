@@ -22,7 +22,7 @@ crypto      = require('crypto')
 
 build = (cb) ->
   esc = make_esc cb, "build"
-  latest = "./warp.io_latest.html"    
+  latest = "./web/warp.io_latest.html"    
   await do_browserify defer()
   await fs.readFile "./warp.io_src.html", {encoding: "utf8"}, esc defer html
   await token_build_and_drop html, defer html
@@ -32,7 +32,7 @@ build = (cb) ->
     await fs.unlink latest, esc defer() unless err?
     console.log "Writing #{html.length} chars." + if old_html? then " (Changed from #{old_html.length} chars)" else ""
     sha256 = hash_data html
-    fullname = "./warp.io_#{version}_SHA256_#{sha256}.html"       
+    fullname = "./web/warp.io_#{version}_SHA256_#{sha256}.html"       
     await fs.writeFile fullname, html, {encoding: "utf8"}, esc defer()
     await fs.symlink fullname, latest, esc defer()
     # delete any old copies of this version
@@ -68,10 +68,10 @@ hash_data = (data) ->
   hasher.digest('hex')
 
 clean_old_ones = (new_one, cb) ->
-  await fs.readdir ".", defer err, files
+  await fs.readdir "./web", defer err, files
   rxx = "warp.io_#{version}_SHA256_([a-f0-9]+)\.html"
   for file in files when ((m = file.match rxx)? and (m[1] isnt new_one))
-    await fs.unlink "./#{file}", defer err
+    await fs.unlink "./web/#{file}", defer err
   cb()
 
 compile_token = (p, cb) ->
