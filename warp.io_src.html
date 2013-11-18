@@ -206,7 +206,7 @@ window.package = {::package.json::};
           <tr><td valign="top" align="right">s0</td>     <td valign="top">=</td><td valign="top" align="left">scrypt(key=passphrase, salt=salt, N=2<sup>18</sup>, r=1, p=8, dkLen=64)</td></tr>
           <tr><td valign="top" align="right">[s1,s2]</td>     <td valign="top">=</td><td valign="top" align="left">[ s0[:32], s0[32:] ] </td></tr>
           <tr><td valign="top" align="right">s3</td>     <td valign="top">=</td><td valign="top" align="left">pbkdf2(key=s2, salt=salt, c=2<sup>16</sup>, dkLen=32)</td></tr>
-          <tr><td valign="top" align="right">seed</td>   <td valign="top">=</td><td valign="top" align="left">s1 ⊕ s3</td></tr>
+          <tr><td valign="top" align="right">seed</td>   <td valign="top">=</td><td valign="top" align="left">s1 &oplus; s3</td></tr>
           <tr><td valign="top" align="right">keypair</td><td valign="top">=</td><td valign="top" align="left">generate_bitcoin_keypair(seed)</td></tr>
         </table>
 
@@ -309,7 +309,8 @@ window.package = {::package.json::};
           have a lot of time on our hands. Please follow us on twitter if you care to hear about this kind of thing.
         </p>
         <p>
-          But enough with the pleasantries: you can always see our signed version history at <a href="https://warp.io/versions.txt">https://warp.io/release.txt</a>
+          But enough with the pleasantries: you can always see our signed version history at <a href="https://warp.io/versions.txt">https://warp.io/release.txt</a> (signed with
+          our <a href="https://keybase.io/keybase-signing-key-2013.asc">PGP key</a>).
         </p>
         <p>
           <i>WarpWallet</i> is of course offered without any warranty of any kind;

@@ -64,7 +64,7 @@ task 'watch', "build repeatedly", (cb) ->
 
 hash_data = (data) ->
   hasher = crypto.createHash('SHA256')
-  hasher.update data
+  hasher.update(data, 'utf8')
   hasher.digest('hex')
 
 clean_old_ones = (new_one, cb) ->
