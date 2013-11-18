@@ -24,8 +24,12 @@ https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
 Version History
 ================
 
+2013-11-19: status TEMPORARY
+warp.io_1.0.0-rc2
+  - Fix a broken link on the main page (was supposed to link here)
+
 2013-11-18: status TEMPORARY
-warp.io_1.0.0-rc1_SHA256_1a64a73d51e51cb128f29de09475d66083f8a9e54ca762e236e4e0d012844d3d.html
+warp.io_1.0.0-rc1_SHA256_1200d11d45363b40fcf8527a066898d19ba6c210580a4e8aa643877897c662a6.html
   - Initial RC1 revision 
 
 ==============================
@@ -33,17 +37,17 @@ warp.io_1.0.0-rc1_SHA256_1a64a73d51e51cb128f29de09475d66083f8a9e54ca762e236e4e0d
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - http://gpgtools.org
 
-iQIcBAEBAgAGBQJSip2KAAoJEGqDlbY4qgNF5DsQAIyStf3twU2fAWkD1DxsKkT9
-Zn5kS+WRpy5mfo8KLBEjfdHvXZfTBkPlnSrE8qeaFdbNDCJRzmMUcwbUYsIzFygh
-qU0ZhPIdn3xoWZJPYRux9eBSQlJ86FIJZsapRozacqvhsYgb//SlvC03wQyOEVIR
-WFLmWY0aUP36aU1ZIB2AfZl25iqlEXMCJWboLqjBbUcQco+2HUVUkZTTD4QS3CmX
-pXeIH+71wba9sK5iEU8cRbnUz10KVY8KjitMiRYdYaknAfYitrKa5e6cOivaW357
-QTKmzvSe/uYUbXSjVLlfGpSxrTbvHmTV7zIf8bUK2PGbOxC+Iz30DZPNKmt2wmIL
-U/y0imovWsfPIFJ9BH9MhCoORCILl6UQxpa6Ctg5T3SlACFvBQUiGAdUsJE+mbR4
-QWtRZ0eenwwAyoLSWmFZ9dBSpsmpNAlkK3uslgL+OloQRKseeWXcJZF0KSwQU6HY
-0Z+3K7zh91wjO1dR1EUTCejfdGp8pHTbYcn7kz8a+Cd/xTqFqDp+DRgBBZi24Xyy
-chk5JaT+hEefP+m8zhO+NZ0xvBwEaPKjMWkMCRKrHwhgFZccCr2aTDW4G+C6up5u
-4KhYYLgvaE5GX32j/hBnqN7qQVOSZwNmfp/JocREMBfsJdKaEeq43WFtb/EAuKoS
-R5cWxHwdCnvd6D28Jv5G
-=O99n
+iQIcBAEBAgAGBQJSiqUnAAoJEGqDlbY4qgNFPGEP/3y50ISPNuOmy18jssHNDTWe
+nT8CqFvYHLAr99MBakTRCE6PhD+kllNu5hGM/fASCneuZSHTfo5RgD8wpzIUDgy1
+p/hPyg2KZNwCwGPormn9eKaKmrpXu7ZQalpg31wMOeuQBR8wwdFzPYomwGW5KDxn
+ANh2V5DRWHOFQhMgq1qf94OlqKZlWWb+qBPps473VOaeRqz4UKBUmqhWEohbpilg
+skIDwt7l9HTTa83tSuL6NE6zHu8VbOB/G9a9OVzyJ50Z7XCD9zaPKb0kw3GCdzuy
+/jsV6KAk9Vzi2qiiFRfxJC8GmguFIgDoxz3U/vL4UVi3/gUC08tIL1zhEmKPpI3U
+amUCXNjY7rbcdqI1Yka59MJwjZsYg5kpYrm5FAeyoCKHw79VcXS0f01rrR6fJXKP
+RvJpsiHP6t07QbPg7j/b+y94NuzqgO4RX8ONbq0HvMZ2i0uZiFkUnZfodTJ2fLjE
+9l39syw28+sPfjv/Fh1nmS70Ls3UWz2Yl4XZHTMNIdm2Wn5MNCsyislMrpjKQUqo
+3oBLvw96/oyrsO90p+Aw496mqA17qXraGdVF56oz4C3+K9RSqjzT3WOfM0WRFSXH
+YP4UznNS4IDyQ28Wm4glRlzW5FoV8KWZqUhluYJJISvJSQ/nSzI8oWep/14LZ8Bt
+nYNMYffJyyAzYgGi1RCX
+=Mpw1
 -----END PGP SIGNATURE-----
