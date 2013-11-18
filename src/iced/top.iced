@@ -1,8 +1,9 @@
 
 {scrypt,pbkdf2,HMAC_SHA256,WordArray} = require 'triplesec'
 generate = require('keybase-bitcoin').generate
+params = require('../json/params.json')
 
-exports.run = run = ({passphrase, salt, params, progress_hook}, cb) ->
+exports.run = run = ({passphrase, salt, progress_hook}, cb) ->
 
   d = {}
   (d[k] = v for k,v of params)
@@ -33,3 +34,4 @@ exports.run = run = ({passphrase, salt, params, progress_hook}, cb) ->
   out = generate seed2
   out.seeds = [ seed1, seed2 ]
   cb out
+
