@@ -113,7 +113,8 @@ token_build_and_drop = (html, cb) ->
 
 do_browserify = (cb) ->
   b = browserify()
-  b.add("./src/browserify/top.js")
+  b.transform(require 'icsify')
+  b.add("./src/iced/top.iced")
   await b.bundle { standalone : 'warpwallet' }, defer err, res
   throw err if err?
   await fs.writeFile "./src/js/deps.js", res, { encoding : "utf8" }, defer err
