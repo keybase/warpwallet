@@ -11,8 +11,12 @@ exports.run = run = ({passphrase, salt, params, progress_hook}, cb) ->
   d.progress_hook = progress_hook
   await scrypt d, defer w
 
+  seed1 = w.to_buffer()
+  console.log seed1.toString('hex')
+  console.log d.salt.to_hex()
+
   d2 = {
-    key : w
+    key : w.clone()
     salt : d.salt
     c : params.pbkdf2c
     dkLen : d.dkLen
@@ -20,12 +24,12 @@ exports.run = run = ({passphrase, salt, params, progress_hook}, cb) ->
     klass : HMAC_SHA256
   }
   await pbkdf2 d2, defer w2
+  console.log w2.to_hex()
 
-  seed1 = w.to_buffer()
   w.xor w2, {}
   seed2 = w.to_buffer()
+  console.log seed2.toString('hex')
 
   out = generate seed2
-  out.seed1 = seed1
-  out.seed2 = seed2
+  out.seeds = [ seed1, seed2 ]
   cb out

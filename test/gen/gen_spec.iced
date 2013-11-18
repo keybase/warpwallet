@@ -59,8 +59,6 @@ class Runner
       quiet : true 
       interp : @scrypt
     }
-    console.log args
-    console.log opts
     child = new Child args, opts
     out = []
     child.filter (l, which) -> out.push l
@@ -75,7 +73,7 @@ class Runner
     args = [
       "-c", params.pbkdf2c,
       "-d", params.dkLen,
-      "-k", hexlify(input.passphrase),
+      "-k", seed1,
       "-s", hexlify(input.salt),
       "-b", seed1
     ]
@@ -83,16 +81,12 @@ class Runner
       quiet : true 
       interp : @pbkdf2
     }
-    console.log args
-    console.log opts
     child = new Child args, opts
     out = []
     child.filter (l, which) -> out.push l
     await child.run().wait defer status
     x = /([0-9a-f]+)/
     ret = if (m = out[0].match x)? then m[1] else null
-    console.log "pking out"
-    console.log ret
     cb ret
 
   #-------------------
@@ -118,8 +112,6 @@ class Runner
         last_key = key
         bu_out[key] = { _ : val}
 
-    console.log out
-    console.log bu_out
     cb {
       "private"  : bu_out.WIF.uncompressed
       "public" : bu_out['Bitcoin address'].uncompressed
@@ -133,8 +125,7 @@ class Runner
     await @run_bu seed2, defer keys
     out = {}
     (out[k] = v for k,v of input)
-    out.seed1 = seed1
-    out.seed2 = seed2
+    out.seeds = [ seed1, seed2 ]
     out.keys = keys
     cb out
 

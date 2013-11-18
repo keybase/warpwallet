@@ -1,81 +1,158 @@
-[ '-N',
-  10,
-  '-p',
-  1,
-  '-r',
-  8,
-  '-d',
-  32,
-  '-c',
-  1,
-  '-P',
-  'ER8FT+HFjk0',
-  '-s',
-  '7DpniYifN6c' ]
-{ quiet: true,
-  interp: '../../node_modules/triplesec/contrib/scrypt-1.1.6/scrypt' }
-[ '-c',
-  65536,
-  '-d',
-  32,
-  '-k',
-  '45523846542b48466a6b30',
-  '-s',
-  '3744706e695969664e3663',
-  '-b',
-  '6cd20ec673550b9fe21952403806d1b9ac12e11a27c4ea077e6eb71252724e02' ]
-{ quiet: true, interp: './pbkdf2.sh' }
-pking out
-ef5b76cb2d80b31335fdd695d6370b728f135f7696247f8ef68d34e61222d55e
-[ 'secret exponent: 108264373778025591546741426393266280876129435978293250548870435456148721292638\n  hex:           ef5b76cb2d80b31335fdd695d6370b728f135f7696247f8ef68d34e61222d55e\nWIF:             L5EzP9TNS1pE65a9HNzPjGT4vkBvDJVtm4rhLNfWzwA7S6ZqsQZT\n  uncompressed:  5KdheByj1gcAmCTYL7o5hPXq1rCzNNBdCLuVd7GXMq4srDFpEaq\npublic pair x:   101729680340302990234641664917479897710089500593919913169759804579535143057297\npublic pair y:   46363720838606816585691227580248628851949078460626786849865370520793482750140\n  x as hex:      e0e8f56841d5f5c370f84d6310d47bfaad16727e0f701cbddb806fee93dc3791\n  y as hex:      6680efa1087c8078df7df6c24397d1f3158ae588678f1c3f7714834160f368bc\neven\nkey pair as sec: 02e0e8f56841d5f5c370f84d6310d47bfaad16727e0f701cbddb806fee93dc3791\n  uncompressed:  04e0e8f56841d5f5c370f84d6310d47bfaad16727e0f701cbddb806fee93dc3791\\\n                   6680efa1087c8078df7df6c24397d1f3158ae588678f1c3f7714834160f368bc\nhash160:         ac6cc724200d4a9f00709074de43a03ec5dc69d3\n  uncompressed:  788acf87a92751f456380d6d710376f78ad9cf5a\nBitcoin address: 1GihY1u4b2oZdbWAmC5v1f9MeWHteHik5v\n  uncompressed:  1BzNNkiHfCmKQSa6zKLFCWVrEirB9j1AMd\n' ]
-{ 'secret exponent': 
-   { _: '108264373778025591546741426393266280876129435978293250548870435456148721292638',
-     hex: 'ef5b76cb2d80b31335fdd695d6370b728f135f7696247f8ef68d34e61222d55e' },
-  WIF: 
-   { _: 'L5EzP9TNS1pE65a9HNzPjGT4vkBvDJVtm4rhLNfWzwA7S6ZqsQZT',
-     uncompressed: '5KdheByj1gcAmCTYL7o5hPXq1rCzNNBdCLuVd7GXMq4srDFpEaq' },
-  'public pair x': { _: '101729680340302990234641664917479897710089500593919913169759804579535143057297' },
-  'public pair y': 
-   { _: '46363720838606816585691227580248628851949078460626786849865370520793482750140',
-     'x as hex': 'e0e8f56841d5f5c370f84d6310d47bfaad16727e0f701cbddb806fee93dc3791',
-     'y as hex': '6680efa1087c8078df7df6c24397d1f3158ae588678f1c3f7714834160f368bc' },
-  even: { _: undefined },
-  'key pair as sec': 
-   { _: '02e0e8f56841d5f5c370f84d6310d47bfaad16727e0f701cbddb806fee93dc3791',
-     uncompressed: '04e0e8f56841d5f5c370f84d6310d47bfaad16727e0f701cbddb806fee93dc3791\\',
-     '6680efa1087c8078df7df6c24397d1f3158ae588678f1c3f7714834160f368bc': undefined },
-  hash160: 
-   { _: 'ac6cc724200d4a9f00709074de43a03ec5dc69d3',
-     uncompressed: '788acf87a92751f456380d6d710376f78ad9cf5a' },
-  'Bitcoin address': 
-   { _: '1GihY1u4b2oZdbWAmC5v1f9MeWHteHik5v',
-     uncompressed: '1BzNNkiHfCmKQSa6zKLFCWVrEirB9j1AMd' } }
-[ '-N',
-  10,
-  '-p',
-  1,
-  '-r',
-  8,
-  '-d',
-  32,
-  '-c',
-  1,
-  '-P',
-  'YqIDBApDYME',
-  '-s',
-  'G34HqIgjrIc' ]
-{ quiet: true,
-  interp: '../../node_modules/triplesec/contrib/scrypt-1.1.6/scrypt' }
-[ '-c',
-  65536,
-  '-d',
-  32,
-  '-k',
-  '5971494442417044594d45',
-  '-s',
-  '473334487149676a724963',
-  '-b',
-  '09b34b63ff53c4b2199af26d92ca6bf17180fd59c9f0b814a12a9fc7ce2dd546' ]
-{ quiet: true, interp: './pbkdf2.sh' }
-pking out
-15804f84e6533b511342d79508e0e8c75096ff69939035988b7f2c64cc4dc4c2
+{
+    "generated": "Mon Nov 18 2013 15:35:45 GMT-0500 (EST)",
+    "version": "1.0.0-rc1",
+    "params": {
+        "N": 10,
+        "c1": 1,
+        "p": 1,
+        "r": 8,
+        "dkLen": 32,
+        "pbkdf2c": 16
+    },
+    "vectors": [
+        {
+            "passphrase": "ER8FT+HFjk0",
+            "salt": "7DpniYifN6c",
+            "seeds": [
+                "6cd20ec673550b9fe21952403806d1b9ac12e11a27c4ea077e6eb71252724e02",
+                "629a18a3c9f1bcaec08c66dc14e26d270a0daeede6629760fd9317777cc62417"
+            ],
+            "keys": {
+                "private": "5JZiEd7ZBHsf5AeRVhGpJhxJtJiW5Gf9o3KGcvH3YDfVzEWFDkH",
+                "public": "19XiAvPdTbsVPb9iYFCWRycSoLJi8Bf4KW"
+            }
+        },
+        {
+            "passphrase": "YqIDBApDYME",
+            "salt": "G34HqIgjrIc",
+            "seeds": [
+                "09b34b63ff53c4b2199af26d92ca6bf17180fd59c9f0b814a12a9fc7ce2dd546",
+                "37b0663e4c6dae488b8be59bc600455c10ba705046429d9db2aef0ce042ff956"
+            ],
+            "keys": {
+                "private": "5JEp5pBS2i3unAM5gKkYxjNFviBy3JYu6UQNNTPWQ3sB9RYXPMr",
+                "public": "16PVpjmqghNfp8fyYRtL1q4QBchrH5uoZr"
+            }
+        },
+        {
+            "passphrase": "FPdAxCygMJg",
+            "salt": "X+qaSwhUYXw",
+            "seeds": [
+                "a0d19efe22c29eb5d1b4ee0167f4858a8b91fa48d50b64e1a59b705535a76d82",
+                "14b0c22c285a22b37418a5e828ec7469195a47f26569899b17635252214168cf"
+            ],
+            "keys": {
+                "private": "5HyQ6GSRpfwoTfrJvbzNsfwMuheq77Kn7kMqgthg4jzC22Y62LX",
+                "public": "152t1T3XNYp68ujxTfuCsgb7quRDKLCnui"
+            }
+        },
+        {
+            "passphrase": "gdoyAj5Y+jA",
+            "salt": "E+6ZzCnRqVM",
+            "seeds": [
+                "a155cbb8c44b88b8e8956c345fc8aa5247f2058dbe53953736f6877288d0db2a",
+                "f0ec7fc2e60ffe8fc32e61952b98fe18817c7c07bc5ce1908360abdb2efc071a"
+            ],
+            "keys": {
+                "private": "5KePf5FMC9cm1gFXMbCZfReC9v2b8i1PoHFWk9xvm3tBuVzg2s2",
+                "public": "13aXXhh1KBX2ef9CkVmyXS9WfE85uf9N6v"
+            }
+        },
+        {
+            "passphrase": "bS7kqw6LDMJbvHwNFJiXlw",
+            "salt": "tzsvA87xk+Rrw/5qj580kg",
+            "seeds": [
+                "2746b8ad90f34c916101147130f59655225af5589e3808a208d689065ffdaee8",
+                "ad426dd33240013cd4fba2bfa357e1d56fca3520468b2dcab9e4a4aedda8e890"
+            ],
+            "keys": {
+                "private": "5K8bGBdrxPJ2SuCLuhz5GpHm41YfMA1kuaJBQh29Y1YucRGPxBh",
+                "public": "16UFimnE91XBphfCF4TeBAB5KJZF6WtQBV"
+            }
+        },
+        {
+            "passphrase": "uyVkW5vKXX3RpvnUcj7U3Q",
+            "salt": "zXrlmk3p5Lxr0vjJKdcJWQ",
+            "seeds": [
+                "435cd27a466e8dede9ffda2aabe676082df51c547b981db77ed2754ef8946eba",
+                "17ffe5c47fec19b55df3c1d56bd366dd763317194e98cd41fcbbedc2aab967f1"
+            ],
+            "keys": {
+                "private": "5HzrcrpJ8C9jTwS4cX7hhboN8Sk5QcYrz9afPPrkhSxuuW21RSv",
+                "public": "1MBx8j44C8Xu7nVFzfvpK2Ph1wdxjYU1ew"
+            }
+        },
+        {
+            "passphrase": "5HoGwwEMOgclQyzH72B9pQ",
+            "salt": "UGKv/5nY3ig8bZvMycvIxQ",
+            "seeds": [
+                "02f53699c748ab3bf2006fac62332678b213bd2a8562ed6cd0f7b8ae76097a32",
+                "7bf4c5269750daa207f9bec1ee59ca7bb1c7d4e9eb4fca97726c781217a3abc4"
+            ],
+            "keys": {
+                "private": "5JkssgJDEXpk3mF3RNbbvFZB86rAko5wKVvKo9niCtDBRFESGTZ",
+                "public": "1Gr2M12tS4JsBLhEF5CDFQ6nRVxi9EBHDz"
+            }
+        },
+        {
+            "passphrase": "TUMBDBWh8ArOK0+jO5glcA",
+            "salt": "dAMOvN2WaEUTC/V5yg0eQA",
+            "seeds": [
+                "ca2a2121052db0b446d3cf2e725164d982a6101237d16605a6f134e29b49c132",
+                "0187b737d1493d19a184d2c594e5bfdaec1488bc1dc6f58233eb1320a0a08caf"
+            ],
+            "keys": {
+                "private": "5HpxfdbVwwhutYneCSGY2HkavGwMZfkhLDiwFLLc6jBnwDmddnJ",
+                "public": "15PJVyDJtoxqPoDZ2NsohD3arVxuCPqZas"
+            }
+        },
+        {
+            "passphrase": "rDrc5eIhSt2qP8pnpnSMu1u2/mP6KTqS",
+            "salt": "HGM1/qHoT3XX61NXw8H1nQ",
+            "seeds": [
+                "772af5a8b7e56c0fa15ed52a70debab3d88e698649d0ca8e3f093105d33b8d94",
+                "28149c75f1d2d41debb58ccbe0328e0d7d9719fee716674784761d04881bc230"
+            ],
+            "keys": {
+                "private": "5J7wPFPeMjcCfDib7BFVtEJQ87n9xTWc1McA4hQ5sr4e4aRC6eS",
+                "public": "19iLvwTFW2m42zKKXCvugTasLnGWZjHbDH"
+            }
+        },
+        {
+            "passphrase": "Brd8TB3EDhegSx2wy2ffW0oGNC29vkCo",
+            "salt": "dUBIrYPiUZ6BD/l+zBhthA",
+            "seeds": [
+                "e5ca109f348144580cfaea5a45321f7fd3804626f27cce1cf9ad238b9b4fec02",
+                "18caad09c0ac36011933e1174db3b6df43a88aa0fc9e47d5b1c96d4688495a5b"
+            ],
+            "keys": {
+                "private": "5J1CrPLcQvNuce7Zkk5eT5XgYrxRt58BgLc4e9vYkYZa1PhWzEG",
+                "public": "1ESzbQh4CdUX8c9dgmYVPtPUsomZ85VX8v"
+            }
+        },
+        {
+            "passphrase": "eYuYtFxU4KrePYrbHSi/8ncAKEb+KbNH",
+            "salt": "le5MMmWaj4AlGcRevRPEdw",
+            "seeds": [
+                "dbc0063ab508893740fece46243be58f9a739af0162da7c2ba739f6925d1517a",
+                "8dd574113b995a9778af2591909533e0e19efb100a4145e349a39e8fbebb39b6"
+            ],
+            "keys": {
+                "private": "5JtkY2756BgKbnhiCYFazWkPAxbWLGKYrU69cnPougaAfa5rBUh",
+                "public": "1PCza1H7JDRnctL7ZK4wz5D2xU6XCcb3ZX"
+            }
+        },
+        {
+            "passphrase": "TRGmdIHpnsSXjEnLc+U+MrRV3ryo8trG",
+            "salt": "DhZNEt9hx08i6uMXo5DOyg",
+            "seeds": [
+                "1d8e49e94ea14552645c5dd02dbd514f3dc2fd561ebcfbd5f228ffb6b06587c6",
+                "f15c10f929f76fab360cb8274e4af5a8fdecf230826c3ad21810fe1855461e5e"
+            ],
+            "keys": {
+                "private": "5Keanjs6zd4Ji3kq1khL6M6MNWhaWfABpJioFFjjxJ5NnF6o4do",
+                "public": "16GyTtvKMcjLjw7rw6KphXwMYq5vwBn6Dm"
+            }
+        }
+    ]
+}
