@@ -2,9 +2,13 @@ ICED=node_modules/.bin/iced
 BROWSERIFY=node_modules/.bin/browserify
 WD=`pwd`
 
-build: web/release.txt
+default: relnotes build
+	
+relnotes: web/release.txt
 
-default: build
+build:
+	icake build
+
 
 test: test-server test-browser
 
@@ -23,4 +27,4 @@ clean:
 web/release.txt: release.txt.in
 	gpg --clearsign -u k@keybase.io < $< > $@
 
-.PHONY: test test-server test-browser clean
+.PHONY: test test-server test-browser clean build

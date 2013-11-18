@@ -32,8 +32,8 @@ build = (cb) ->
     await fs.unlink latest, esc defer() unless err?
     console.log "Writing #{html.length} chars." + if old_html? then " (Changed from #{old_html.length} chars)" else ""
     sha256 = hash_data html
-    fullname = "./web/warp.io_#{version}_SHA256_#{sha256}.html"       
-    await fs.writeFile fullname, html, {encoding: "utf8"}, esc defer()
+    fullname = "warp.io_#{version}_SHA256_#{sha256}.html"       
+    await fs.writeFile "./web/#{fullname}", html, {encoding: "utf8"}, esc defer()
     await fs.symlink fullname, latest, esc defer()
     # delete any old copies of this version
     await clean_old_ones sha256, esc defer()
@@ -70,8 +70,9 @@ hash_data = (data) ->
 clean_old_ones = (new_one, cb) ->
   await fs.readdir "./web", defer err, files
   rxx = "warp.io_#{version}_SHA256_([a-f0-9]+)\.html"
-  for file in files when ((m = file.match rxx)? and (m[1] isnt new_one))
-    await fs.unlink "./web/#{file}", defer err
+  for file in files 
+    if ((m = file.match rxx)? and (m[1] isnt new_one))
+      await fs.unlink "./web/#{file}", defer err
   cb()
 
 compile_token = (p, cb) ->
