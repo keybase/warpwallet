@@ -183,9 +183,10 @@ window.package = {::package.json::};
         </p>
 
         <table class="table table-condensed" style="font-size:1.0em;">
-          <tr><td valign="top" align="right">s1</td>     <td valign="top">=</td><td valign="top" align="left">scrypt(key=passphrase, salt=salt, N=2^18, r=1, p=8, dkLen=32)</td></tr>
-          <tr><td valign="top" align="right">s2</td>     <td valign="top">=</td><td valign="top" align="left">pbkdf2(key=s1, salt=salt, c=2^16, dkLen=32)</td></tr>
-          <tr><td valign="top" align="right">seed</td>   <td valign="top">=</td><td valign="top" align="left">s1^s2</td></tr>
+          <tr><td valign="top" align="right">s0</td>     <td valign="top">=</td><td valign="top" align="left">scrypt(key=passphrase, salt=salt, N=2<sup>18</sup>, r=1, p=8, dkLen=64)</td></tr>
+          <tr><td valign="top" align="right">[s1,s2]</td>     <td valign="top">=</td><td valign="top" align="left">[ s0[0:32], s0[32:64] ] </td></tr>
+          <tr><td valign="top" align="right">s3</td>     <td valign="top">=</td><td valign="top" align="left">pbkdf2(key=s2, salt=salt, c=2<sup>16</sup>, dkLen=32)</td></tr>
+          <tr><td valign="top" align="right">seed</td>   <td valign="top">=</td><td valign="top" align="left">s1 ⊕ s3</td></tr>
           <tr><td valign="top" align="right">keypair</td><td valign="top">=</td><td valign="top" align="left">generate_bitcoin_keypair(seed)</td></tr>
         </table>
 

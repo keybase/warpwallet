@@ -32,5 +32,6 @@ key = binascii.unhexlify(args.key)
 salt = binascii.unhexlify(args.salt)
 base = binascii.unhexlify(args.base)
 out = PBKDF2(password=key, salt=salt, dkLen=args.dkLen, count=args.count, prf=hmac_sha256)
+print binascii.hexlify(out)
 print binascii.hexlify(sxor(base,out))
 
