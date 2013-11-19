@@ -17,6 +17,7 @@ class Warper
     $('#passphrase').on 'keyup',            => @any_change()
     $('#public-address').on 'click',        -> $(@).select()
     $('#private-key').on    'click',        -> $(@).select()
+    $('.what-salt').on      'click',        => $('.salt-explanation').toggle()
 
   any_change: ->
     $('.progress-form').hide()

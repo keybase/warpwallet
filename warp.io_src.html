@@ -18,6 +18,8 @@
  //
  // A salt shouldn't make you lazy with your passphrase, of course.
  //
+ //   @maxtaco and @malgorithms
+ //
  // ---------------------------------------------------------------
 
  var SALT_DEFAULT = null; // assign a string and save this file.
@@ -120,7 +122,7 @@ window.package = {::package.json::};
           </div>  
         </div>
         <div class="form-group">
-          <label for="salt" class="col-md-4 control-label salt-label">Optional: your email as a salt [<a href="#what-salt">?</a>]</label>
+          <label for="salt" class="col-md-4 control-label salt-label">Optional: your email [<a class="what-salt" href="#what-salt">as a salt</a>]</label>
           <div class="col-md-8">
             <input id="salt" class="form-control">
           </div>
@@ -134,12 +136,14 @@ window.package = {::package.json::};
             </div>
           </div>
         </div>
-        <div class="form-group salt-explanation">
+        <div class="form-group salt-explanation" style="display:none;">
           <div class="col-md-8 col-md-offset-4">
             <p>
-                If you include a "salt", it'll make your wallet's security stronger. If you're unsure, please
-                use one. With a salt, someone would have to brute force guess your
-                passphrase <b>and</b> simultaneously guess your salt.
+                If you include your email, we'll use it as added input to make your wallet's security stronger. If you're unsure, please
+                do it. Your email is easy to remember for you, but this makes it
+                harder for generic passphrase searching softare to stumble upon your wallet. If you're a programmer: we're using it 
+                as a "salt", as explained in WarpWallet's formula in the footer. Regardless, pick a passphrase
+                with a lot of complexity. [<a class="what-salt" href="#what-salt">Ok</a>]
             </p>            
           </div>
         </div>
@@ -193,20 +197,18 @@ window.package = {::package.json::};
         <h4>What is WarpWallet?</h4>
         <p>
           WarpWallet is a deterministic bitcoin address generator. You never have to save
-          or store your private key anywhere. Just pick a really good password and never use it
+          or store your private key anywhere. Just pick a really good password - many random words, for example - and never use it
           for anything else.
         </p>
         <p>
-          This page is self-contained for portability. Access it wherever you like - including an air-gapped machine. 
-          And, heck, email it to 10 friends if you're afraid it will go away.
-          All the JS, CSS, and images are embedded. It's also <a href="https://github.com/keybase/warpwallet">hosted on github</a>.
+          This page is self-contained for portability. Save it on your computer - all the JS, CSS, and images are embedded. It's also <a href="https://github.com/keybase/warpwallet">hosted on github</a>.
         </p>
         <p>
           This is not an original idea. <a href="https://www.bitaddress.org/">bitaddress.org's brainwallet</a> 
           is our inspiration.
         </p>
         <p>
-          WarpWallet adds two improvements: (1) WarpWallet uses <a href="http://www.tarsnap.com/scrypt.html">scrypt</a> to make address generation both memory and time-intensive. And (2) you can "salt" your passphrase with your email address.  Though "salting" is optional, we recommend it.  Any attacker of WarpWallet addresses would have to target you individually, rather than netting you in a wider, generic sweep.  And your email is trivial to remember, so why not?
+          WarpWallet adds two improvements: (1) WarpWallet uses <a href="http://www.tarsnap.com/scrypt.html">scrypt</a> to make address generation both memory and time-intensive. And (2) you can "salt" your passphrase with your email address.  Though salting is optional, we recommend it.  Any attacker of WarpWallet addresses would have to target you individually, rather than netting you in a wider, generic sweep.  And your email is trivial to remember, so why not?
         </p>
         <p>
           For safety, we've implemented WarpWallet outside of JavaScript and confirmed it generates the same output. (It's a step in our test suite, and we publish our <a href="https://github.com/keybase/warpwallet/blob/master/test/spec.json">test vectors</a> along with the source.) If you're a programmer and want to implement WarpWallet yourself...
