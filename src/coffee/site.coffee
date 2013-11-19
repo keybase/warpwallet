@@ -108,6 +108,7 @@ class Warper
     $('#btn-submit').attr('disabled', true).html 'Running...'
     $('#btn-reset').attr('disabled', true).html 'Running...'
     $('#passphrase, #salt, checkbox-salt-confirm').attr 'disabled', true
+    $('.progress-pbkdf2, .progress-scrypt').html ''
     $('.progress-form').show()
 
     warpwallet.run { 

@@ -25,25 +25,25 @@ Version History
 ================
 
 2013-11-19: status ACTIVE
-warp_1.0.0-rc3_SHA256_dc559269f6ab906516b6b055f13537bd93f08ba9e669bedbdc27ccf503d0cc11.html
-  - Initial revision
+warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b607d0f.html
+  - Initial revision, challenge announcement
 
 ==============================
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSi8xrAAoJEEdITlBlbRbHq9AP/jNtGO9wRdq8f5S3QrY3WomV
-lovluWldE4VkWj8xQfPuILEcKzWVyyD1rUi5+hFtm6a7JpUdfNjcmzUT7ersFCFr
-FfJ9/LymhfQ2wwfgXcxTIqOJVt1oNDiJkO1kw9/uUR1WoFtuTrRy82UX4Zjphz0b
-75EevrEMkK6x/79ASBOUidBjLpOSdSpMb3MkMnllD350QK94L4GdlD+6E+IZ2AkJ
-R9PnIrKl5AxUeQzONNUt8xcZ6RDDcdcyMn2sFucx1z2bnEN/yaJ+mcIRUvYRMbFF
-33IBj5HYkDPNt0pLSw5THw+KQyokcAj99g657r+0LoMVkIcCfykn/YRApT0Uoft2
-FYCie6F1AI9nDLNvYHdHtdDNVSvp+lOp+u0Ulg8UijYWpwsqAY0/z0zpTnVJTCTt
-kRbThllgy0/WNvgmdZqxM/yGBcw3jGN3tYb5KmU+yvI/Lwa8DXibj5/6DPnJFU3M
-KMWqchzFaOAnSpkpTLmdCCfAOQqAL4xg32KdmBBEdm+aR7nJXnD2ZGYcdV/+mwgr
-8iZeJFt8siTgE1lPkSiFcnnCoAA1z7MmA1Suwa1vtBPW4BdduEFUWAdeosrJfdmh
-cVoREre1H7f+/UeWdF168N0/yHVk1C8z7aJshJzvKLxUUybdiBJqJutgIj8N8WfS
-19HfQgyHj5QaNebMq1Si
-=jziQ
+iQIcBAEBCgAGBQJSi8yWAAoJEEdITlBlbRbHrvAP/AoJghPbkjamjEg0S8OirJQL
+1T/6B8EYwYp/Tw3bTzd+kiSMMN8UQj69jwzK1SS9tAPvdBq5mQ/je2XZrcwiecAZ
+46pFlWBxFk2KZCF1K816WOkf93BSSPbzXQVmWFlag0ibIHfcT4qZXnqCj+elwwFh
+HYALzPIMiEfntj4YcE+pXqkULN7cYodG0mbn8hxzNFtchqCdxthzzlmenL/MxVun
+JfydSUirlAXVlCGzM297DOLZDk2qncOPXiVheWZQd5HbLyGUaSamhfuvqNkJEL1t
+q3iuk9B3KUdoJrhZQ4Ss04QyoBsT6oVHPtkprrrrQVSerZGbn97dV+Fyu3/xCUal
+iSvNCyUHiRW5OBaZ9p1LiTOA2jRjW5/agMBHjNLFkV7obWDVwmbXPDa4bv+9yCes
+E3MiznD+jD9R2uy+hESSoSXoXxJ93q4lCDrwjjucNq6ksvC92MZqafJHA1spQiX8
+8BJ0qh1ZjJZDNw1Wq47sgLvHgOXpWHDa0Ep3YQNrW/pOHWNnU0ajzRMTiJ12fj02
+ZF1QI4AvdcOAShkqezGfVdmh1//rw1eCorFRAGz6Eggxyco1+/4dtcw5ywG6XxuC
+zvY2AqeMdlzdYRu07x8iSNCJHtxtAulTUEE2hfWYTUZsZpwojhKFyS/xTmBBT/e+
+KIJ5aqzS8FgqrOj05Dpd
+=RflD
 -----END PGP SIGNATURE-----
