@@ -120,7 +120,7 @@ window.package = {::package.json::};
           </div>  
         </div>
         <div class="form-group">
-          <label for="salt" class="col-md-4 control-label salt-label">Optional: your email as a salt</label>
+          <label for="salt" class="col-md-4 control-label salt-label">Optional: your email as a salt [<a href="#what-salt">?</a>]</label>
           <div class="col-md-8">
             <input id="salt" class="form-control">
           </div>
@@ -132,6 +132,15 @@ window.package = {::package.json::};
                 <input type="checkbox" id="checkbox-salt-confirm"> Sanity check: I confirm <span class="salt-summary"></span>
               </label>
             </div>
+          </div>
+        </div>
+        <div class="form-group salt-explanation">
+          <div class="col-md-8 col-md-offset-4">
+            <p>
+                If you include a "salt", it'll make your wallet's security stronger. If you're unsure, please
+                use one. With a salt, someone would have to brute force guess your
+                passphrase <b>and</b> simultaneously guess your salt.
+            </p>            
           </div>
         </div>
         <div class="form-group">
@@ -215,7 +224,7 @@ window.package = {::package.json::};
         <p>
           The following challenges are designed to test the safety of WarpWallet, and scrypt in general. 
           We expect the first 3 to fall quickly and hope to lose our bitcoins
-          to nice people.  If challenge 5 fails, we'll make an announcement
+          to nice people.  If challenge 5 falls, we'll make an announcement
           here and on twitter (<a href="https://twitter.com/maxtaco">here</a>, <a href="https://twitter.com/malgorithms">here</a>).
         </p>
         <p>
