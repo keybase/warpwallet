@@ -24,6 +24,9 @@ https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
 Version History
 ================
 
+2013-11-XX
+warp.io_1.0.0-rc3
+
 2013-11-18: status TEMPORARY
 warp.io_1.0.0-rc2_SHA256_a761e5c92dcac05cb6a8acd12882118c2eeff7a9e9565bd0e885f00b2ad70e1d.html
   - Fix a broken link on the main page (was supposed to link here)
@@ -39,17 +42,17 @@ warp.io_1.0.0-rc1_SHA256_1200d11d45363b40fcf8527a066898d19ba6c210580a4e8aa643877
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - http://gpgtools.org
 
-iQIcBAEBAgAGBQJSirX0AAoJEGqDlbY4qgNF4GIQAKX9OoFI/AredQjSToUyWfk/
-Zd1YPInPKAqWasycFrzk7hvHSXhb2LImdf8Nngmg+YiohMQHtHCE/ok8ePCbwxIh
-QHlvittJfCueh8wescd1lDpRswmSOrM0lFg8Z4OQPyJFUlVIUsS5YEzfdVUkV0+c
-QsjccxQEHkUKbRn0hc/dermDV/rlTo+r495bvDkDJo0GsLaLWtcu1hA3KYEKm3zT
-5qCqUfdYTYHu8CV1RjxiHazhQMAh0yRdZ8yK0BvIS6vzA65dygxqoXgnE9Zqn56+
-rt/Kcg8N01ENeYdxzEBnxVTWld5MjSrfoJA54q9g7zhHXyrZyAKDnO1q/jJoWlv2
-2UpRjjFKMoFydjsXKudi5SJlz1PmmjKdbAD8je9WSdVLro83XwQjIbwbCMyu+bwU
-ev6ul5SXcHzPaOx/P4KsnAKS5/cHaXZ6QNYER7KrdscOx9BdqY4Xkn4wzPIrQaym
-v8YYeofkxRXYskq9K03PowyYFY/hVtcIQNEOlLSnw8d4yz6RdGqJmXErnSahQ5Ym
-Kej3+IwqcDQFzM93ylMRVrVlp0MmCM9V3JMVVHL9RjqNqkf+CUa4bFxKIGdBZrZx
-n5spZ4n5ixE9vk9+HeUjvMUjwdBpNxjHptMjARJYKoVo+SS/EKiJjwNMJmoomJgx
-c9wzV5xoAVgqWioHYY3g
-=bf70
+iQIcBAEBAgAGBQJSirewAAoJEGqDlbY4qgNFbKkP/0l6/uRrz9qL206SsBHFdZ/b
+5vkRZUr0lDVIQbKJOlMWA14W8OnIbAyE0LeK5g4HbDMabFEGVQz2+UN4NMENaFGV
+rNqbtd9XhpBk16QrIovQnPDshEV3n5BTMnK36FYXARYXQkcPK4PQvrGx/esSQfHQ
+rQTE99bSCgeaVvs9GNql5p58QD84xmUp+LbNrNPivHj8acyDhljrZBwGZblzkRX3
+5IfA9HGwWo4bIFhSnyM5sNQuDGMKOIGfm0XbYEts+VGKx95GjJphiHAFqQ1jInOO
+LwdWaTmx3cyp/tu1uplVneLOOPGiBimma/tRNvsRu12E4Jhx7Qp2MCE8A9FVT6PV
+mC1xKfezaPO/ZriAeJzFe52e+s8m7snCEugPda+bdy0f7xO0mq3bc+uPj5XoVtx3
+BN8KiHNHYGSkbKennH5gKTGNPH6hQvAsObC1n6kUdE0st9OfdH42rVUBd5jx2cLt
+LdEztWi+O54Q7vc/U5sD3phqKwjJ1OPs/FDwe9olOnM8U0/ChU2qvL9W7ofj+F6A
+UsLqTSfOHWeh08tjMCba+3s/WbnkKQz91H9LPiLEyoeEoa73WrTlE03MWd+38G4m
+tuXYCzk78/WQ6efbqAIqqyVtojzrftl7QTAQ478lgSTVAptfazZJBijY6OPQraRi
+luk75hWzOwLPz9R9T/ck
+=WDBu
 -----END PGP SIGNATURE-----
