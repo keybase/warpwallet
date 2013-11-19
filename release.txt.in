@@ -21,8 +21,8 @@ https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
 Version History
 ================
 
-2013-11-19: status TEMPORARY
-{}.html
+2013-11-19: status ACTIVE
+warp_1.0.0-rc4_SHA256_392437c02dbbd49d31ab8162efa430d590e25fec5fd7dc4701aedd04734d598f.html
   - provide warning for old browsers which don't have Int32Array defined (IE9, for example)
   - fixed buttons trying to submit in Firefox
   - Added "use asm" for Firefox in Salsa20 core. This made a huge difference.

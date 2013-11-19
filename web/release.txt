@@ -1,0 +1,55 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+
+WarpWallet --- https://keybase.io/warpwallet
+==========
+
+A brainwallet for Bitcoins, served as a self-contained HTML page with 
+embedded JS and CSS.
+
+Input keys are salted and stretched with a combination of
+Scrypt (http://www.tarsnap.com/scrypt.html) and 
+PBKF2 (http://en.wikipedia.org/wiki/PBKDF2).
+
+You are encouraged to download this page and run it on an airgapped machine.
+
+Donations to Bitaddress.org, who packaged a lot of the code up and
+inspired us to make this product: 1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
+
+This message will be signed by our company PGP key, available here:
+https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
+
+
+Version History
+================
+
+2013-11-19: status ACTIVE
+warp_1.0.0-rc4_SHA256_392437c02dbbd49d31ab8162efa430d590e25fec5fd7dc4701aedd04734d598f.html
+  - provide warning for old browsers which don't have Int32Array defined (IE9, for example)
+  - fixed buttons trying to submit in Firefox
+  - Added "use asm" for Firefox in Salsa20 core. This made a huge difference.
+
+2013-11-19: status ACTIVE
+warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b607d0f.html
+  - Initial revision, challenge announcement
+
+==============================
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+Comment: GPGTools - https://gpgtools.org
+
+iQIcBAEBCgAGBQJSi9OgAAoJEEdITlBlbRbH3kgP+wfPqTCVMsZdu5w8sbzEbS64
+/pAjhwY8adUDdobrlVVgP8pDydsskGzf0oJniV/4p+/t+ykqr6z9cDxx2KA5vvpq
+HmdKWBYUYrpzCUwFsDIc2YXt4Mpyb+uQVfr/nXJJF7CO7WVNENOsAvKL48/4LyJm
+Ej5BAv9g4a9ZghVRJPYUUvRuV0t0QlatM1pUTgvjF874wha+6otX8IRUC+x2gMWg
+k2biYJej3YYhILb7HMkz0qOK18+V9lejAHNfH6e8NwDDBluXd0zrQhSqOXe5BB2f
+2wrFuRiAZntIPXcNta134mbgJ/pw8vunMvwn5WknFr4f6ikVNuyKJqHOKWPfPnof
+D5zJzS7GXI1Jx05wSe7T9UVSx3hHgCjVcGnJPIu1fROdq0T0JrYBBg2NGlS+4Cjd
+ttMKwDSH1+p8hWQORo00QfXClK2gFiMjcqjDmvPNW8wLgd6Z6ZekDkyuf4/2gTEf
+WWycm+Jn7I0yZ5k8WRYPQoRKB6f99c4ib6oCLq4eVVATau3wBzUPiNZjTXUkQ5Zj
+NXIIewcvBqPepqdFIxO5v5GOpZXLanfBHPeb/6UsmrQmNNQDKmjIk6tSLCW5YwD2
+QRDEcr6zUOmVKzBb2SjYYDeG/flDkcYsZA4o+8LkFvBE3AxQrYzKYmTQRvJHknwo
+iApgTNw8x9TnWcNRXv4D
+=CyVZ
+-----END PGP SIGNATURE-----
