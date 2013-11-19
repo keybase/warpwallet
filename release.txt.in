@@ -21,6 +21,9 @@ https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
 Version History
 ================
 
+2013-11-XX
+warp.io_1.0.0-rc3
+
 2013-11-18: status TEMPORARY
 warp.io_1.0.0-rc2_SHA256_a761e5c92dcac05cb6a8acd12882118c2eeff7a9e9565bd0e885f00b2ad70e1d.html
   - Fix a broken link on the main page (was supposed to link here)
