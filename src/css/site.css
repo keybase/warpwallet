@@ -43,6 +43,11 @@ h1 .second-half {
   padding:10px;
   border-radius: 5px;  
 }
+.salt-explanation p {
+  padding:20px;
+  font-size:0.9em;
+  color:#444;
+}
 .sub-row {
   color:#333;
 }
