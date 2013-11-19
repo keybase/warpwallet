@@ -97,8 +97,10 @@ h1 .second-half {
   text-decoration: underline
 }
 .sub-row .reward-amount {
-  color:#464;
-  font-weight:bold;
+  color:#fff;
+  background-color:#5cb85c;
+  padding:2px;
+  border-radius:4px;
 }
 .sub-row .unbroken {
   color:#464;
