@@ -24,24 +24,26 @@ https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
 Version History
 ================
 
-Coming soon...
+2013-11-19: status TEMPORARY
+warp_1.0.0-rc3_SHA256_dc559269f6ab906516b6b055f13537bd93f08ba9e669bedbdc27ccf503d0cc11.html
+  - Initial revision
 
 ==============================
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSi7hkAAoJEEdITlBlbRbHKrkQAI1f7pTbk1vkcMkEZ5pP3sfC
-4Y5cYevFWBULwsjEnKxggT3Iro7CDZepvknKZGWwqMevuXjcBL5aqe4E3TA4/Un5
-TCdIDpqF6nTW3mRKvd1wgUwa1a8C2zpS3G/BvQslAGLXJ7c1XDBOJ98fJqhV/bQ/
-ktmZMvWCl/JkjcoyhGtj5LRkYz09Z52vTtB0siIZRpQDoi/buakGUphBZeAz4JO+
-+lgh42QB6UiRx5ynEqKIExl9QrpL24vIg3tnrN/JiHpy/kMuv0hSzdbs40PjCBV6
-+rXcLdx0v4n+kID2RH3ljTJfgDB4mPi9bsHTaO4zVl4vuKQsbON1pdUJ5dhtUc9w
-CXkX24jcSmmanjyAP91427b2+X/Tp0siquLyxdLVbIO7uxPevOqgJ8flk5vGE9I1
-oWv0N31ISUVhcvXau3njmcStpRlHAJxmpAjqhlkmMBdRszUIyXZE+xFIHl9sKJgA
-RLpE+3VnnIsWJYKmCqXMMcp4CRurHCKclsTFMugMN9u5Z4HRMre7gJ1jsGCxmbWm
-9rjiCyF8jpj/oZ5V02KC54cu9let+LToCWU+Zv620AcsCqLyNCjOgHBjr8yWZrTV
-I/l/2pGllcVqQg0Yi8pzEXTjT+nH+v2RIQB7H+StXwPPVtCbUeWf1os3WGNgx6T0
-ZckzCWcfOXWCDAyn3Egb
-=plp/
+iQIcBAEBCgAGBQJSi7rmAAoJEEdITlBlbRbHOHkP/REJPbBIbFvPPjf1ryS/SDqN
+cH8an95ApUYIuju8EAt8WKtekMpFikSogATTDTU96YtSxZEato2llaee61e4DOEC
+7vGCh24wnDltJTkA7TTToXfYcAX1b3hWXTSWtUiP8cwkkX0AkWilAW/cKG6+iPZO
+otFvV374sK1AEfPTtLFe2EG3PPlrE3SBeFut/hNXnZHGYwJN9K5Eevrkj1IlR1rx
+g4eR6cPKU7cmX1BArduvNva6qTBgO4nJT6WvYQo+agVKbSmMDwgLpAUt/VEkkWDn
+72GDZjOeWVaGz7SLC6WLCVdvhlwNf855PB2dMl8hBXl5ObIyrOQzBFd77SN+LTZo
+GskAsZPK06B6b1clHElQALczQkzffyfYaHGs5h3V9v26mltSTNH8+nFGSEyAr6Xi
+KbyJ/yWqEWXyJtT382bkv+bLkf2OgZ5CH3YzhTY1anABMWd/at+mGDS1MmeIeQnF
+qpcW0yvzkK24+iIGyHtEtBPZRLx2sXPFXfbYJUEMLADp8NspFQfbVfh0pJuvwc7d
+cmMTsHuMnbm/+G6pZES98gP9aRLswzlMVlNqPL7h+xRbu9ZGaduLU+Rl13X/wExf
+gtmzJpH/DFD2onNYJNoDAGomVzyMiOl29+WmByVMZh0HEsORCSiw6ns1UMuldJWx
+HP4XKwO/Agpna0TDSyUK
+=cI59
 -----END PGP SIGNATURE-----
