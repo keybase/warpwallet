@@ -3,6 +3,8 @@
 generate = require('keybase-bitcoin').generate
 params = require('../json/params.json')
 
+#=====================================
+
 from_utf8 = (s, i) ->
   b = new Buffer s, 'utf8'
   b2 = Buffer.concat [ b, (new Buffer [ i ]) ]
@@ -10,6 +12,8 @@ from_utf8 = (s, i) ->
   util.scrub_buffer(b)
   util.scrub_buffer(b2)
   return ret
+
+#=====================================
 
 exports.run = run = ({passphrase, salt, progress_hook}, cb) ->
 
@@ -44,4 +48,6 @@ exports.run = run = ({passphrase, salt, progress_hook}, cb) ->
   out = generate seed_final
   out.seeds = seeds
   cb out
+
+#=====================================
 
