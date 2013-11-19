@@ -1,12 +1,20 @@
 class Warper
 
   constructor: ->
+    @check_compatibility()
     @attach_ux()
     if window.SALT_DEFAULT?
       $('#salt').val window.SALT_DEFAULT
       $('#salt').attr 'disabled', true
       $('.salt-label').text 'Prefilled salt'      
 
+  check_compatibility: ->
+    if not Int32Array?
+      $('.form-container').html '''
+        <p>
+          Sorry, but your browser is too old to run WarpWallet, which requires Int32Array support.
+        </p>'''  
+        
   attach_ux: ->
     $('#btn-submit').on 'click',            => @click_submit()
     $('#btn-reset').on 'click',             => @click_reset()

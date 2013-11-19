@@ -22,6 +22,11 @@ Version History
 ================
 
 2013-11-19: status TEMPORARY
+.html
+  - provide warning for old browsers which don't have Int32Array defined (IE9, for example)
+  - fixed buttons trying to submit in Firefox
+
+2013-11-19: status TEMPORARY
 warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b607d0f.html
   - Initial revision, challenge announcement
 
