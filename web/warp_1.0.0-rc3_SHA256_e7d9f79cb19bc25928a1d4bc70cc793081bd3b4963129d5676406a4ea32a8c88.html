@@ -892,6 +892,7 @@ window.package = {
       $('#btn-submit').attr('disabled', true).html('Running...');
       $('#btn-reset').attr('disabled', true).html('Running...');
       $('#passphrase, #salt, checkbox-salt-confirm').attr('disabled', true);
+      $('.progress-pbkdf2, .progress-scrypt').html('');
       $('.progress-form').show();
       return warpwallet.run({
         passphrase: $('#passphrase').val(),
@@ -13528,11 +13529,9 @@ hr {
         <div class="form-group salt-explanation" style="display:none;">
           <div class="col-md-8 col-md-offset-4">
             <p>
-                If you include your email, we'll use it as added input to make your wallet's security stronger. If you're unsure, please
-                do it. Your email is easy to remember for you, but this makes it
-                harder for generic passphrase searching softare to stumble upon your wallet. If you're a programmer: we're using it 
-                as a "salt", as explained in WarpWallet's formula in the footer. Regardless, pick a passphrase
-                with a lot of complexity. [<a class="what-salt" href="#what-salt">Ok</a>]
+                WarpWallet can use your email address as extra seed data to make your wallet stronger. If you're unsure, please
+                do it. If you want to know more, read how we "salt" in the footer of this page. 
+                [<a class="what-salt" href="#what-salt">Ok</a>]
             </p>            
           </div>
         </div>
@@ -13630,7 +13629,7 @@ hr {
             <li>
               <b>hint</b>: this passphrase is 2 random alphanumeric characters, such as 'X9'.
             </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1F1k4fXca2L8ew5YV3isDzs7nTSe1oG7uK" target="_new">1NcXVjzBPYzLZREwWucQHsxCYpjtQ9NGev</a></li>
+            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1JKb1617p68H5MPkoNaMtaJCqKDU3h8qSn" target="_new">1JKb1617p68H5MPkoNaMtaJCqKDU3h8qSn</a></li>
             <li><b>status</b>: <span class="unbroken">unbroken</span></li>
             <li><b>expires</b>: never
           </ul>
@@ -13644,7 +13643,7 @@ hr {
             <li>
               <b>hint</b>: this passphrase is 3 random alphanumeric characters, such as 'Xa2'.
             </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1F1k4fXca2L8ew5YV3isDzs7nTSe1oG7uK" target="_new">1F1k4fX...</a></li>
+            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1NMjXhB2DW8pbGvd64o9DiqwCF8BTAkJKu" target="_new">1NMjXhB2DW8pbGvd64o9DiqwCF8BTAkJKu</a></li>
             <li><b>status</b>: <span class="unbroken">unbroken</span></li>
             <li><b>expires</b>: never
           </ul>
@@ -13657,7 +13656,7 @@ hr {
             <li>
               <b>hint</b>: this passphrase is the usernames of two who've posted on the <a href="http://www.reddit.com/r/Bitcoin">Bitcoin subreddit</a>, separated by a space.
             </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1F1k4fXca2L8ew5YV3isDzs7nTSe1oG7uK" target="_new">1F1k4fX...</a></li>
+            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1FpxSs3tsvV8knTgRv2885bE1GyPq1QrvH" target="_new">1FpxSs3tsvV8knTgRv2885bE1GyPq1QrvH</a></li>
             <li><b>status</b>: <span class="unbroken">unbroken</span></li>
             <li><b>expires</b>: January 1, 2015
           </ul>
@@ -13672,7 +13671,7 @@ hr {
               <b>hint</b>: This passphrase is the username of someone in the Hacker News top 100 karma
               list <a href="https://keybase.io/warp/hacker_news_100.txt">as of November 19, 2013</a>.  However, we dropped 2 characters from his or her username.
             </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1F1k4fXca2L8ew5YV3isDzs7nTSe1oG7uK" target="_new">1F1k4fX...</a></li>
+            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1GXXH7FbY7nCJDRc72SMyYykgtEUi5GxfR" target="_new">1GXXH7FbY7nCJDRc72SMyYykgtEUi5GxfR</a></li>
             <li><b>status</b>: <span class="unbroken">unbroken</span></li>
             <li><b>expires</b>: January 1, 2015
           </ul>
@@ -13689,7 +13688,7 @@ hr {
             <li>
               <b>hint</b>: this passphrase is 8 characters long, only alphanumerics. For example, 'b234FEzz'.
             </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1F1k4fXca2L8ew5YV3isDzs7nTSe1oG7uK" target="_new">1F1k4fX...</a></li>
+            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1AdU3EcimMFN7JLJtceSyrmFYE3gF5ZnGj" target="_new">1AdU3EcimMFN7JLJtceSyrmFYE3gF5ZnGj</a></li>
             <li><b>status</b>: <span class="unbroken">unbroken</span></li>
             <li><b>expires</b>: January 1, 2016</li>
             <li><b>note</b>: * we put half the prize in the private wallet, and expect to hear from the winner privately, so we can talk
@@ -13709,7 +13708,7 @@ hr {
         </p>
         <p>
           But enough with the pleasantries: you can always see our signed version history at <a href="https://keybase.io/warp/release.txt">https://keybase.io/warp/release.txt</a> (signed with
-          our <a href="keybase-code-signing-key-2013.asc">PGP key</a>).
+          our <a href="https://keybase.io/warp/keybase-code-signing-key-2013.asc">PGP key</a>).
         </p>
         <p>
           <i>WarpWallet</i> is of course offered without any warranty of any kind;
@@ -13726,10 +13725,17 @@ hr {
       </div><!-- /footer column -->
     </div>
     <hr>
-    <script>document.write(package.version)</script>
-    &nbsp; &nbsp; CrashMix LLC
+    
+    <br /><br /><br />
+    <div style="text-align:center;">
+      <img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAA/CAYAAABDyo4+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0NTExMjY2OTQ5NzUxMUUzOTVFNkE0MDk1NDUxNkM2MyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0NTExMjY2QTQ5NzUxMUUzOTVFNkE0MDk1NDUxNkM2MyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ1MTEyNjY3NDk3NTExRTM5NUU2QTQwOTU0NTE2QzYzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQ1MTEyNjY4NDk3NTExRTM5NUU2QTQwOTU0NTE2QzYzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Tt/8VgAABXpJREFUeNrsnE9u00AUxu0oB/ANSE+AewKcE+CcgGRXiQUxF0i7QGJF0gVSd01PkPQEyQ1w90gEdiAhjFiB1MJ76Ht0amzHf8b2uDDSyE1w7Jmf3/vee+MRtvW//dWOjo6mdJhRd/r/cdwB49DhnLpPPaQ+se/jRF+9fu3hT0/5miccPn/6dJcCxwUcPi6pB2dnZ5F9T4C4eOqPMMEQ/Sv1B/jOxekM6IRALRU4YzrM8ZHB/Pk3u8NQBnR4BjAR9QvqW5p4mHH+GNrCbf3548fg86dPM3zP4EYE587v7Y66j4DhJ32aBiXD2jY/vn93Prx9G93c3LDurFlv2KXi59sdAzODq5xSXxCYqOS1fAK0+hZF1vX19eLlixdB2rn2vwQmdt0NRJzdctg5QHCFOSaxhLDuNF6fXXSFjwdp1+4bCMYBGBbObdbgqzS65pruJR9diHS9gDA5N/Z1lFdE6fcSbtmFRjyJmp9HqKQAa+2AYvmHl3GeDIYt4pImvk0AKxnsAu4UNWCwe+/RL2klPkKti5vwhE8AIX5TBvcQR65xpnSNHfKWBa4hWjCMw2u79QvCOQYYRxHOfW6wjQnjYyVhewxAW7hU1BKHqBIghFp2gUGViAKYLI6nAM2glvT9pCUwrqJF5cI8TWYO1/hd3RbJWjNcdIPBTdSaqIVS5R0enF3YgnCBFSbCFnOsKcq1DgfNl5qssAZJvaJTOA2Dw+0JjpdZJ9kpeqNGlfC+wcEceTw7GstB1rm9hPR7UyOchQGWYylLHif7TuzF3OocIU8LHLQ/q3R0zcCAUsZXitS9D6sf0xxHJxy6rmTHbYbypIydjSDXePrKj/gY6MpkkVSOkR4ElhlN5jnJm8f1FBfg5rCAwaKqwJFMOYRFRgZYz1Sx5tw6aNMP3yFDTkvBpb66wpLALsvKlHWWCEsVJsAZwxDWNJ5Rkd/aCeFPUnAHRaaTUqnLm4MrCF6YkD+FBsDhMb0pa812gRsNYGkM6wGOg5SCzyQ4G1h+KVe3Kw5ArOuJdfv6xRQ4kvCWhvNXoliiOo8wAM8wOOOqlqPLgqTS53bYNhxYNMOZ68q9ehV/f5FQHbepN190wtHhYqFSz8yq5k8aMuSkgNGqBVlYJwqVTLUNy5Fcbq3bmnuariOlhIsSo0kxlhznQHH5AdKSys3WOFgR7AiCvavZpeTl4p3VTvq3n/hTy7pTT+O4TxBWnTpdTUn+fITwuMVKGTQwycUkJ5LI4aE4rKPglPzmIKUmFMt9ZBQgQNoqQjnTpQPsUtRXWCFgl8p6h/Ze55x6NXjBBDqkxdWwOiBRirVt0WSU1A4IT3akuNpxBauZo57iXWR5hT803YLE1dQE0i8Ix0P49mE1RSC7xgNSEkgR0fO8WTYsToQ4sFL27XTWxWJtBJP//eonCxILOnW2mmfQMdn1UTYrjowHBD0a7oMEF3yDj0MkeKIlDwveVsL7VRcsKA2SF8vAV0gP1PWksKSm7N2xUaQ1skeRIRGIIUB4gCSbp/hzkBC+xQK8AuI+wENQM2qzLUiFhO22AfRhat2+q19khesCyyiiV6GutymNAVJAMYxDuN1hWkEZW53Mm5HLjo0LXeNtZRswEr68SV/mLtSYe4mladsd27PMbrsCkUx2bCx1LrWYDkiE2smxPuTrdq8uWZCbw3oY0lb3NuKuAHL2aM9UWUmw/kVAWaFellQWdSzzGg0oNmEnwXqmSCR3Vo7tdPfRgtSicxCD4yqRq7Zd+l0AFMYBIWqtrNtdcbW98u4CoKS2AbBl3UuwXQB0J1nExlAXIb32jaFdACRvKRzAGcPtRk3cvEv/NYWnaFJjG0O7AEgV4Mb3W3cBEGsQlw+XTb8T4/ZLgAEAleqmB7PlYlsAAAAASUVORK5CYII=>
+      <br /><br />
+      <script>document.write(package.version)</script> - CrashMix 2013 - <a href="https://keybase.io">Keybase.io</a>
+
+    </div>
     <br /><br /><br />
   </div><!-- /container -->
+
 </div><!-- /footer -->
 
 </body>
