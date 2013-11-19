@@ -1,6 +1,6 @@
 {
   "name": "warpwallet",
-  "version": "1.0.0-rc4",
+  "version": "1.0.0-rc5",
   "description": "Open Source JavaScript Client-Side Bitcoin Wallet Generator Using scrypt",
   "dependencies": {
     "iced-coffee-script": "",
