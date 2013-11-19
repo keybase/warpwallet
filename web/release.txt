@@ -24,7 +24,7 @@ https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
 Version History
 ================
 
-2013-11-19: status TEMPORARY
+2013-11-19: status ACTIVE
 warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b607d0f.html
   - Initial revision, challenge announcement
 
@@ -33,17 +33,17 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSi8iIAAoJEEdITlBlbRbHOIEP/Rayikv+287iuGpic5Hc8vka
-SpEeZYb1QNGlfTPPm1WSg5CW94GJWO6/DFC93Zf7y4Lu/qYu3/wVqFlGjDa1J14C
-QJQULV1kEiP8CCxcAz/rsiUuevxdSl2SbbNxZJIc93t3nKcec6HWgWFMl4lBTF3T
-NFDHWflshFTDo26aXfGl7lDzAssQj9/8PTt2Gxa2qe2rbQxEOIuZs9UkQO7J4idp
-beFnZEyQjPFqHOg63Qyw5m5K1mCktGVe7UylVjKdnzK0eAHWmicYYiuwpHYrBXbN
-gmijDX42r2S7y6WjjbjONl5KETW2iEmiiHlfYWBSknuO75hw3yBFN8svWMqAW9bR
-0OQCW6Fb5n1dXO089GFNvGmHuxyFo2HDPAhwkZYV83FGT0zCIIlBC1/SC7zUMHz4
-PhT8PZ5lBY6K51faF07SA+CY0C6abcjXuGRpla2+53BjC8fsyAZeohfILcoVXxf2
-Wx2ZZXIKx67U1L8vWOgmptpPYSzMjSVrf59j5LDcHA7L8mqc9/zvoozgvC6luMrr
-6lEuiEm1NgWnDphsdYSJNfyln8esuuYG/P09rpcn+/qBJJAZT0rGpkmVvLn8dp/p
-kgUhlPTJxwaOwbpdHpohaNZOWdnMTuKGQmJqb+/YdmDbcL5xUS+psgoRLTluytaQ
-auCCEmlKz9nw8fKfiww8
-=S5QI
+iQIcBAEBCgAGBQJSi8yWAAoJEEdITlBlbRbHrvAP/AoJghPbkjamjEg0S8OirJQL
+1T/6B8EYwYp/Tw3bTzd+kiSMMN8UQj69jwzK1SS9tAPvdBq5mQ/je2XZrcwiecAZ
+46pFlWBxFk2KZCF1K816WOkf93BSSPbzXQVmWFlag0ibIHfcT4qZXnqCj+elwwFh
+HYALzPIMiEfntj4YcE+pXqkULN7cYodG0mbn8hxzNFtchqCdxthzzlmenL/MxVun
+JfydSUirlAXVlCGzM297DOLZDk2qncOPXiVheWZQd5HbLyGUaSamhfuvqNkJEL1t
+q3iuk9B3KUdoJrhZQ4Ss04QyoBsT6oVHPtkprrrrQVSerZGbn97dV+Fyu3/xCUal
+iSvNCyUHiRW5OBaZ9p1LiTOA2jRjW5/agMBHjNLFkV7obWDVwmbXPDa4bv+9yCes
+E3MiznD+jD9R2uy+hESSoSXoXxJ93q4lCDrwjjucNq6ksvC92MZqafJHA1spQiX8
+8BJ0qh1ZjJZDNw1Wq47sgLvHgOXpWHDa0Ep3YQNrW/pOHWNnU0ajzRMTiJ12fj02
+ZF1QI4AvdcOAShkqezGfVdmh1//rw1eCorFRAGz6Eggxyco1+/4dtcw5ywG6XxuC
+zvY2AqeMdlzdYRu07x8iSNCJHtxtAulTUEE2hfWYTUZsZpwojhKFyS/xTmBBT/e+
+KIJ5aqzS8FgqrOj05Dpd
+=RflD
 -----END PGP SIGNATURE-----
