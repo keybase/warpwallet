@@ -25,6 +25,6 @@ clean:
 	rm lib/lib.js test/browser/test.js
 
 web/release.txt: release.txt.in
-	gpg --clearsign -u k@keybase.io < $< > $@
+	gpg --clearsign -u code@keybase.io < $< > $@
 
 .PHONY: test test-server test-browser clean build

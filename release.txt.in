@@ -21,17 +21,6 @@ https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
 Version History
 ================
 
-2013-11-XX
-warp.io_1.0.0-rc3
-
-2013-11-18: status TEMPORARY
-warp.io_1.0.0-rc2_SHA256_a761e5c92dcac05cb6a8acd12882118c2eeff7a9e9565bd0e885f00b2ad70e1d.html
-  - Fix a broken link on the main page (was supposed to link here)
-  - Upgrade Triplesec to work even if we can find a native CSPRNG, as long
-    as we don't need a CSPRNG for what we're doing (as is the case here).
-
-2013-11-18: status TEMPORARY
-warp.io_1.0.0-rc1_SHA256_1200d11d45363b40fcf8527a066898d19ba6c210580a4e8aa643877897c662a6.html
-  - Initial RC1 revision 
+Coming soon...
 
 ==============================

@@ -22,9 +22,9 @@ crypto      = require('crypto')
 
 build = (cb) ->
   esc = make_esc cb, "build"
-  latest = "./web/warp.io_latest.html"    
+  latest = "./web/warp_latest.html"    
   await do_browserify defer()
-  await fs.readFile "./warp.io_src.html", {encoding: "utf8"}, esc defer html
+  await fs.readFile "./warp_src.html", {encoding: "utf8"}, esc defer html
   await token_build_and_drop html, defer html
   await fs.readFile latest, {encoding: "utf8"}, defer err, old_html
   if err? or (old_html isnt html)
@@ -32,7 +32,7 @@ build = (cb) ->
     await fs.unlink latest, esc defer() unless err?
     console.log "Writing #{html.length} chars." + if old_html? then " (Changed from #{old_html.length} chars)" else ""
     sha256 = hash_data html
-    fullname = "warp.io_#{version}_SHA256_#{sha256}.html"       
+    fullname = "warp_#{version}_SHA256_#{sha256}.html"       
     await fs.writeFile "./web/#{fullname}", html, {encoding: "utf8"}, esc defer()
     await fs.symlink fullname, latest, esc defer()
     # delete any old copies of this version
@@ -49,7 +49,7 @@ task 'watch', "build repeatedly", (cb) ->
   ready = false
   b = new brew {
     match:    /^.*$/
-    includes: ['./src/', './warp.io_src.html']
+    includes: ['./src/', './warp_src.html']
     compile:  (path, txt, cb)  -> cb null, txt 
     join:     (strs, cb)       -> cb null, (strs.join "\n") 
     compress: (str,  cb)    -> cb null, str
@@ -69,7 +69,7 @@ hash_data = (data) ->
 
 clean_old_ones = (new_one, cb) ->
   await fs.readdir "./web", defer err, files
-  rxx = "warp.io_#{version}_SHA256_([a-f0-9]+)\.html"
+  rxx = "warp_#{version}_SHA256_([a-f0-9]+)\.html"
   for file in files 
     if ((m = file.match rxx)? and (m[1] isnt new_one))
       await fs.unlink "./web/#{file}", defer err
