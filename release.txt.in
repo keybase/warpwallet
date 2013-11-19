@@ -24,6 +24,8 @@ Version History
 2013-11-19: status TEMPORARY
 warp.io_1.0.0-rc2
   - Fix a broken link on the main page (was supposed to link here)
+  - Upgrade Triplesec to work even if we can find a native CSPRNG, as long
+    as we don't need a CSPRNG for what we're doing (as is the case here).
 
 2013-11-18: status TEMPORARY
 warp.io_1.0.0-rc1_SHA256_1200d11d45363b40fcf8527a066898d19ba6c210580a4e8aa643877897c662a6.html
