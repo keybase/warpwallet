@@ -1,9 +1,8 @@
 {
-    "generated": "Mon Nov 18 2013 16:44:52 GMT-0500 (EST)",
-    "version": "1.0.0-rc1",
+    "generated": "Tue Nov 19 2013 09:08:24 GMT-0500 (EST)",
+    "version": "1.0.0-rc3",
     "params": {
         "N": 18,
-        "c1": 1,
         "p": 1,
         "r": 8,
         "dkLen": 32,
@@ -14,156 +13,156 @@
             "passphrase": "ER8FT+HFjk0",
             "salt": "7DpniYifN6c",
             "seeds": [
-                "f8038674da442e7740d5cf2b9e758c3b8c0d6c6bb7710174bbf08594da616af4a0d07b46a43bd0685ab99edf5cb99eb64fd895b2f7a562bd8d711790f103ab4e",
-                "8afaa5757e514a71d6e9e84bedbd35cd85fdc8bcb1e759d8f72e5568ad17c18d",
-                "72f92301a4156406963c276073c8b9f609f0a4d7069658ac4cded0fc7776ab79"
+                "b58e47817de4d3901694b68bc8566ed5af9bec21e7a3bd56be114e2004ac148b",
+                "daab156024167271f4f894e91213f6cd52cd243dd19c7126075d0c1debeef114",
+                "6f2552e159f2a1e1e26c2262da459818fd56c81c363fcc70b94c423def42e59f"
             ],
             "keys": {
-                "private": "5JgvRADDrGH1n1mtmnHXAwX3LeA4vp83PEaG2dxjAsmKkyNNBdf",
-                "public": "1xhLnRh5EWVgwPMua3X1dXwbwxNSiMoBd"
+                "private": "5JfEekYcaAexqcigtFAy4h2ZAY95vjKCvS1khAkSG8ATo1veQAD",
+                "public": "1J32CmwScqhwnNQ77cKv9q41JGwoZe2JYQ"
             }
         },
         {
             "passphrase": "YqIDBApDYME",
             "salt": "G34HqIgjrIc",
             "seeds": [
-                "e7cdfd3e0df625cfc0b1f6c56838445c845a718657562108454a60db8c1188ae7ca8b8dd99064be6aa5c5f15c8849f1f1e7ace5408e7b1d1941ccd681c4cbf44",
-                "cbcd3ffc1ae9dfb9bc9af97868fd045886711fc5a17f2c20b13f8621db01ab10",
-                "2c00c2c2171ffa767c2b0fbd00c54004022b6e43f6290d28f475e6fa571023be"
+                "145c2af767a1116477fec267e758cf57614e5d7fa175f7d9acde5b4984d44181",
+                "ce5cbcf5c2d90be3e22b9e098ffc7b824827fa26f49f87fcf4b7865e47edc413",
+                "da009602a5781a8795d55c6e68a4b4d52969a75955ea70255869dd17c3398592"
             ],
             "keys": {
-                "private": "5J9faVsbvDLj2Z6dDsXRWwD2rSkudD9rPe3bjXBgzW9FvKZTzZT",
-                "public": "1KmQkK9o5LK1ovhT953CkuzQA382oCD9fW"
+                "private": "5KUJA5iZ2zS7AXkU2S8BiBVY3xj6F8GspLfWWqL9V7CajXumBQV",
+                "public": "19aKBeXe2mi4NbQRpYUrCLZtRDHDUs9J7J"
             }
         },
         {
             "passphrase": "FPdAxCygMJg",
             "salt": "X+qaSwhUYXw",
             "seeds": [
-                "5caf93fb7fbf138d780c3fa66c64b3504ce4b1163e6e5c19d38e18d4ab4eb64d8c24bfc5bbae2a880af1953986613ecadfe94ffa6d30441b201143d2d48f5d49",
-                "772e6248ade07358002400bfb14fac30a86556959804f2d58d0f59ef8d554b89",
-                "2b81f1b3d25f60d578283f19dd2b1f60e481e783a66aaecc5e81413b261bfdc4"
+                "653083a95e681134205d7f4bf9c3f58a48bb8e7ef7715cba4e800bcc802c368a",
+                "4a5a7a04c713922d43a9a103de4ff1c420c47db03b542f275be4939712b08557",
+                "2f6af9ad997b831963f4de48278c044e687ff3cecc25739d1564985b929cb3dd"
             ],
             "keys": {
-                "private": "5J9SvaencbGgRwgaqy7e8NvRq2h5mo93L8fYDXGvhuEZkob4PnZ",
-                "public": "158TFroxo2UzrVJe6oeRZfmXb3dAxZ9n92"
+                "private": "5JBAonQ4iGKFJxENExZghDtAS6YB8BsCw5mwpHSvZvP3Q2UxmT1",
+                "public": "14Pqeo9XNRxjtKFFYd6TvRrJuZxVpciS81"
             }
         },
         {
             "passphrase": "gdoyAj5Y+jA",
             "salt": "E+6ZzCnRqVM",
             "seeds": [
-                "f9edb6a326cf034c8b716553053674c43098fc559375f3947ce65beb87cfd559245f946e8a90a6c52093ba8c3c279a4e69a83df4dee44916ef68b61985929e38",
-                "f54068d4030f998bcb47860e831cc5964d88f9203cd37dc5326318dac131f689",
-                "0cadde7725c09ac74036e35d862ab1527d100575afa68e514e85433146fe23d0"
+                "2f4ef304adad15cc851f3b2b4999c418ac4b4bff8958b09a0ccfae603084b814",
+                "75fe4aebad1d28d523e26c3128bac4518e78b9ad77e3be10aa643e82b67ea96c",
+                "5ab0b9ef00b03d19a6fd571a612300492233f252febb0e8aa6ab90e286fa1178"
             ],
             "keys": {
-                "private": "5HusTHdtr9swLPtt4bpJQp8UiYfCU9UCDgMuUzYJ9iDStjLdHAc",
-                "public": "1Gm15BjbvyDjEFwuRDWuQmxqs7c6ghZQ43"
+                "private": "5JWE9LBvFM5xRE9YCnq3FD35fDVgTPNBmksGwW2jj5fi6cSgHsC",
+                "public": "1KiiYhv9xkTZfcLYwqPhYHrSbvwJFFUgKv"
             }
         },
         {
             "passphrase": "bS7kqw6LDMJbvHwNFJiXlw",
             "salt": "tzsvA87xk+Rrw/5qj580kg",
             "seeds": [
-                "249e52c58d2bedb3b25d824a0019c99a7b7788f38f84122a0f14ad9a35fab6ec8ac24a85d628ad25972d6f0e41995e2fc7b986d6de4f7e82432d6cc91355db37",
-                "558e8fc755b0472238073eadf447058f49078c26cba9f3b2be4cfc2aa990ea6b",
-                "7110dd02d89baa918a5abce7f45ecc15327004d5442de198b15851b09c6a5c87"
+                "39fa48c58d6e8b81f98dc04cc8b898444410a1fc887a41d47648ba4eb93fe3ac",
+                "f5ea0f92683ec7986393b197129b380315bb9a08c36a70415bbab94b6492e1a6",
+                "cc104757e5504c199a1e71dbda23a04751ab3bf44b1031952df20305ddad020a"
             ],
             "keys": {
-                "private": "5Jg5hQY64WDZ39e7QaRYaZT4uKMHejv5bkijCrjsGvxxfbBfdoL",
-                "public": "1E4aHDeVEr1sC4DuKw5xF2n7SM157Ynkw7"
+                "private": "5KNA7T1peej9DwF5ZALUeqBq2xN4LHetaKvH9oRr8RHdTgwohd7",
+                "public": "17ZcmAbJ35QJzAbwqAj4evo4vL5PwA8e7C"
             }
         },
         {
             "passphrase": "uyVkW5vKXX3RpvnUcj7U3Q",
             "salt": "zXrlmk3p5Lxr0vjJKdcJWQ",
             "seeds": [
-                "f8555e18cb5912da2ff7ebb2c42569d9488326f4ba1b7bb7f48e85cb54f4b06171231c91e719e134592326612e8657a7d9c7c54fe41395d53ba24a8885e62bab",
-                "57dfc82ff8c3afa734dfc7ee1848555a9febd7d11c4e45ee88e680d99a971c3c",
-                "af8a9637339abd7d1b282c5cdc6d3c83d768f125a6553e597c680512ce63ac5d"
+                "235d2b1480eee07bdc04114fd83294facd8f252ac142685595046bb2e680e9dc",
+                "239cc5df0fb8d80078e8fe5aac99552aca03dd1cab7276a4cb909083dc05dd8f",
+                "00c1eecb8f56387ba4ecef1574abc1d0078cf8366a301ef15e94fb313a853453"
             ],
             "keys": {
-                "private": "5K9bYqpSUugnYX7za1SRRWfNRou3drDdyBka7YTB5E4vffzbnZa",
-                "public": "1Q3CdczoERyyoEDnPWYUj6USNZ22ayrxFR"
+                "private": "5Hpcw1rqoojG7LTHo4MrEHBwmBQBXQQmH6dEa89ayw5qMXvZmEZ",
+                "public": "1ACJ7MhCRRTPaEvr2utat6FQjsQgC6qpE6"
             }
         },
         {
             "passphrase": "5HoGwwEMOgclQyzH72B9pQ",
             "salt": "UGKv/5nY3ig8bZvMycvIxQ",
             "seeds": [
-                "9092718b945aebc932194f4a88f509786593acc14a59412bb3f5fc27bda4b408a27fce782034973aaa3ebdfba7f8459dc5d1d093e0b590d2627b8b2a3473da6e",
-                "a7a1df9483e9fa72529c267f136bfd6da115ceb9d039c348a1b2bdf50971e243",
-                "3733ae1f17b311bb608569359b9ef415c48662789a608263124741d2b4d5564b"
+                "2dc5e1ad04bbd8b586563d7728e8c211537b78a8966ad71641634332c140317d",
+                "0b91675d6ab1486fdd543f9b6949109f056fa24785c93a2a8405c207840af1f3",
+                "265486f06e0a90da5b0202ec41a1d28e5614daef13a3ed3cc5668135454ac08e"
             ],
             "keys": {
-                "private": "5JEbe2yJKSKRcVwUQ8PUFir3wfaVLSDRPwK2b5TyBk8H61vNEdu",
-                "public": "1JPFGxjMgavWhem8qSMwyqYnhSLmMh4UY1"
+                "private": "5J7Ag5fBArgKN9ocVJs4rcQw1chZjHrqAb4YRuny6YiieJc5iG3",
+                "public": "1Mtb2o7AsTRAR3vjtSYjq1rgB8Q6A76avD"
             }
         },
         {
             "passphrase": "TUMBDBWh8ArOK0+jO5glcA",
             "salt": "dAMOvN2WaEUTC/V5yg0eQA",
             "seeds": [
-                "9b8a1209659341b7df11b6664c14b2b5d23385c097ab20fa3e211f33fc2f47e28755b12979261cfe111a720c4869c9784b8d641826b8cde0b81baa0b8a3bcf4c",
-                "79456048bf89e6e00d4b77982501d61eb2967dbddbfbc12477c4a7500021cd93",
-                "e2cf7241da1aa757d25ac1fe691564ab60a5f87d4c50e1de49e5b863fc0e8a71"
+                "68a1588996ce0da29e1b219c9a1e2d663a97d8c91d52bc38ff4e9bc5bd7b462c",
+                "9d8aee7f419bb46d093158fe63eca5bfe38a4c7a43387ac4b0127be800bfce41",
+                "f52bb6f6d755b9cf972a7962f9f288d9d91d94b35e6ac6fc4f5ce02dbdc4886d"
             ],
             "keys": {
-                "private": "5KYB9VJVEKDHqjHyzRviE4LqXVYEhmgVwWM8bK5PpQ1j3HmMyVB",
-                "public": "1GqdiZ248tPPTrg1uDdPtHmNnNk1uoaUDp"
+                "private": "5KgG93ePJJ8HC2tnTerThNUnXbjyeBpUCBDRn5ZxMRB9GxiwJEK",
+                "public": "1B2VuTAHERd2GmBK522LFLUTwYWcW1vXH6"
             }
         },
         {
             "passphrase": "rDrc5eIhSt2qP8pnpnSMu1u2/mP6KTqS",
             "salt": "HGM1/qHoT3XX61NXw8H1nQ",
             "seeds": [
-                "419aef01c10862b300ee432298b3a191f5fb414fac5b208381c781c9b90276dcfc067cd81d96365a1a052d57fb2eee873defb70522a4b2ca59447922e99c1597",
-                "53a01c7efeaf1166ff4427353451874c9bdce1d5f5c78e3332e7c1a3ed99ef0f",
-                "123af37f3fa773d5ffaa6417ace226dd6e27a09a599caeb0b320406a549b99d3"
+                "e95a1ef65063f5ab041375b33f9f4d958cd11a32ca852032cfac38d0b3b1c90d",
+                "fafde347cb69a0aac6035506eff73d6411cff64ebadbc776617ecbcb6b759202",
+                "13a7fdb19b0a5501c21020b5d06870f19d1eec7c705ee744aed2f31bd8c45b0f"
             ],
             "keys": {
-                "private": "5HxKFRYcWwc5cz9trXZ9Ni1XdESQkkehkGmWZoADAKYF4SXy5Q7",
-                "public": "1Mskdt6PECSg945aKmsf52XSS9YoZeHq9d"
+                "private": "5HxwfzgQ2yem9uY5UxdiaKYPgUR251FCVHw1VuHC5bSW5NVLaok",
+                "public": "12XD7BtiU1gydRzQm3cAoui2RQjhVJfNPg"
             }
         },
         {
             "passphrase": "Brd8TB3EDhegSx2wy2ffW0oGNC29vkCo",
             "salt": "dUBIrYPiUZ6BD/l+zBhthA",
             "seeds": [
-                "c6520fc18d2393735d6c6ff86445c14262dd8adac3c8992000f9e85d78980f36d976fd2ce5f359f6b0a946625abacc85beca8028f9d9ba7391a739f0a9f73151",
-                "300744a38b1baffc07c66c31872b8719c79aecdfc227b51cf24b7e28ab4602e9",
-                "f6554b6206383c8f5aaa03c9e36e465ba547660501ef2c3cf2b29675d3de0ddf"
+                "9f5cc8f45b5221352a487c81c7adfba40f8e3a3d860f3eaa8a0c4e0925ad054c",
+                "24aafad8ea524a72756a3ac56297615e056aad6df9fc8b6aeae8e338d167248a",
+                "bbf6322cb1006b475f224644a53a9afa0ae497507ff3b5c060e4ad31f4ca21c6"
             ],
             "keys": {
-                "private": "5KgmqDA5iTvJZNiPYuQoHDgvuvtTYtZTEDNjzb61mrQ37xcf2oC",
-                "public": "18oFQN647Q5SSiVyWDbCzHaeBBYjBobMSs"
+                "private": "5KF4ozGWXGZAqNydQg65JQ4XnJaUpBkU9g59C287GrbLfWVmYHL",
+                "public": "1CD93Tgj74uKh87dENR2GMWB1kpCidLZiS"
             }
         },
         {
             "passphrase": "eYuYtFxU4KrePYrbHSi/8ncAKEb+KbNH",
             "salt": "le5MMmWaj4AlGcRevRPEdw",
             "seeds": [
-                "d1b5690eb5e5949ad6189c9b890d2cbae06e87c6e7d4ff27cd713a5cbbc9c55537281fe4d2d5c5c5c6550b28645a337621fc1e365530d0428f1e168495445c9f",
-                "32b41ecb82bd04e729dfb2e27ac33b1ed9d51931458637c7d3a02064f65a5924",
-                "e30177c53758907dffc72e79f3ce17a439bb9ef7a252c8e01ed11a384d939c71"
+                "f9f7f8d6d88c355416e53e1f0c82fb0f752551564e5d9c18ab63d6e42dd99eb0",
+                "4c420683306f07bff28cfb525af04d95bb5f9a168b9daebc5038a32590d2de2e",
+                "b5b5fe55e8e332ebe469c54d5672b69ace7acb40c5c032a4fb5b75c1bd0b409e"
             ],
             "keys": {
-                "private": "5KYG8yWg5GzjWUiEjqazPSi2AHXECKgnhVwXbeyzVxfdRPj2fVr",
-                "public": "1PxjXLEubAjKU9qm3LWLNVBgpAdHhXFY18"
+                "private": "5KCK9EtgvjsQcPcZcfMoqcHwZKzA1MLfPUvDCYE1agiNf56CfAk",
+                "public": "18mugeQN8uecTBE9psW2uQrhRBXZJkhyB7"
             }
         },
         {
             "passphrase": "TRGmdIHpnsSXjEnLc+U+MrRV3ryo8trG",
             "salt": "DhZNEt9hx08i6uMXo5DOyg",
             "seeds": [
-                "8669d5ba6b16a91676ba4cf3f749953707505331a9cf918dfdda826f28aac3d66902a95c40d72be1f66c9b8d6ca350f710a6f3b8b7cdac390e18d700acd3ace1",
-                "7a2e5fdf000441af5fa9108b43d68e5b3af15cb713946e672d7027b3034a67ee",
-                "fc478a656b12e8b929135c78b49f1b6c3da10f86ba5bffead0aaa5dc2be0a438"
+                "22c525d1fa3820c90b4f405b204c3599d9de67cbf851bf7e0f192fb61bb15f8c",
+                "51543758d7bbfd715a732f6359a4c3a92b9fc42d979db79b0af801c9f7d77824",
+                "739112892d83ddb8513c6f3879e8f630f241a3e66fcc08e505e12e7fec6627a8"
             ],
             "keys": {
-                "private": "5KjPiojX8UJaSkhx8455sFtANG1JY9kCSJaiqT5RzcAQjaXH724",
-                "public": "1KR9FaH8wMMYnMoVL2BDhw9exQkAM7AEhU"
+                "private": "5JhBaSsxgNBjvZWVfdVQsnMzYf4msHMQ7HRaHLvvMy1CEgsTstg",
+                "public": "19QCgqHnKw8vrJph7wWP3nKg9tFixqYwiB"
             }
         }
     ]
