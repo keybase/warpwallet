@@ -25,6 +25,7 @@ Version History
 ================
 
 2013-11-20: status ACTIVE
+warp_1.0.4_SHA256_433bb302d88dd1e88567aaddfe0b6b241317c8266cc2310079bde86e8a68fda6.html
   - Small performance fixes: loop unrolling in scrypt, and also more "use asm" for Firefox
   - Challenge 2 has fallen
 
@@ -61,17 +62,17 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSjMaZAAoJEEdITlBlbRbHD9wP/R8Be4c7lhsymTx/EYfWJeqy
-Huq+fuYJqAfTdxUNJEQIRzLHwsJ6Bv8nEe18qnivvI1e164eiciY1vdMJiPL9TUT
-cq1kYjHnbQUjVguA5FANjN2T3EKNMxiJ1ClMqTUEaE3isxqFSBbyU6GU9QGxYwz1
-kkifbcm3E8vS9Q95Hbdz04A4Hw3gfzSwQAE+iV1WMtz+E7er10prfm2AIzqykL0/
-xyTpIWEzFdK3ITNlbVbq5eAEtptHxm8KylZzTvwECoCuNQY1XWEY4wIA1eCKZAnk
-1xNeZWRLiWcpBlOJEsZOmbtAut6rjh8Z+LCKKLf7O06TIA6Vn9C+MgFAwhP0kye6
-NxsJDmhD6L7hbSE99cCG7Nhi4nLbFyXD6leR2einTfRH3g2zZ65AJuY5ieYRBne6
-I8Ficbv9wc+uUkzfWMilYGmpoIvm/lFZgXk0LZC4L9yYutbMiO15i9WTcOsVxvmZ
-TORBzrxf8GeUVhjXFZ4CsOQ6PWZd1m/Bf+2dqQdS5gmnuHJKz8RDGNr5KVOYuUMs
-zMJTjksVDgLkPp3fgBD3OTFCue7wf+oLRDDUUfV99Z8k+Sf36kul0Il9aUPhCjUP
-b5OXe2zWlidaI6Rea/9u8s1QqVC7T5Qf/yHyn5RtxpJmr1/IfWE8/0JvfKrxbYqN
-OY+7AFQs76gKPwECCOch
-=BY/x
+iQIcBAEBCgAGBQJSjMjmAAoJEEdITlBlbRbH8loP/3yeT4gJnB9aFoYo7/bO9W2d
+zdpr1ZpD/6CJTzAbtLLUmxFrH0FLigw5R1xw3rfmjeY36rCrarJnNYOEMbd4qpCH
+RyZDOHyTv2fMAOyy5pHTdMnC77Cc4aBFBb4m45p/fPQ0ofsc5h6rg6GYA2PvJgp+
+kqjVvUJCxg1hrc0m2lyW2IjxrFIKU+BxmUBwqb5sg5y2z0WqQPeGhreyPACks/Xd
+CAQO/sIig1zFFTTesQQV8UGfYvWVoiUSVBgPMdX5QGH3SjFRm2PVGxwoS8BPrQPf
+LbKxX5vX4yVYhI7HNjSyEMRrR4MPfGe7XkYV+3nB2A1qhfl6D9LjjLmbD+uShfBY
+0WCmkC92+QfngOLxl+LmML/sbVlyX+dLQ057SR96YWW91Jfnx/6kG15b9kVMcgZz
+EvLiRTBbWNP9WpGvQYZEKCFhrRnwm+zmC/K0fzQYvGIgKqfVcgCA2dRM+Qq/B6KR
+7CrLeOhcpf9FGivqpllHCz7z9mkH/7Ld4NByAUlrVPTHeVN0v2LghwA4Xy8kEbSV
+wbhgAGJwHRwZPqKoKCsrdVoiqK+qOwWqtmQPtZZQFO35DM2QwEkPmzqRDC3cOLew
++f/baaK1HIdBrQrkBDrVLHkRDoFHH4Jo4RCR9Bkm3UpVd+Qk6+2fRKh7fqkF/g22
+4n+0NGqGj0Nlcb9dykQ/
+=yCAJ
 -----END PGP SIGNATURE-----
