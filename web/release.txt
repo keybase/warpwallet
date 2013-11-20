@@ -18,7 +18,7 @@ Donations to Bitaddress.org, who packaged a lot of the code up and
 inspired us to make this product: 1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
 
 This message will be signed by our company PGP key, available here:
-https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
+https://keybase.io/warp/keybase-code-signing-key-2013.asc (ID: 4748 4E50 656D 16C7)
 
 
 Version History
@@ -62,17 +62,17 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSjMjmAAoJEEdITlBlbRbH8loP/3yeT4gJnB9aFoYo7/bO9W2d
-zdpr1ZpD/6CJTzAbtLLUmxFrH0FLigw5R1xw3rfmjeY36rCrarJnNYOEMbd4qpCH
-RyZDOHyTv2fMAOyy5pHTdMnC77Cc4aBFBb4m45p/fPQ0ofsc5h6rg6GYA2PvJgp+
-kqjVvUJCxg1hrc0m2lyW2IjxrFIKU+BxmUBwqb5sg5y2z0WqQPeGhreyPACks/Xd
-CAQO/sIig1zFFTTesQQV8UGfYvWVoiUSVBgPMdX5QGH3SjFRm2PVGxwoS8BPrQPf
-LbKxX5vX4yVYhI7HNjSyEMRrR4MPfGe7XkYV+3nB2A1qhfl6D9LjjLmbD+uShfBY
-0WCmkC92+QfngOLxl+LmML/sbVlyX+dLQ057SR96YWW91Jfnx/6kG15b9kVMcgZz
-EvLiRTBbWNP9WpGvQYZEKCFhrRnwm+zmC/K0fzQYvGIgKqfVcgCA2dRM+Qq/B6KR
-7CrLeOhcpf9FGivqpllHCz7z9mkH/7Ld4NByAUlrVPTHeVN0v2LghwA4Xy8kEbSV
-wbhgAGJwHRwZPqKoKCsrdVoiqK+qOwWqtmQPtZZQFO35DM2QwEkPmzqRDC3cOLew
-+f/baaK1HIdBrQrkBDrVLHkRDoFHH4Jo4RCR9Bkm3UpVd+Qk6+2fRKh7fqkF/g22
-4n+0NGqGj0Nlcb9dykQ/
-=yCAJ
+iQIcBAEBCgAGBQJSjMvdAAoJEEdITlBlbRbHU3oP/iSJu2UZmJKnVJaZc91deOQ+
+Acs5Ku/+zMV70BIjdst793GwTndnVBoMHLQp1fdukZjMKf+dSbQzgJj1WkfFFrYI
+PkIm34JJgyr6jrK7XYlwrP7TBhmzHiwKwc+btm+9wcvsB4Wl3tKJgYD2Pfusa/ul
+fN7RPJ3xvSiYQWBZe8Ee51+MRvBgT/0FCGF4S80ZNyNVkBvtImfCXpwgpWSout0G
+SX7gEsX9jLIRnak+vLGwlJ5Zi37Sge2OU12CY9aLis8EfCb99La5z/SamxMJjzth
+bzeDuXMbgGhvXySErTMnf1etdfjRu8fJmP0hU+DRbNR1xW1in6cghdtkC+r0bZIU
+OXSEtTr1g+9iOFoTReU0v3Qsp2qkaU4uOdVKbSPI8j64dlt5FLC9LNe+40w9R9cF
+ooDO4U+FsFJeOzFjg4GXf7pCLUK/H1wC9DED/Hwn4IxKOSB6GAWCbIDbjAXwd2yN
+0ABKdLqz4YQ8SsUPa6Laca41AT5HEwDYamAbxbm9fx3yKBqXE/SLcu+3iclv6BC2
+woIBYQpTRZQQaIfK6XtU4qbJZfT2J/IGvZngYIExqJYdIBys6FCE6agq4yfPvAPa
+37vuVcXWUcS4Vsy8q+llNgitYre1Bhv86+k3voqRjLpn8qlDMZQZ8lp39URzfSil
+6k+vcj3bH6nvvaN56xp5
+=eSiB
 -----END PGP SIGNATURE-----
