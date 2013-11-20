@@ -25,7 +25,7 @@ Version History
 ================
 
 2013-11-19: status ACTIVE
-warp_1.0.
+warp_1.0.3_SHA256_f95f003d20d86902a99acec97c1645fe722321ec641d77fe5fb96773a0d580cf.html
   - Fix a bug in the pseudocode in the documentation. It's r=1 and p=8, and not vice-versa.
     The code was correct though.
 
@@ -57,17 +57,17 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSjB2eAAoJEEdITlBlbRbHwh8P/2/wAG4eWMWbrDXbj5DRQ7ZU
-TdGgmalbQ8e9XT/CzIFoIkiUwO7+zGN6draSdgUGuN1PUj8llcV1wuU3O+2I4spG
-gIWqjaReSi+Riw0Yj3UXAAIM3xvsyziM49JpLEAAln397ZLzKCW4qB4fWE/4WEfd
-rCc0aV/emPwKCzu6RPlG9C/0Qu4r0+483FleTXV94XNu9FXI688E6D37x2LmSLnI
-60uiObMWr3wu/8lsFBbsTKshVDTqPKj24w0wl3yyV8oQwwEH4VmVZ7ni0ylVqRY5
-R9DxJn/fTHXaewjXT+lafKlGe4/Gpw4mu3gWqFtRfOwGQx0UUS8P8/l3MBy4M49y
-KFxMqAbm4zpgWTfWSQyZgODtYjqz6Z+F9pTOhwuRvO7uAlM9hWbxv5Z/1lAXFzPD
-2wtKwTzsaceYcBCEJ7aEIO4KVWvr7mB9x/EtiZ0zfWyLMDRK0r3fwej9rI1a+KMx
-cn99FgKWa/lV2h3Gp5TZ0eA8iJosjhkstzHE71xdelWjxc9deZcdMJJ7UMfx7z1v
-c5Qs91Qjv4G1kl5QT9A1XAnclEYj2JW6ooylysF36cOfJJN6S10mZdSFtLYUm9bp
-bl6AM8p6mf1Ilmns19ZJXgue+1XKvxg2leQqP7ZLgWIo3CWfVfo/6saX0CHDxRcC
-w1KrzxrTkArgDSAq+kgl
-=FoWF
+iQIcBAEBCgAGBQJSjB6nAAoJEEdITlBlbRbHTr8P/ibm/JgPv7THCR7UZvnwioqG
+B6w5+Zo8tqj+Nd7PK0jotPJX5JOdkb2BQdUAs45G8qrhGV7ymrYD6BRDs6xqPBW9
+FE9JcYySDDQzj7er2pwWwWHJhh1mY758SQKFCfCuGDg8fvUf6hqxLH2NfGs4NMPL
+SmuYfdyEYABIOGiwoojjxueP7hi8/N4QWSGZyDBzoyAD0hKIm1rvsbb9XBRXXhDo
+78L1L28UFVZrDVAee7JGJmjn3JP/swX0Tlef8wWzhG/6iqxztGVWtTwO1F0UF6eI
+odUFEEjNlA56ENfOP/7v9RLNAxQu7xnYr2mu/rgyXMMY2MQlcfwJhXzLQIvVRCdq
+Tuj16Um+YjX8A2u4NcY2DcUvICdURsTZiIogwmXV0V8AL6eiY6uOU9beo0/IbpXR
+GtDmxSseXll4HGL7S97nbXxSeGqq2/ad0Z+jvdKD3RZwIvij0jqtVqe1cIEGjQFp
+8WtYxM+u4NDUJ5yUwwWNu49TbNn8ao882tVvpIjJs16n6zKGu7aVpuyUhQ3XKXY8
+8hn+fKTztVcKw3QEHDijI5tqyVeSeaAbo4UPFtQdhkAvbZCCL4ONAdGD5OCISth2
+95DMwtnWJ1HMbccLv9eFXBo812R35nBbxaoSpd2MXKKg+tjDurqcLUxyfmwVJ9hb
+R3jNezT3xF+aKPJGQ3az
+=FG5d
 -----END PGP SIGNATURE-----
