@@ -22,6 +22,11 @@ Version History
 ================
 
 2013-11-19: status ACTIVE
+warp_1.0.
+  - Fix a bug in the pseudocode in the documentation. It's r=1 and p=8, and not vice-versa.
+    The code was correct though.
+
+2013-11-19: status ACTIVE
 warp_1.0.2_SHA256_61f4538178e457b7bbb01235a8291fbf88f8a1b3ccdaa4cc87ffc2352ab383c6.html
   - Challenge 2 has fallen, update the site text
 
