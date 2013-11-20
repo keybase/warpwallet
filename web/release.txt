@@ -24,6 +24,10 @@ https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
 Version History
 ================
 
+2013-11-20: status ACTIVE
+  - Small performance fixes: loop unrolling in scrypt, and also more "use asm" for Firefox
+  - Challenge 2 has fallen
+
 2013-11-19: status ACTIVE
 warp_1.0.3_SHA256_f95f003d20d86902a99acec97c1645fe722321ec641d77fe5fb96773a0d580cf.html
   - Fix a bug in the pseudocode in the documentation. It's r=1 and p=8, and not vice-versa.
@@ -57,17 +61,17 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSjCQmAAoJEEdITlBlbRbHJr0QAI18QF0K5A9CdWEstM6w+yA/
-AnvE9oJib8iUoFaFaYSN1oN9WsiaK9409wL07p3BqlJ1ruXwnT7ssITR2dz4BnJU
-lnMGPL7E5VqWu0U5+XO0jPm/6ZSh0A7KbaMODCnCun7eNIJPbr4Y3QBDv++VezIZ
-4+0m13D1X45P9KKWj8xuPtWp4e6rE/UzMUdeZeyfqkwTEqed3Ebz/1VXRvHL4Mpv
-vokdXhLb/S0Zwia9BBSLehqAdZneZr8wSxr++3t50f0gDXsLaXKl9owHcGYtSE1w
-wGc+dHpo7TGWfaLk6LenD+6SRftYxiqh3eYFyNTf/MjB4Ef4Dzao7fvg+SMS6+Ki
-LPs7VjnGKREDmrDP/2TgeOHEtOqT1PvUpyuvFaSlBfPDbPgKC5S9rJl88Tcgdnuq
-c7eXfDDHrzsgvYeRLZLu5cgK+i2k2qqpoioVFrckY2XPN5vciwQ8dEB3Rj2sjotM
-S0wqPUWaDNu4nEScT95CaAbDoOFxK1gZFXY1p8WYiFp3yyrBw7ry9vHuTR1vMAjg
-WrF8t7ZqRFx3K8sAkLkvYcAKFYwGvEQWwdQK9eEimVOQ03UafoRxAV5gsTmHMoCS
-tGbZdYFLPu+E3SMnbQVohIRvk1WIoqlvDUq7PYEn00/GcZPHwXxAj3lVHpZ5R2Za
-hlRkUlaui44HfyKHfBu1
-=QLfE
+iQIcBAEBCgAGBQJSjMaZAAoJEEdITlBlbRbHD9wP/R8Be4c7lhsymTx/EYfWJeqy
+Huq+fuYJqAfTdxUNJEQIRzLHwsJ6Bv8nEe18qnivvI1e164eiciY1vdMJiPL9TUT
+cq1kYjHnbQUjVguA5FANjN2T3EKNMxiJ1ClMqTUEaE3isxqFSBbyU6GU9QGxYwz1
+kkifbcm3E8vS9Q95Hbdz04A4Hw3gfzSwQAE+iV1WMtz+E7er10prfm2AIzqykL0/
+xyTpIWEzFdK3ITNlbVbq5eAEtptHxm8KylZzTvwECoCuNQY1XWEY4wIA1eCKZAnk
+1xNeZWRLiWcpBlOJEsZOmbtAut6rjh8Z+LCKKLf7O06TIA6Vn9C+MgFAwhP0kye6
+NxsJDmhD6L7hbSE99cCG7Nhi4nLbFyXD6leR2einTfRH3g2zZ65AJuY5ieYRBne6
+I8Ficbv9wc+uUkzfWMilYGmpoIvm/lFZgXk0LZC4L9yYutbMiO15i9WTcOsVxvmZ
+TORBzrxf8GeUVhjXFZ4CsOQ6PWZd1m/Bf+2dqQdS5gmnuHJKz8RDGNr5KVOYuUMs
+zMJTjksVDgLkPp3fgBD3OTFCue7wf+oLRDDUUfV99Z8k+Sf36kul0Il9aUPhCjUP
+b5OXe2zWlidaI6Rea/9u8s1QqVC7T5Qf/yHyn5RtxpJmr1/IfWE8/0JvfKrxbYqN
+OY+7AFQs76gKPwECCOch
+=BY/x
 -----END PGP SIGNATURE-----

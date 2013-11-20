@@ -21,6 +21,11 @@ https://keybase.io/keybase-signing-key.asc (ID: F66E 6A83 95B6 38AA 0345)
 Version History
 ================
 
+2013-11-20: status ACTIVE
+warp_1.0.4_SHA256_433bb302d88dd1e88567aaddfe0b6b241317c8266cc2310079bde86e8a68fda6.html
+  - Small performance fixes: loop unrolling in scrypt, and also more "use asm" for Firefox
+  - Challenge 2 has fallen
+
 2013-11-19: status ACTIVE
 warp_1.0.3_SHA256_f95f003d20d86902a99acec97c1645fe722321ec641d77fe5fb96773a0d580cf.html
   - Fix a bug in the pseudocode in the documentation. It's r=1 and p=8, and not vice-versa.
