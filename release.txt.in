@@ -21,9 +21,11 @@ https://keybase.io/warp/keybase-code-signing-key-2013.asc (ID: 4748 4E50 656D 16
 Version History
 ================
 
-2013-11-20: status IN_DEVELOPMENT
-warp_1.0.5_XXX.html
+2013-11-22: status ACTIVE
+warp_1.0.5_SHA256_499890b2f8100113c316eacf6e1e33eab2688ffc90910e8ff9fdc45cae74989b.html
   - Link from Challenge 4 to the winner's commentary on HN
+  - Removed benign index.map attempted load from JavaScript
+  - Updated styling/wording
 
 2013-11-20: status ACTIVE
 warp_1.0.4_SHA256_433bb302d88dd1e88567aaddfe0b6b241317c8266cc2310079bde86e8a68fda6.html

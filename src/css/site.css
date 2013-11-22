@@ -96,14 +96,30 @@ h1 .second-half {
   color: #464;
   text-decoration: underline
 }
-.sub-row .reward-amount {
+.sub-row .reward-amount-solved {
   color:#fff;
   background-color:#5cb85c;
   padding:2px;
   border-radius:4px;
 }
+.sub-row .reward-amount {
+  color:#fff;
+  background-color:#622;
+  padding:2px;
+  border-radius:4px;
+}
+
 .sub-row .unbroken {
-  color:#464;
+  color:#fff;
+  background-color:#622;
+  padding:2px;
+  border-radius:4px;
+}
+.sub-row .solved {
+  color:#fff;
+  background-color:#5cb85c;
+  padding:2px;
+  border-radius:4px;
 }
 
 .sub-row table {

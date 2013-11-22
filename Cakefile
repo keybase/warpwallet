@@ -26,6 +26,7 @@ build = (cb) ->
   await do_browserify defer()
   await fs.readFile "./warp_src.html", {encoding: "utf8"}, esc defer html
   await token_build_and_drop html, defer html
+  html = html.replace 'sourceMappingURL', 'sourceMappingDisabled'
   await fs.readFile latest, {encoding: "utf8"}, defer err, old_html
   if err? or (old_html isnt html)
     # Clean out the old symlink

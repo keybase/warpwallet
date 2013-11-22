@@ -24,9 +24,11 @@ https://keybase.io/warp/keybase-code-signing-key-2013.asc (ID: 4748 4E50 656D 16
 Version History
 ================
 
-2013-11-20: status IN_DEVELOPMENT
-warp_1.0.5_XXX.html
+2013-11-22: status ACTIVE
+warp_1.0.5_SHA256_499890b2f8100113c316eacf6e1e33eab2688ffc90910e8ff9fdc45cae74989b.html
   - Link from Challenge 4 to the winner's commentary on HN
+  - Removed benign index.map attempted load from JavaScript
+  - Updated styling/wording
 
 2013-11-20: status ACTIVE
 warp_1.0.4_SHA256_433bb302d88dd1e88567aaddfe0b6b241317c8266cc2310079bde86e8a68fda6.html
@@ -66,17 +68,17 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSjOCRAAoJEEdITlBlbRbHi8QQAJRl8P1NOfEdFmDFM5Si6KtL
-ap2yHHkgiha6/lW2uiJDoTYiinrp8iJzA0TvnAFTTl+KVh8XP+7C8Q65sOiGxvdH
-/LIKnsWuZjOnssfxXVK+kM1PP08xCjnVLSy3h5ILM9rE3Y2DyZdQ2soFyOv6nCWF
-nqLqRMVUml6QepPUxn+9aSJub7X9mwBP5rTSbbsXUZIkYO0UOj5sYhPPr3c0cQg+
-FBr/t+PZtFW1JK5sSxlaW1kIFerAAF50uY05gj6IDNEsKPJr9Pdyc+sjvqgX4JOM
-z3kjYhcrjcDcvQJCM9YyNyOlbuYNQ016WfNO6hbpisbYGcEr8dOml31lAlvN4rYy
-8HkCyqzG9WJW+sLmNDytM/LyMjDLdFivuooalHMTiV+I4pX1I5R3fw3rUwhlA6SL
-GW+JmZWtjBptSRinu0O5ksylWeV/LL4dzYVViicvXxTKkAKpsot3k5de/iWmmHgq
-oM5z9TaQgws17q46cruwIUUDNajJExKsKGTyeC04Vr94unBL9h7roqgwio7B7oG6
-ELz643ZQDhp2H0DFTiNu8FNfZnFZRk5iBNz9GA5srgh3hk1ghTtNk74IY0ggCBF6
-y/WY/HH4CSHDLjpoBCWa4ouAchtdsS2heDf+dCfOp2+iVTnICnHU6QPvbOB0HdCt
-s4MGgh71DCQyDpVrgG6s
-=f80Q
+iQIcBAEBCgAGBQJSj8dnAAoJEEdITlBlbRbHqtcP/18ZsvZpfRNvbvUtMr8ziBDk
++e6NHNzBz5VanYxQhMdKA9IR7yhc3xF1WOszYtocrdJUFW4CEZvm436NssiJx7lO
+w5TqGVYaJWXAVDPi+ez/4q4F5u6mCj5906NFlFjbTJqqBA1QDn8phsFN9vlpA9Qy
++ynY630t4dM1nS1tWSjDXUZdA/wVoPdRm/tEe2VtQjUg+G6WUTpZtLPmMqQbLE6o
+d+d+udUTEbtf0Btz2FGRw1Bu30RwWPFvmTO3e4nDRllwzBVPyMlVWx1N+f7UVaek
+V5U6LV9jTNdJ5BzPMrRPyi3zmqdDOoUHhQpeiXd3aCGCF7aR/iWtqtsHPT+hfbEO
+JhRNdGGsQtArHb7bNrG+pKQdZaETe1gNiQVsFvdHjavnHlGpJb845Wvt0aCF1sXp
+icxUgEMSPqdB4wFuiRmoEYOAPNbRqVWb/eVdFzpAv2Koil+XyRG8mrP0VR335F4l
+ZXynt7zCHdDh7GCMxrpbbjtsYOavgOIcs7v14prr8K0kTlJNmMvGN7oOZEN3uUeq
+Z5gTC9g5iuFATbYS8AztyAsdR2b0SffhQL3hVDY3T2uzv3KXZC0HWytYg4fLfiz0
+tXMsbMmmcT3pjAq4JzBaXcpL3shyio+he80vTMYlWG9zcaQIzXXv0Lw6qugS+FUD
+LWdxIrxow6ip4TUIQGAk
+=CKd9
 -----END PGP SIGNATURE-----
