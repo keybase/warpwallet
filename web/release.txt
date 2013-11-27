@@ -25,7 +25,9 @@ Version History
 ================
 
 2013-11-27: status ACTIVE
+warp_1.0.6_SHA256_e68d4587b0e2ec34a7b554fbd1ed2d0fedfaeacf3e47fbb6c5403e252348cbfc.html
   - Challenge 3 has fallen, update the site text
+  - A few performance improvements in scrypt (loop unrolling and "use asm");
 
 2013-11-22: status ACTIVE
 warp_1.0.5_SHA256_499890b2f8100113c316eacf6e1e33eab2688ffc90910e8ff9fdc45cae74989b.html
@@ -71,17 +73,17 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSlkV5AAoJEEdITlBlbRbHyUcP/1SxO1JA7u8QrhcnyPZAYiLU
-xj48Ae0kg+/BaQ1rr+kIxl4r/X8zrioBO9ElPCM3vD81LI16lnL4N9skyXgA2Ese
-Usz74NLvDJw18fOJ13a/m1LNZ7cn8pqwRVcrlux/y/xPP2zurXQf0ByWKhAFrByh
-dMzQEf5vj86LwXjklUV1ZYaMU5SUc0fKRk8X4h2g1olYi0apIiN+M0GQJgy1JrR3
-Y8s1ouOt0OXYzPQSVx622vC2/wcgw1nSZwmpGjuwR2SkrX57VyZgvNRg/f8uY9qn
-VuVUnKD969E8RYF5FFbTmcSmx0FwDgKdb5j3oplzzyup8TNWTenXdG0nN3YjPxyR
-FPSxvM0TAlx7eFbulpyW+nQg0oBIzhz9Z/3KlqpckK4TSwqDAnLkczFXwEycvko2
-1BZjYnaTjzVvaF79KgfLt9OR9l8r7WfPIrFch/df9iUgs/MB274zVABPIk1k6EWJ
-yj6JAlfDk23n/UVG0aEdIoeUDpVMD9GdKUUP2S2FZXZIRUkucXhgKZxnKNUUsD2M
-CjP2nZnBvJwCKufzYznsmedVzvwpffFNvMHGOZ5vlWfn7Vd0FhT6xvz51WV6DbaV
-rTM3IjWUWYdYNXCX/WGHLgCs6JLVszuc59mb4NhNx+tFRW9U1gvc0Grwd1KBIx8T
-sPXMPcvzFMuAfd8CPcPY
-=EVqs
+iQIcBAEBCgAGBQJSlkcpAAoJEEdITlBlbRbHdlgP/3xkCfvvNzxEMUcVID77xYdQ
+ZNepKQo7PTIp2XUYWAs9mENScDadJdS+FouOjna5we9vZ8JCUXBCI0v4nfGmCBrx
+Kra2m8b39Ih19ofG40IZXmabYmLdsELfH/JkwzJD11G599kKa+yyVuanvGP9jiqP
+IUlqfLtj3nd4ZZ5R2j+GILH6i2Ggy/uNBReLZUxVYOPbSieiAaw5e4D8YftkdQrZ
+DweZTPKjw5N2WRr/6Sl0rgUUB1Vj5olsMAuKeQfOMoD0dEe4ZbvU9Kj/TiCO0pm8
+Wjyi+x7E9QdPqo+/77OvtK6D/v2dX01AZk3RZAx+PU18kDwa75I9cEqxLSk4FXM0
+PlsMBVyT5Dbmj21IxigqVkYVyK0ckINsM12ufcgSTg3X69JQ+bdz/60iUQea9SwE
+gAyL350tQIM8OMmCWe0BTRlQdkM4s65qGOu8XSuIefYveI2DGAkmg/wUODoGE8IE
+dyqZKONCK/k9BkFZxtzkawisLeXYdKwPOkSUqfghExWMPdteQcszoLWuik0eDAb7
+3RxHtZWIaw4LiIx/HdgYNLin6l1NNyyEnlV6WTnLYiCmC5X2rL3qsX65SUYXff5T
+0LK+UZDAouFBGZf3gqeKbWS94A0PRkjEgq9YvojrHR+UAIKSzdccdn+huKuPfxk4
+e7mXyrb4wT6UIgLQ5B6s
+=HoWH
 -----END PGP SIGNATURE-----
