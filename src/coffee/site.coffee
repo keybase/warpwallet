@@ -120,6 +120,7 @@ class Warper
     $('.progress-form').show()
 
     warpwallet.run { 
+      coinType : $('#cryptocurrency').val()
       passphrase : $('#passphrase').val()
       salt : $('#salt').val()
       progress_hook : (o) => @progress_hook o

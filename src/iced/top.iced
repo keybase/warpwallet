@@ -1,6 +1,7 @@
 
 {scrypt,pbkdf2,HMAC_SHA256,WordArray,util} = require 'triplesec'
 generate = require('keybase-bitcoin').generate
+networkVersion = require('keybase-bitcoin').networkVersion
 params = require('../json/params.json')
 
 #=====================================
@@ -15,7 +16,8 @@ from_utf8 = (s, i) ->
 
 #=====================================
 
-exports.run = run = ({passphrase, salt, progress_hook}, cb) ->
+exports.run = run = ({coinType, passphrase, salt, progress_hook}, cb) ->
+  networkVersion(coinType)
 
   d = {}
   seeds = []
