@@ -115,6 +115,7 @@ class Warper
   click_submit: ->
     $('#btn-submit').attr('disabled', true).html 'Running...'
     $('#btn-reset').attr('disabled', true).html 'Running...'
+    $('#cryptocurrency').prop('disabled', true)
     $('#passphrase, #salt, checkbox-salt-confirm').attr 'disabled', true
     $('.progress-pbkdf2, .progress-scrypt').html ''
     $('.progress-form').show()
@@ -127,6 +128,7 @@ class Warper
       params : window.params
     }, (res) =>
 
+      $('#cryptocurrency').prop('disabled', false)
       $('#passphrase, #checkbox-salt-confirm').attr 'disabled', false
       if not window.SALT_DEFAULT?
         $('#salt').attr 'disabled', false
