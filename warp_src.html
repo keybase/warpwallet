@@ -115,6 +115,7 @@ window.package = {::package.json::};
 <script type="text/javascript">
 $(document).ready(function() {
   $("select").bselect();
+  $('#cryptocurrency').bselect( "select", 0 ); // default: select 'Bitcoin'
 });
 </script>
 <!-- ########################################################################################## -->
@@ -131,8 +132,24 @@ $(document).ready(function() {
           <label for="cryptocurrency" class="col-md-4 control-label">Cryptocurrency</label>
           <div class="col-md-8">
             <select id="cryptocurrency" class="form-control">
-              <option value="0">Bitcoin</option>
+              <option value="0" id="default-option">Bitcoin</option>
+              <option value="48">Litecoin</option>
               <option value="30">Dogecoin</option>
+              <option value="25">BitBar</option>
+              <option value="18">Bytecoin</option>
+              <option value="28">ChnCoin</option>
+              <option value="0">DevCoin</option>
+              <option value="14">Feathercoin</option>
+              <option value="0">Freicoin</option>
+              <option value="16">Junkcoin</option>
+              <option value="50">Mincoin</option>
+              <option value="52">Namecoin</option>
+              <option value="8">Novacoin</option>
+              <option value="115">Onecoin</option>
+              <option value="55">PPCoin</option>
+              <option value="62">SmallChange</option>
+              <option value="0">Terracoin</option>
+              <option value="77">Yacoin</option>
             </select>
           </div>
         </div>
