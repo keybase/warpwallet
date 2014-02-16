@@ -96,14 +96,27 @@ window.package = {::package.json::};
 {::src/js/deps.js::}
 </script>
 
+<script type="text/javascript">
+{::src/js/bselect.js::}
+</script>
+
 <style>
 {::src/css/bootstrap.min.css::}
+</style>
+
+<style>
+{::src/css/bselect.css::}
 </style>
 
 <style>
 {::src/css/site.css::}
 </style>
 
+<script type="text/javascript">
+$(document).ready(function() {
+  $("select").bselect();
+});
+</script>
 <!-- ########################################################################################## -->
 
 <body>
