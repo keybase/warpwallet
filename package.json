@@ -5,6 +5,7 @@
   "dependencies": {
     "iced-coffee-script": "",
     "iced-utils" : ">=0.1.1",
+    "iced-runtime" : "*",
     "keybase-bitcoin": ">=0.0.0",
     "triplesec" : "keybase/triplesec#header_v3",
     "browserify" : "*",
