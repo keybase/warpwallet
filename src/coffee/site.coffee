@@ -74,7 +74,7 @@ class Warper
       $('.salt-confirm').hide()      
     else if @salt_ok() 
       $('.salt-confirm').show()
-      $('.salt-summary').html salt
+      $('.salt-summary').text salt
     else
       $('.salt-confirm').hide()
     @any_change()
