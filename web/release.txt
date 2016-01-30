@@ -24,6 +24,10 @@ https://keybase.io/warp/keybase-code-signing-key-2013.asc (ID: 4748 4E50 656D 16
 Version History
 ================
 
+2015-10-30: status ACTIVE
+warp_1.0.7_SHA256_9c64ee9978b93c47e020593bc43f7ab7638d5b264638cdd0d678463200700a0c.html
+  - Fix potential XSS vulnerability
+
 2013-11-27: status ACTIVE
 warp_1.0.6_SHA256_e68d4587b0e2ec34a7b554fbd1ed2d0fedfaeacf3e47fbb6c5403e252348cbfc.html
   - Challenge 3 has fallen, update the site text
@@ -70,20 +74,19 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 
 ==============================
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQIcBAEBCgAGBQJSlkcpAAoJEEdITlBlbRbHdlgP/3xkCfvvNzxEMUcVID77xYdQ
-ZNepKQo7PTIp2XUYWAs9mENScDadJdS+FouOjna5we9vZ8JCUXBCI0v4nfGmCBrx
-Kra2m8b39Ih19ofG40IZXmabYmLdsELfH/JkwzJD11G599kKa+yyVuanvGP9jiqP
-IUlqfLtj3nd4ZZ5R2j+GILH6i2Ggy/uNBReLZUxVYOPbSieiAaw5e4D8YftkdQrZ
-DweZTPKjw5N2WRr/6Sl0rgUUB1Vj5olsMAuKeQfOMoD0dEe4ZbvU9Kj/TiCO0pm8
-Wjyi+x7E9QdPqo+/77OvtK6D/v2dX01AZk3RZAx+PU18kDwa75I9cEqxLSk4FXM0
-PlsMBVyT5Dbmj21IxigqVkYVyK0ckINsM12ufcgSTg3X69JQ+bdz/60iUQea9SwE
-gAyL350tQIM8OMmCWe0BTRlQdkM4s65qGOu8XSuIefYveI2DGAkmg/wUODoGE8IE
-dyqZKONCK/k9BkFZxtzkawisLeXYdKwPOkSUqfghExWMPdteQcszoLWuik0eDAb7
-3RxHtZWIaw4LiIx/HdgYNLin6l1NNyyEnlV6WTnLYiCmC5X2rL3qsX65SUYXff5T
-0LK+UZDAouFBGZf3gqeKbWS94A0PRkjEgq9YvojrHR+UAIKSzdccdn+huKuPfxk4
-e7mXyrb4wT6UIgLQ5B6s
-=HoWH
+iQIcBAEBCgAGBQJWrT73AAoJEEdITlBlbRbHoEEP+wUB0SFRzOo7ZSWKIXsezrlx
+sCgsFuB1qJRia7+nwYCD4sA0p+YW1dsVPTRIsQs+NTuqE0CMBXIed5PlrbTSXe92
+QKxHZvSOK/OPX3yyfzmAUVe1KjOhyofTIzm2OqSSJldr4c9IR+xxsI9F+1/CKN7S
+PIutiwXwwpgY7TQun+RSWF6XGhXXaMY6LUAFDgBxg7SNjEzPFayBzUhvKG6Vwa7v
+ToaCxthz3yjDsjklaGL+UytshBoEvRHXk09xvzqArNmFdFPgtZFHDO0oTtp1rdzS
+ZFNQThN5wQfQtyzdxIN14PhECpK1Hx3/va+T34BTo+EBXWQkLt+d/UY/M9r2BdUw
+n0qbSLnPUJU5MPPSjtDq+IuPZVr5DQxPA2IXGrq5gbghfCxaTJ/7tP92H3hbKbnJ
+JM6NhTboiRm77E2onebPdjqc7Oi3z8nOeO2O2nAx6YX1l6wug/8YUby7AnRMzmLl
+t3ec4Pd/IIpGkS+N7truZ5kQsnX48yCA1xnNlCkyWsvRrsqUd6HxDHeZXgAgIHl5
+5YLzXyevLfvHrJ7yJS11obz+k2DkWXuIwxLr+T3+lOMWo3FKObtW88zbjq1jdYkD
+1t5kjPXqBaxh2vYOY7OcmHuNzk1Sf6YxlEXkDTZWdY/NPYlLMPas3gatm041cswx
+qU8Vn1oSnkTYd8jUdWiX
+=QWxz
 -----END PGP SIGNATURE-----

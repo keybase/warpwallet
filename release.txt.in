@@ -21,6 +21,10 @@ https://keybase.io/warp/keybase-code-signing-key-2013.asc (ID: 4748 4E50 656D 16
 Version History
 ================
 
+2015-10-30: status ACTIVE
+warp_1.0.7_SHA256_9c64ee9978b93c47e020593bc43f7ab7638d5b264638cdd0d678463200700a0c.html
+  - Fix potential XSS vulnerability
+
 2013-11-27: status ACTIVE
 warp_1.0.6_SHA256_e68d4587b0e2ec34a7b554fbd1ed2d0fedfaeacf3e47fbb6c5403e252348cbfc.html
   - Challenge 3 has fallen, update the site text
