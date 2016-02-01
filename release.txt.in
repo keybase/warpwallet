@@ -2,11 +2,11 @@
 WarpWallet --- https://keybase.io/warpwallet
 ==========
 
-A brainwallet for Bitcoins, served as a self-contained HTML page with 
+A brainwallet for Bitcoins, served as a self-contained HTML page with
 embedded JS and CSS.
 
 Input keys are salted and stretched with a combination of
-Scrypt (http://www.tarsnap.com/scrypt.html) and 
+Scrypt (http://www.tarsnap.com/scrypt.html) and
 PBKF2 (http://en.wikipedia.org/wiki/PBKDF2).
 
 You are encouraged to download this page and run it on an airgapped machine.
@@ -20,6 +20,10 @@ https://keybase.io/warp/keybase-code-signing-key-2013.asc (ID: 4748 4E50 656D 16
 
 Version History
 ================
+
+2015-02-01: Status ACTIVE
+web/warp_1.0.8_SHA256_5111a723fe008dbf628237023e6f2de72c7953f8bb4265d5c16fc9fd79384b7a.html
+  - Announce new WW Challenge, and close old one.
 
 2015-10-30: status ACTIVE
 warp_1.0.7_SHA256_9c64ee9978b93c47e020593bc43f7ab7638d5b264638cdd0d678463200700a0c.html

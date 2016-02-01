@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
+Hash: SHA1
 
 
 WarpWallet --- https://keybase.io/warpwallet
 ==========
 
-A brainwallet for Bitcoins, served as a self-contained HTML page with 
+A brainwallet for Bitcoins, served as a self-contained HTML page with
 embedded JS and CSS.
 
 Input keys are salted and stretched with a combination of
-Scrypt (http://www.tarsnap.com/scrypt.html) and 
+Scrypt (http://www.tarsnap.com/scrypt.html) and
 PBKF2 (http://en.wikipedia.org/wiki/PBKDF2).
 
 You are encouraged to download this page and run it on an airgapped machine.
@@ -23,6 +23,10 @@ https://keybase.io/warp/keybase-code-signing-key-2013.asc (ID: 4748 4E50 656D 16
 
 Version History
 ================
+
+2015-02-01: Status ACTIVE
+web/warp_1.0.8_SHA256_5111a723fe008dbf628237023e6f2de72c7953f8bb4265d5c16fc9fd79384b7a.html
+  - Announce new WW Challenge, and close old one.
 
 2015-10-30: status ACTIVE
 warp_1.0.7_SHA256_9c64ee9978b93c47e020593bc43f7ab7638d5b264638cdd0d678463200700a0c.html
@@ -74,19 +78,19 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 
 ==============================
 -----BEGIN PGP SIGNATURE-----
-Comment: GPGTools - https://gpgtools.org
+Version: GnuPG v1
 
-iQIcBAEBCgAGBQJWrT73AAoJEEdITlBlbRbHoEEP+wUB0SFRzOo7ZSWKIXsezrlx
-sCgsFuB1qJRia7+nwYCD4sA0p+YW1dsVPTRIsQs+NTuqE0CMBXIed5PlrbTSXe92
-QKxHZvSOK/OPX3yyfzmAUVe1KjOhyofTIzm2OqSSJldr4c9IR+xxsI9F+1/CKN7S
-PIutiwXwwpgY7TQun+RSWF6XGhXXaMY6LUAFDgBxg7SNjEzPFayBzUhvKG6Vwa7v
-ToaCxthz3yjDsjklaGL+UytshBoEvRHXk09xvzqArNmFdFPgtZFHDO0oTtp1rdzS
-ZFNQThN5wQfQtyzdxIN14PhECpK1Hx3/va+T34BTo+EBXWQkLt+d/UY/M9r2BdUw
-n0qbSLnPUJU5MPPSjtDq+IuPZVr5DQxPA2IXGrq5gbghfCxaTJ/7tP92H3hbKbnJ
-JM6NhTboiRm77E2onebPdjqc7Oi3z8nOeO2O2nAx6YX1l6wug/8YUby7AnRMzmLl
-t3ec4Pd/IIpGkS+N7truZ5kQsnX48yCA1xnNlCkyWsvRrsqUd6HxDHeZXgAgIHl5
-5YLzXyevLfvHrJ7yJS11obz+k2DkWXuIwxLr+T3+lOMWo3FKObtW88zbjq1jdYkD
-1t5kjPXqBaxh2vYOY7OcmHuNzk1Sf6YxlEXkDTZWdY/NPYlLMPas3gatm041cswx
-qU8Vn1oSnkTYd8jUdWiX
-=QWxz
+iQIbBAEBAgAGBQJWr3NpAAoJEEdITlBlbRbHxnoP91Zpg4zxBh8fBt/rpltPzYWw
+l+ZClsoXj9nqGFnVoY+Iq1i7WrNIQokG4OBC+ZJqUw58f9zUWwjBsYTtBvKYr+Za
+sP5IGf5SN5D5FkBLiutXTljcuTcaVzGPHrmkIn0Nad/1DYHCvpOtLHq48ItacBzD
+9lY3Gnw676lnambd9PVa5ypUnjkZbMEzb6G7yAL4oK+mTZiu01MdZ4mzCxpHRS3m
+yFH+YCVS4PbU4ZikMiIp00AFpei5Y4rknxQu4dPUGmsaiZX2iVlEXEM32mCn6nPO
+9XIq+EzNFvT/jRZPyI3K1u7S+XvN3rvvTwlC2g2f1lHjcrjfB8R7GTmjBsf+TXP7
+WZG0A2sOVj5i92+zskMAk6mOgtq1R6vkSSK1iIP6a8qmfASlO5w/3KrQ/1uVyJ/E
+H7m+a4E1ku1J13LswdaNmD75eBoLdk8oFMwp9JStshyC1iuZCCk+KmuR62Lmx7e0
+5m6D/DeXK8moudoHXGMulFStL/kmCz6K0hqbTc3mBYJV5Egj6G0jP+KujLiMfxIf
+o8KIuIPYbY3rx2KwgghzayKNMGmDd3ZHOO/JiMhSo1S2Bs3iYWXBfUJSW3uGJIQs
+M0H1SuNwwoy8TWYz4T3oAI1mijWr9/fkIqoxGZ6PysTiw0ewKvEVWY7X7akF8Xsx
+c4rgrtSi2oUf5qB9tgk=
+=JSOs
 -----END PGP SIGNATURE-----
