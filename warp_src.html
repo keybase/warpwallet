@@ -46,6 +46,7 @@
   *******************   ***************
   jQuery                https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
   bootstrap (CSS)       https://github.com/twbs/bootstrap/blob/master/LICENSE
+  bselect               MIT (https://github.com/gustavohenke/bselect)
   browserify            https://github.com/substack/node-browserify/blob/master/LICENSE
   qrcode.js             MIT (http://davidshimjs.github.io/qrcodejs/)
   bitaddress.org        https://github.com/pointbiz/bitaddress.org/blob/master/README (MIT)
@@ -96,15 +97,28 @@ window.package = {::package.json::};
 {::src/js/deps.js::}
 </script>
 
+<script type="text/javascript">
+{::src/js/bselect.js::}
+</script>
+
 <style>
 {::src/css/bootstrap.min.css::}
+</style>
+
+<style>
+{::src/css/bselect.css::}
 </style>
 
 <style>
 {::src/css/site.css::}
 </style>
 
-
+<script type="text/javascript">
+$(document).ready(function() {
+  $("select").bselect();
+  $('#cryptocurrency').bselect( "select", 0 ); // default: select 'Bitcoin'
+});
+</script>
 <!-- ########################################################################################## -->
 
 <body>
@@ -115,6 +129,31 @@ window.package = {::package.json::};
     <div class="col-md-12">
       <h1>Warp<span class="second-half">Wallet</span></h1>
       <form class="form-horizontal form-container" role="form">
+        <div class="form-group">
+          <label for="cryptocurrency" class="col-md-4 control-label">Cryptocurrency</label>
+          <div class="col-md-8">
+            <select id="cryptocurrency" class="form-control">
+              <option value="0" id="default-option">Bitcoin</option>
+              <option value="48">Litecoin</option>
+              <option value="30">Dogecoin</option>
+              <option value="25">BitBar</option>
+              <option value="18">Bytecoin</option>
+              <option value="28">ChnCoin</option>
+              <option value="0">DevCoin</option>
+              <option value="14">Feathercoin</option>
+              <option value="0">Freicoin</option>
+              <option value="16">Junkcoin</option>
+              <option value="50">Mincoin</option>
+              <option value="52">Namecoin</option>
+              <option value="8">Novacoin</option>
+              <option value="115">Onecoin</option>
+              <option value="55">PPCoin</option>
+              <option value="62">SmallChange</option>
+              <option value="0">Terracoin</option>
+              <option value="77">Yacoin</option>
+            </select>
+          </div>
+        </div>
         <div class="form-group">
           <label for="passphrase" class="col-md-4 control-label">Passphrase</label>
           <div class="col-md-8">
