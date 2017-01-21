@@ -1,6 +1,7 @@
 
 {scrypt,pbkdf2,HMAC_SHA256,WordArray,util} = require 'triplesec'
 generate = require('keybase-bitcoin').generate
+mnemonic = require('bitcore-mnemonic')
 params = require('../json/params.json')
 
 #=====================================
@@ -47,6 +48,7 @@ exports.run = run = ({passphrase, salt, progress_hook}, cb) ->
 
   out = generate seed_final
   out.seeds = seeds
+  out.mnemonic = mnemonic.fromSeed(seed_final.slice(0,16), mnemonic.Words.ENGLISH).toString()
   cb out
 
 #=====================================
