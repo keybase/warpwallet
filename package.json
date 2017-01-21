@@ -1,6 +1,6 @@
 {
   "name": "warpwallet",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Open Source JavaScript Client-Side Bitcoin Wallet Generator Using scrypt",
   "dependencies": {
     "brew": "*",
