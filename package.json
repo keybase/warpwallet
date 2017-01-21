@@ -13,7 +13,8 @@
     "iced-utils": ">=0.1.1",
     "icsify": "*",
     "keybase-bitcoin": ">=0.0.0",
-    "triplesec": "keybase/triplesec#header_v3"
+    "triplesec": "keybase/triplesec#header_v3",
+    "bitcore-mnemonic": ">=1.1.1"
   },
   "repository": {
     "type": "git",
