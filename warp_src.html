@@ -84,18 +84,6 @@
 </script>
 
 <script type="text/javascript">
-{::src/js/jquery-ui.min.js::}
-</script>
-
-<script type="text/javascript">
-{::src/js/jquery.keyboard.js::}
-</script>
-
-<script type="text/javascript">
-{::src/js/virtualkeyboard.js::}
-</script>
-
-<script type="text/javascript">
 window.params  = {::src/json/params.json::};
 window.package = {::package.json::};
 </script>
@@ -116,14 +104,6 @@ window.package = {::package.json::};
 {::src/css/site.css::}
 </style>
 
-<style>
-{::src/css/keyboard.css::}
-</style>
-
-<style>
-{::src/css/walletkeyboard.css::}
-</style>
-
 
 <!-- ########################################################################################## -->
 
@@ -138,13 +118,13 @@ window.package = {::package.json::};
         <div class="form-group">
           <label for="passphrase" class="col-md-4 control-label">Passphrase</label>
           <div class="col-md-8">
-            <input id="passphrase" class="form-control virtualkeyboard">
+            <input id="passphrase" class="form-control">
           </div>
         </div>
         <div class="form-group">
           <label for="salt" class="col-md-4 control-label salt-label">Optional: your email [<a class="what-salt" href="#what-salt">as a salt</a>]</label>
           <div class="col-md-8">
-            <input id="salt" class="form-control virtualkeyboard">
+            <input id="salt" class="form-control">
           </div>
         </div>
         <div class="form-group salt-confirm chefckbox" style="display:none;">
