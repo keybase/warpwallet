@@ -24,7 +24,14 @@ https://keybase.io/warp/keybase-code-signing-key-2013.asc (ID: 4748 4E50 656D 16
 Version History
 ================
 
-2015-02-01: Status ACTIVE
+2017-05-30: Status ACTIVE
+web/warp_1.0.9_SHA256_a2067491ab582bde779f4505055807c2479354633a2216b22cf1e92d1a6e4a87.html
+  - Add tags to prevent browsers from spellchecking, autocorrecting, autocapitalizing
+  - Escape user content on email address, in case they're convinced to paste a script into that field
+  - Correct below date on v.1.0.8 which said 2015 instead of 2016 
+  - Vendor in deps to Git repo
+
+2016-02-01: Status ACTIVE
 web/warp_1.0.8_SHA256_5111a723fe008dbf628237023e6f2de72c7953f8bb4265d5c16fc9fd79384b7a.html
   - Announce new WW Challenge, and close old one.
 
@@ -78,19 +85,18 @@ warp_1.0.0-rc3_SHA256_94a39e283ed917cf7678ec415e8f6f50426df8678027f091c4c986305b
 
 ==============================
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1
 
-iQIbBAEBAgAGBQJWr3NpAAoJEEdITlBlbRbHxnoP91Zpg4zxBh8fBt/rpltPzYWw
-l+ZClsoXj9nqGFnVoY+Iq1i7WrNIQokG4OBC+ZJqUw58f9zUWwjBsYTtBvKYr+Za
-sP5IGf5SN5D5FkBLiutXTljcuTcaVzGPHrmkIn0Nad/1DYHCvpOtLHq48ItacBzD
-9lY3Gnw676lnambd9PVa5ypUnjkZbMEzb6G7yAL4oK+mTZiu01MdZ4mzCxpHRS3m
-yFH+YCVS4PbU4ZikMiIp00AFpei5Y4rknxQu4dPUGmsaiZX2iVlEXEM32mCn6nPO
-9XIq+EzNFvT/jRZPyI3K1u7S+XvN3rvvTwlC2g2f1lHjcrjfB8R7GTmjBsf+TXP7
-WZG0A2sOVj5i92+zskMAk6mOgtq1R6vkSSK1iIP6a8qmfASlO5w/3KrQ/1uVyJ/E
-H7m+a4E1ku1J13LswdaNmD75eBoLdk8oFMwp9JStshyC1iuZCCk+KmuR62Lmx7e0
-5m6D/DeXK8moudoHXGMulFStL/kmCz6K0hqbTc3mBYJV5Egj6G0jP+KujLiMfxIf
-o8KIuIPYbY3rx2KwgghzayKNMGmDd3ZHOO/JiMhSo1S2Bs3iYWXBfUJSW3uGJIQs
-M0H1SuNwwoy8TWYz4T3oAI1mijWr9/fkIqoxGZ6PysTiw0ewKvEVWY7X7akF8Xsx
-c4rgrtSi2oUf5qB9tgk=
-=JSOs
+iQIcBAEBAgAGBQJZLad5AAoJEEdITlBlbRbHQYcP/jl6BTKQ3inNk12yAm0vIbo+
++2NzEdrM755jE034ALAwuyUNBM1oRsj55EE+vQkOT092AcK27oouQ35IbBZv/r6K
+Ybici0E5ccf4HPx1mnml1xd31ACJwNTHXQg2p8OnPrHSfR4QnseEYErxvGIwPZJs
+mSN0TbJnkPD/9eXgjFyrjD/o8Q1aNzQyAl2IZgzfChDEvovrIpY3ZTSxexmSe0bU
+Hhm9ZtyLVKorRxtBGqBXDmLWDCXmqWUhakvKvtcc4CE3mpQp478wq1dQ9ujNaLJ5
+R5NdCO4xVi1vNF9XQ13GN2wVOmt1Ecx6KVCDeCycm/tbv8yhgZKNGAeMN86r3Why
+3wHFmuTROGZertAjKgfN5I5rYBS/k/R/PeCI8PSEkKZzvjfI++kuKOQnWcZiFDDm
+QQQr6LOae/C2lMcIBWNdpnZrxB564HTln8nBIIUOnmE9817WUgZWfQgAU2hckvpD
+S4nWkRy0rTL08NtfkODt/+eqAxGnwDRqYc8l4MwJI9YjXZtAPentpw3veX2ssg05
+0v4zsHiwjQl3xFYJc2OT6t5jVgaGizYG/mu9QScUPddL0BaIGs7Uf81v2lW4UNRG
+hDMksoaRqnTLyJzEaUjR5naoxTUSDCWEN3D5RynjHompXUQxcQfvRT5BpAw9wkyM
+eEw0AjPZmUkWpxBohKrS
+=jtQs
 -----END PGP SIGNATURE-----

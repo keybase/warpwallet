@@ -6,15 +6,17 @@ class Warper
     if window.SALT_DEFAULT?
       $('#salt').val window.SALT_DEFAULT
       $('#salt').attr 'disabled', true
-      $('.salt-label').text 'Prefilled salt'      
+      $('.salt-label').text 'Prefilled salt'
 
   check_compatibility: ->
     if not Int32Array?
       $('.form-container').html '''
         <p>
           Sorry, but your browser is too old to run WarpWallet, which requires Int32Array support.
-        </p>'''  
-        
+        </p>'''
+
+  escape_user_content: (s) -> s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;').replace(/\'/g, '&#39;')
+
   attach_ux: ->
     $('#btn-submit').on 'click',            => @click_submit()
     $('#btn-reset').on 'click',             => @click_reset()
@@ -34,7 +36,7 @@ class Warper
     $('#btn-submit').attr('disabled', false).show().html 'Generate'
     pp   = $('#passphrase').val()
     salt = $('#salt').val()
-    chk  = $('#checkbox-salt-confirm').is ":checked"    
+    chk  = $('#checkbox-salt-confirm').is ":checked"
     err  = null
     warn = null
     if not pp.length
@@ -50,7 +52,7 @@ class Warper
       $('#btn-submit').attr('disabled', true).html err
     else if warn
       $('#btn-submit').attr('disabled', false).html warn
-    else  
+    else
       $('#btn-submit').attr('disabled', false).html "Generate"
     $('.output-form').hide()
     $('#public-address-qr').html ''
@@ -71,10 +73,10 @@ class Warper
     if not salt.length
       $('.salt-confirm').hide()
     if window.SALT_DEFAULT?
-      $('.salt-confirm').hide()      
-    else if @salt_ok() 
+      $('.salt-confirm').hide()
+    else if @salt_ok()
       $('.salt-confirm').show()
-      $('.salt-summary').text salt
+      $('.salt-summary').html @escape_user_content salt
     else
       $('.salt-confirm').hide()
     @any_change()
@@ -119,7 +121,7 @@ class Warper
     $('.progress-pbkdf2, .progress-scrypt').html ''
     $('.progress-form').show()
 
-    warpwallet.run { 
+    warpwallet.run {
       passphrase : $('#passphrase').val()
       salt : $('#salt').val()
       progress_hook : (o) => @progress_hook o
@@ -136,7 +138,7 @@ class Warper
       $('#public-address').val res.public
       $('#private-key').val res.private
       @write_qrs res.public, res.private
-      console.log 
+      return
 
 $ ->
   new Warper()
