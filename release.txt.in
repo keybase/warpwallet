@@ -21,7 +21,13 @@ https://keybase.io/warp/keybase-code-signing-key-2013.asc (ID: 4748 4E50 656D 16
 Version History
 ================
 
-2015-02-01: Status ACTIVE
+2017-05-30: Status ACTIVE
+web/warp_1.0.9_SHA256_c067a5573248a16e56b02f748b0638b94dd0f211284ffa5c58a47b25b344f756.html
+  - Add tags to prevent browsers from spellchecking, autocorrecting, autocapitalizing
+  - Escape user content on email address, in case they're convinced to paste a script into that field
+  - Correct below date on v.1.0.8 which said 2015 instead of 2016
+
+2016-02-01: Status ACTIVE
 web/warp_1.0.8_SHA256_5111a723fe008dbf628237023e6f2de72c7953f8bb4265d5c16fc9fd79384b7a.html
   - Announce new WW Challenge, and close old one.
 
