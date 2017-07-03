@@ -36,6 +36,7 @@ build = (cb) ->
     fullname = "warp_#{version}_SHA256_#{sha256}.html"       
     await fs.writeFile "./web/#{fullname}", html, {encoding: "utf8"}, esc defer()
     await fs.symlink fullname, latest, esc defer()
+    await fs.writeFile "./docs/index.html", html, {encoding: "utf8"}, esc defer()
     # delete any old copies of this version
     await clean_old_ones sha256, esc defer()
   cb null
