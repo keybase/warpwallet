@@ -49,8 +49,9 @@ deploy = (orig_branch, cb) ->
   await fs.readFile "./index.html", esc defer html_old
   sha_old = hash_data html_old
   if sha_old == sha_new
+    console.log "Currently deployed version matches master. Returning you to original branch, #{orig_branch}"
     await exec "git checkout #{orig_branch}", defer err
-    cb new Error "Currently deployed version matches master"
+    return
   
   await fs.writeFile "index.html", html, {encoding: "utf8"}, esc defer()
   cmds = [
