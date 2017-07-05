@@ -62,7 +62,7 @@ deploy = (cb) ->
 
 exec_and_print = (cmd, cb) ->
   console.log "Executing #{cmd}"
-  await exec cmd defer err, stdout, stderr
+  await exec cmd, defer err, stdout, stderr
   if err?
     console.log "Failed: " + stderr
   else
@@ -93,10 +93,8 @@ task 'watch', "build repeatedly", (cb) ->
   while true
     await setTimeout defer(), 1000
 
-task 'deploy', "build current version on master and deploy to gh-pages", (cb) ->
+task 'deploy', "deploy current version on master to gh-pages", (cb) ->
   await exec_and_print "git checkout master", defer err
-  throw err if err?
-  await build defer err
   throw err if err?
   await deploy defer err
   throw err if err?
