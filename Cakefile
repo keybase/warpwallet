@@ -43,11 +43,12 @@ build = (cb) ->
 deploy = (orig_branch, cb) ->
   esc = make_esc cb, "deploy"
   await fs.readFile "./web/warp_latest.html", esc defer html
+  sha_new = hash_data html
   await exec_and_print "git checkout gh-pages", defer err
   cb err if err?
-
   await fs.readFile "./index.html", esc defer html_old
-  if html_old == html
+  sha_old = hash_data html_old
+  if sha_old == sha_new
     await exec "git checkout #{orig_branch}", defer err
     cb new error "Currently deployed version matches master"
   
@@ -63,10 +64,12 @@ deploy = (orig_branch, cb) ->
     cb err if err?
 
 exec_and_print = (cmd, cb) ->
-  console.log "Executing #{cmd}"
+  console.log "Executing '#{cmd}':"
   await exec cmd, defer err, stdout, stderr
   if err?
-    console.log "Failed: #{stderr}"
+    console.log `Failed: \n
+                 #{stderr}\n
+                 #{stdout}`
   else
     console.log stdout
 
