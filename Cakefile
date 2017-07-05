@@ -40,13 +40,17 @@ build = (cb) ->
     await clean_old_ones sha256, esc defer()
   cb null
 
-deploy = (cb) ->
+deploy = (orig_branch, cb) ->
   esc = make_esc cb, "deploy"
   await fs.readFile "./web/warp_latest.html", esc defer html
   await exec_and_print "git checkout gh-pages", defer err
-  if err?
-    cb err
-    return
+  cb err if err?
+
+  await fs.readFile "./index.html", esc defer html_old
+  if html_old == html
+    await exec "git checkout #{orig_branch}", defer err
+    cb new error "Currently deployed version matches master"
+  
   await fs.writeFile "index.html", html, {encoding: "utf8"}, esc defer()
   cmds = [
     "git add index.html"
@@ -56,19 +60,17 @@ deploy = (cb) ->
   ]
   for cmd in cmds
     await exec_and_print cmd, defer err
-    if err?
-      cb err
-      return
+    cb err if err?
 
 exec_and_print = (cmd, cb) ->
   console.log "Executing #{cmd}"
   await exec cmd, defer err, stdout, stderr
   if err?
-    console.log "Failed: " + stderr
+    console.log "Failed: #{stderr}"
   else
     console.log stdout
 
-  cb(err)
+  cb err
 
 task 'build', "build the html file", (cb) ->
   await build defer err
@@ -94,9 +96,13 @@ task 'watch', "build repeatedly", (cb) ->
     await setTimeout defer(), 1000
 
 task 'deploy', "deploy current version on master to gh-pages", (cb) ->
+  await exec "git rev-parse --abbrev-ref HEAD", defer err, orig_branch, stderr
+  throw err if err?
   await exec_and_print "git checkout master", defer err
   throw err if err?
-  await deploy defer err
+  await deploy orig_branch, defer err
+  throw err if err?
+  await exec_and_print "git checkout #{orig_branch}", defer err
   throw err if err?
   cb?()
 
