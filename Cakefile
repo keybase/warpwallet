@@ -67,9 +67,11 @@ exec_and_print = (cmd, cb) ->
   console.log "Executing '#{cmd}':"
   await exec cmd, defer err, stdout, stderr
   if err?
-    console.log `Failed: \n
-                 #{stderr}\n
-                 #{stdout}`
+    console.log """
+    Failed:
+    #{stderr}
+    #{stdout}
+    """
   else
     console.log stdout
 
