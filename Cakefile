@@ -47,7 +47,7 @@ deploy = (cb) ->
   if err?
     cb err
     return
-  fs.writeFile "index.html", html, {encoding: "utf8"}, esc defer()
+  await fs.writeFile "index.html", html, {encoding: "utf8"}, esc defer()
   cmds = [
     "git add index.html"
     "git commit -m 'deploy v#{version}'",
