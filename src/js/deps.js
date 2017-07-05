@@ -9310,7 +9310,7 @@ module.exports={
   "_args": [
     [
       "elliptic@5.2.1",
-      "/Users/gray/CryptoStuff/ripplewarpwallet"
+      "C:\\Users\\Gray\\Code\\ripplewarpwallet"
     ]
   ],
   "_from": "elliptic@5.2.1",
@@ -9332,7 +9332,7 @@ module.exports={
   "_requiredBy": [],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-5.2.1.tgz",
   "_spec": "5.2.1",
-  "_where": "/Users/gray/CryptoStuff/ripplewarpwallet",
+  "_where": "C:\\Users\\Gray\\Code\\ripplewarpwallet",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
