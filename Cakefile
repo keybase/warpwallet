@@ -36,10 +36,39 @@ build = (cb) ->
     fullname = "warp_#{version}_SHA256_#{sha256}.html"       
     await fs.writeFile "./web/#{fullname}", html, {encoding: "utf8"}, esc defer()
     await fs.symlink fullname, latest, esc defer()
-    await fs.writeFile "./docs/index.html", html, {encoding: "utf8"}, esc defer()
     # delete any old copies of this version
     await clean_old_ones sha256, esc defer()
   cb null
+
+deploy = (cb) ->
+  esc = make_esc cb, "deploy"
+  await fs.readFile "./web/warp_latest.html", esc defer html
+  await exec_and_print "git checkout gh-pages", defer err
+  if err?
+    cb err
+    return
+  fs.writeFile "index.html", html, {encoding: "utf8"}, esc defer()
+  cmds = [
+    "git add index.html"
+    "git commit -m 'deploy v#{version}'",
+    "git push",
+    "git checkout master"
+  ]
+  for cmd in cmds
+    await exec_and_print cmd, defer err
+    if err?
+      cb err
+      return
+
+exec_and_print = (cmd, cb) ->
+  console.log "Executing #{cmd}"
+  await exec cmd defer err, stdout, stderr
+  if err?
+    console.log "Failed: " + stderr
+  else
+    console.log stdout
+
+  cb(err)
 
 task 'build', "build the html file", (cb) ->
   await build defer err
@@ -63,6 +92,15 @@ task 'watch', "build repeatedly", (cb) ->
   }
   while true
     await setTimeout defer(), 1000
+
+task 'deploy', "build current version on master and deploy to gh-pages", (cb) ->
+  await exec_and_print "git checkout master", defer err
+  throw err if err?
+  await build defer err
+  throw err if err?
+  await deploy defer err
+  throw err if err?
+  cb?()
 
 hash_data = (data) ->
   hasher = crypto.createHash('SHA256')
