@@ -4,3 +4,4 @@ npm-debug.log
 test/gen/py-venv
 test/browser/test.js
 node_modules/
+.vscode/

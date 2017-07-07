@@ -4,6 +4,7 @@
   "description": "Open Source JavaScript Client-Side Ripple Wallet Generator Using scrypt",
   "dependencies": {
     "brew": "*",
+    "buffer": "^4.9.1",
     "browserify": "*",
     "colors": "*",
     "iced-coffee-script": "^1.7.1-f",
