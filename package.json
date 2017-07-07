@@ -1,9 +1,10 @@
 {
-  "name": "warpwallet",
-  "version": "1.0.9",
-  "description": "Open Source JavaScript Client-Side Bitcoin Wallet Generator Using scrypt",
+  "name": "ripplewarpwallet",
+  "version": "1.0.1",
+  "description": "Open Source JavaScript Client-Side Ripple Wallet Generator Using scrypt",
   "dependencies": {
     "brew": "*",
+    "buffer": "^4.9.1",
     "browserify": "*",
     "colors": "*",
     "iced-coffee-script": "^1.7.1-f",
@@ -12,19 +13,20 @@
     "iced-test": "*",
     "iced-utils": ">=0.1.1",
     "icsify": "*",
-    "keybase-bitcoin": ">=0.0.0",
+    "ripple-keypairs": "^0.10.0",
     "triplesec": "keybase/triplesec#header_v3"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/keybase/warpwallet"
+    "url": "git://github.com/termhn/ripplewarpwallet"
   },
   "keywords": [
-    "bitcoin address wallet generator"
+    "ripple address wallet generator brainwallet"
   ],
   "author": "",
   "license": "",
   "bugs": {
-    "url": "https://github.com/keybase/warpwallet/issues"
-  }
+    "url": "https://github.com/termhn/ripplewarpwallet/issues"
+  },
+  "false": {}
 }

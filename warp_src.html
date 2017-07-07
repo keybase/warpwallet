@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>WarpWallet - deterministic bitcoin wallet generator</title>
+  <title>RippleWarpWallet - deterministic ripple wallet generator</title>
   <meta charset="utf-8">
 </head>
 
@@ -28,15 +28,6 @@
 <!--
 
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  Please send donations to bitaddress.org, not to us. WarpWallet is inspired by their project and includes some
-  of their code.
-
-      1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
-
-  This project, software and embedded resources are copyright CrashMix LLC ("maxchris" -> "crashmix"; get it?)
-
-  The WarpWallet name and logo are not part of the open source license.
 
   Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others.
   The individual copyrights are included throughout the document along with their licenses.
@@ -113,10 +104,10 @@ window.package = {::package.json::};
 
   <div class="row">
     <div class="col-md-12">
-      <h1>Warp<span class="second-half">Wallet</span></h1>
+      <h1>RippleWarp<span class="second-half">Wallet</span></h1>
       <form class="form-horizontal form-container" role="form">
         <div class="form-group">
-          <label for="passphrase" class="col-md-4 control-label">Passphrase</label>
+          <label for="passphrase" class="col-md-4 control-label">Passphrase - <a href="#choosepass">(Please see below to choose a good passphrase)</a></label>
           <div class="col-md-8">
             <input id="passphrase" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
           </div>
@@ -139,7 +130,7 @@ window.package = {::package.json::};
         <div class="form-group salt-explanation" style="display:none;">
           <div class="col-md-8 col-md-offset-4">
             <p>
-                WarpWallet can use your email address as extra seed data to make your wallet stronger. If you're unsure, please
+                RippleWarpWallet can use your email address as extra seed data to make your wallet stronger. If you're unsure, please
                 do it. If you want to know more, read how we "salt" in the footer of this page.
                 [<a class="what-salt" href="#what-salt">Ok</a>]
             </p>
@@ -159,13 +150,13 @@ window.package = {::package.json::};
         </div>
         <div class="output-form" style="display:none;">
           <div class="form-group">
-            <label for="public-address" class="col-md-4 control-label">Public bitcoin address</label>
+            <label for="public-address" class="col-md-4 control-label">Public Ripple address</label>
             <div class="col-md-8">
               <input id="public-address" readonly class="form-control">
             </div>
           </div>
           <div class="form-group">
-            <label for="private-key" class="col-md-4 control-label">Private key <span class="sub-label">(don't share)</span></label>
+            <label for="private-key" class="col-md-4 control-label">Secret key <span class="sub-label">(don't share)</span></label>
             <div class="col-md-8">
               <input id="private-key" readonly class="form-control">
             </div>
@@ -176,7 +167,7 @@ window.package = {::package.json::};
               <div id="public-address-qr"></div>
             </div>
             <div class="col-md-6 col-private-key-qr">
-              <h5>Private key QR Code (Wallet Import Format)</h5>
+              <h5>Secret key QR Code</h5>
               <div id="private-key-qr"></div>
             </div>
 
@@ -191,158 +182,80 @@ window.package = {::package.json::};
 
   <div class="container">
     <div class="row sub-row">
+
       <div class="col col-md-4">
-        <h4>What is WarpWallet?</h4>
+        <h4>What is RippleWarpWallet?</h4>
         <p>
-          WarpWallet is a deterministic bitcoin address generator. You never have to save
-          or store your private key anywhere. Just pick a really good password - many random words, for example - and never use it
+          RippleWarpWallet is a fork of the original WarpWallet used for making Ripple wallets instead of bitcoin ones. It is a deterministic ripple address generator. You never have to save
+          or store your secret key anywhere. Just pick a really good passphrase - I recommend using Diceware, an online implementation of which <a href="https://www.rempe.us/diceware/">you can find here</a> - and never use it
           for anything else.
         </p>
         <p>
-          This page is self-contained for portability. Save it on your computer - all the JS, CSS, and images are embedded. It's also <a href="https://github.com/keybase/warpwallet">hosted on github</a>.
+          This page is self-contained for portability. Save it on your computer - all the JS, CSS, and images are embedded. It's also <a href="https://github.com/termhn/ripplewarpwallet">hosted on github</a>.
         </p>
         <p>
           This is not an original idea. <a href="https://www.bitaddress.org/">bitaddress.org's brainwallet</a>
-          is our inspiration.
+          is the original inspiration.
         </p>
         <p>
-          WarpWallet adds two improvements: (1) WarpWallet uses <a href="http://www.tarsnap.com/scrypt.html">scrypt</a> to make address generation both memory and time-intensive. And (2) you can "salt" your passphrase with your email address.  Though salting is optional, we recommend it.  Any attacker of WarpWallet addresses would have to target you individually, rather than netting you in a wider, generic sweep.  And your email is trivial to remember, so why not?
+          If you want to donate to the author of this version, here are my addresses: <br/>
+          XRP: r3fMVf7RMkYwEKB12mPm3P8AiYWPYyBgdi <br/>
+          BTC: 15U8wNjnW2cUfwCfv5dm7GBmLTjZ1Sx1YV <br/>
+          ETH: 0x188a25F12c7ed69B4AF8593950748ea7f9Daa6a1
         </p>
         <p>
-          For safety, we've implemented WarpWallet outside of JavaScript and confirmed it generates the same output. (It's a step in our test suite, and we publish our <a href="https://github.com/keybase/warpwallet/blob/master/test/spec.json">test vectors</a> along with the source.) If you're a programmer and want to implement WarpWallet yourself...
+          WarpWallet adds two improvements: (1) WarpWallet uses <a href="http://www.tarsnap.com/scrypt.html">scrypt</a> to make address generation both memory and time-intensive. And (2) you can "salt" your passphrase with your email address.  Though salting is optional, we recommend it.  Any attacker of WarpWallet addresses would have to target you individually, rather than netting you in a wider, generic attack.  And your email is trivial to remember, so why not?
+        </p>
+        <p>
+          If you're a programmer and want to implement WarpWallet yourself, here is the algorithm used. Ripple-specific functions are part of <a href="https://www.npmjs.com/package/ripple-keypairs">the ripple-keypairs npm package</a>...
         </p>
 
         <table class="table table-condensed" style="font-size:1.0em;">
           <tr><td valign="top" align="right">s<sub>1</sub></td>     <td valign="top">=</td><td valign="top" align="left">scrypt(key=(passphrase||<tt>0x1</tt>), salt=(salt||<tt>0x1</tt>), N=2<sup>18</sup>, r=8, p=1, dkLen=32)</td></tr>
           <tr><td valign="top" align="right">s<sub>2</sub></td>     <td valign="top">=</td><td valign="top" align="left">pbkdf2(key=(passphrase||<tt>0x2</tt>), salt=(salt||<tt>0x2</tt>), c=2<sup>16</sup>, dkLen=32, prf=HMAC_SHA256)</td></tr>
-          <tr><td valign="top" align="right">keypair</td><td valign="top">=</td><td valign="top" align="left">generate_bitcoin_keypair(s<sub>1</sub> &oplus; s<sub>2</sub>)</td></tr>
+          <tr><td valign="top" align="right">secret</td><td valign="top">=</td><td valign="top" align="left">generateSeed(s<sub>1</sub> &oplus; s<sub>2</sub>)</td></tr>
+          <tr><td valign="top" align="right">keypair</td><td valign="top">=</td><td valign="top" align="left">deriveKeypair(secret)</td></tr>
+          <tr><td valign="top" align="right">address</td><td valign="top">=</td><td valign="top" align="left">deriveAddress(keypair.publicKey)</td></tr>
         </table>
 
       </div>
-      <div class="col col-md-4">
-        <h4>WarpWallet Challenge</h4>
+
+      <div id="choosepass" class="col col-md-4">
+        <h4>Choosing a Good Passphrase</h4>
         <p>
-          The following challenges are designed to test the safety of WarpWallet, and scrypt in general.
-          We expect the first 4 to fall quickly and hope to lose our bitcoins
-          to nice people.  If challenge 5 falls, we'll make an announcement
-          here and on twitter (<a href="https://twitter.com/maxtaco">@maxtaco</a>, <a href="https://twitter.com/malgorithms">@malgorithms</a>).
+          "Brainwallets" are often frowned upon in the cryptocurrency community because the safety of a brainwallet is entirely based on how strong of a passphrase you choose to protect it with, and most times the chosen passphrases are not good. RippleWarpWallet takes steps to minimize this by using large iterations of scrypt and pbkdf2 as well as a salt in order to make brute-forcing much more difficult, but this protection is not fool-proof. A bad passphrase will still put your coins at a large risk of being stolen. So, what constitutes a good passphrase?
         </p>
         <p>
-          All these challenges are with unsalted passphrases. Salt yours! They're harder to lick.
+          If you just want to make a good passphrase and don't want to know why it is a good one, I recommend using <a href="https://www.rempe.us/diceware/">this generator</a>, which is based on the <a href="http://world.std.com/~reinhold/diceware.html">Diceware method</a>. Then, use a <a href="https://en.bitcoin.it/wiki/Brainwallet#Example_Mnemonic_Peg">mnemonic peg system</a> to memorize it easily and reliably. If you do want to know why a random phrase from a book or other similar human-generated passphrases are bad, read on.
         </p>
-
-        <div class="challenge">
-
-          <h5>Challenge 1</h5>
-          <ul>
-            <li><b>reward</b>: <span class="reward-amount-solved">0.1 BTC</span></li>
-            <li>
-              <b>hint</b>: this passphrase is 2 random alphanumeric characters, such as 'X9'.
-            </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1JKb1617p68H5MPkoNaMtaJCqKDU3h8qSn" target="_new">1JKb1617p68H5MPkoNaMtaJCqKDU3h8qSn</a></li>
-            <li><b>status</b>: <span class="solved">solved</span></li>
-            <li><b>expires</b>: never</li>
-          </ul>
-        </div>
-
-
-        <div class="challenge">
-          <h5>Challenge 2</h5>
-          <ul>
-            <li><b>reward</b>: <span class="reward-amount-solved">0.25 BTC</span></li>
-            <li>
-              <b>hint</b>: this passphrase is 3 random alphanumeric characters, such as 'Xa2'.
-            </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1NMjXhB2DW8pbGvd64o9DiqwCF8BTAkJKu" target="_new">1NMjXhB2DW8pbGvd64o9DiqwCF8BTAkJKu</a></li>
-            <li><b>status</b>: <span class="solved">solved</span></li>
-            <li><b>expires</b>: never</li>
-          </ul>
-        </div>
-
-        <div class="challenge">
-          <h5>Challenge 3</h5>
-          <ul>
-            <li><b>reward</b>: <span class="reward-amount-solved">0.5 BTC</span></li>
-            <li>
-              <b>hint</b>: this passphrase is the usernames of two who've posted on the <a href="http://www.reddit.com/r/Bitcoin">Bitcoin subreddit</a>, separated by a space.
-            </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1FpxSs3tsvV8knTgRv2885bE1GyPq1QrvH" target="_new">1FpxSs3tsvV8knTgRv2885bE1GyPq1QrvH</a></li>
-            <li><b>status</b>: <span class="solved">solved</span> [<a href="http://www.reddit.com/r/Bitcoin/comments/1rla6w/after_8_days_of_bruteforcing_the_rbitcoin/">link</a>]</li>
-            <li><b>expires</b>: January 1, 2015</li>
-          </ul>
-        </div>
-
-
-        <div class="challenge">
-          <h5>Challenge 4</h5>
-          <ul>
-            <li><b>reward</b>: <span class="reward-amount-solved">1.0 BTC</span></li>
-            <li>
-              <b>hint</b>: This passphrase is the username of someone in the Hacker News top 100 karma
-              list <a href="https://keybase.io/warp/hacker_news_100.txt">as of November 19, 2013</a>.  However, we dropped 2 characters from his or her username.
-            </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1GXXH7FbY7nCJDRc72SMyYykgtEUi5GxfR" target="_new">1GXXH7FbY7nCJDRc72SMyYykgtEUi5GxfR</a></li>
-            <li><b>status</b>: <span class="solved">solved</span> [<a href="https://news.ycombinator.com/item?id=6765801">link</a>]</li>
-            <li><b>expires</b>: January 1, 2015</li>
-          </ul>
-        </div>
-
         <p>
-          And finally, the real challenge...
+          The strength of a passphrase is calculated using something called "bits of entropy." This is fancy talk for basically saying a fair coin flip. So, to calculate the total number of possibilities that an attacker would have to try to exhaust every possibility given a passphrase's bits of entropy (also known as the <i>key-space</i>, you do 2<sup>bits</sup>. Going forward, it is good to note that an attacker will, on average, have to go through half of the available key-space to find your passphrase. Modern password-cracking infrastructure from a single private entity has been shown to be able to do ~3.5 million hashes per second (or more with a larger, more expensive rig, as some crypto mining entities surely have access to) on scrypt, and we can assume a nation-state type attacker like the NSA could easily do an order of magnitude or more above this--say, 3.5 trillion hashes per second as a conservative estimate. Therefore, the time in seconds, on average, it would take to crack a RippleWarpWallet by brute force would be 2<sup>bits of entropy</sup> * 0.5 / (hashrate of attacker).
         </p>
-
-        <div class="challenge">
-          <h5>The WarpWallet Challenge 1</h5>
-          <ul>
-            <li><b>reward</b>: <span class="reward-amount">20.0 BTC*</span></li>
-            <li>
-              <b>the answer was</b>: 'PuACRv0R'
-            </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1AdU3EcimMFN7JLJtceSyrmFYE3gF5ZnGj" target="_new">1AdU3EcimMFN7JLJtceSyrmFYE3gF5ZnGj</a></li>
-            <li><b>status</b>: <span class="solved">Expired/unsolved</span></li>
-            <li><b>expired on</b>: Feb 1, 2016. Come on, guys!</li>
-            </ul>
-            </div>
-
-        <div class="challenge">
-          <h5>The WarpWallet Challenge 2</h5>
-          <ul>
-            <li><b>reward</b>: <span class="reward-amount">20.0 BTC*</span></li>
-            <li>
-              <b>hint</b>: this passphrase is 8 characters long, only alphanumerics. For example, 'b234FEzz'. the salt is <tt>a@b.c</tt>
-            </li>
-            <li><b>wallet</b>: <a class="wallet-link" href="https://blockchain.info/address/1MkupVKiCik9iyfnLrJoZLx9RH4rkF3hnA" target="_new">1MkupVKiCik9iyfnLrJoZLx9RH4rkF3hnA</a></li>
-            <li><b>status</b>: <span class="unbroken">Unsolved</span></li>
-            <li><b>expires on</b>: Jan 1, 2018</li>
-            <li><b>note</b>: * we put half the prize in the private wallet, and expect to hear from the winner privately, so we can talk
-              about his/her technique. The other half we will send privately.</li>
-          </ul>
-        </div>
+        <p>
+          The bits of entropy of a piece of a passphrase can therefore be calculated by taking log<sub>2</sub> of the number of possibilites that could exist for that piece. If you take a random single lower-case letter, for example, you have 27 possible choices, and log<sub>2</sub>27 = 4.75 bits of entropy. Bits of entropy of pieces of a passphrase can be added together. Therefore, a passphrase with 8 random lower-case letters has an entropy of ~ 4.75 * 8 = 38 bits of entropy. That would mean the total key-space of the passphrase would be 2<sup>38</sup> = 274,877,906,944. However, if those 8 lower case letters are not actually random and are instead parts of an english word, the entropy of each of those letters because they were not actually generated randomly. Therefore, using a "random phrase" from a book, or a random phrase you invent, is not a very good passphrase. The best way to make a secure and memorable passphrase is to use something like <a href="https://www.rempe.us/diceware/">this passphrase generator</a>, which is based on the <a href="http://world.std.com/~reinhold/diceware.html">Diceware method</a>. Then, use a <a href="https://en.bitcoin.it/wiki/Brainwallet#Example_Mnemonic_Peg">mnemonic peg system</a> to memorize it easily and reliably.
+        </p>
       </div>
-
 
       <div class="col col-md-4">
         <h4>Authors</h4>
         <p>
-          We are <a href="https://twitter.com/maxtaco">Max Krohn</a> and
+          The author of RippleWarpWallet, a fork of the original WarpWallet, is Gray Olson, an artist, photographer, programmer, and overall geek living in Phoenix, AZ. You can see more about her at <a href="https://www.grayolson.me/">grayolson.me</a>
+        <p>
+          The authors of the original WarpWallet are <a href="https://twitter.com/maxtaco">Max Krohn</a> and
           <a href="https://twitter.com/malgorithms">Chris Coyne</a>, co-founders
-          of OkCupid, SparkNotes, and a bunch of other toys. Good day to you! We recently left OkCupid after 9 years, so we
-          have a lot of time on our hands. Please follow us on twitter if you care to hear about this kind of thing.
+          of OkCupid, SparkNotes, and a bunch of other toys. They say: "Good day to you! We recently left OkCupid after 9 years, so we
+          have a lot of time on our hands. Please follow us on twitter if you care to hear about this kind of thing."
         </p>
         <p>
-          But enough with the pleasantries: you can always see our signed version history at <a href="https://keybase.io/warp/release.txt">https://keybase.io/warp/release.txt</a> (signed with
-          our <a href="https://keybase.io/warp/keybase-code-signing-key-2013.asc">PGP key</a>).
-        </p>
-        <p>
-          <i>WarpWallet</i> is of course offered without any warranty of any kind;
-          if you lose your bitcoins due to a bug in our software, your keystrokes being
+          <i>RippleWarpWallet</i> is of course offered without any warranty of any kind;
+          if you lose your ripple due to a bug in this software, your keystrokes being
           recorded on a malware-infested XP rig from 2003, a weak passphrase, or even a typo,
-          we are sorry in the most respectful way, but we cannot help you. Of course if you're messing around with bitcoins, you
+          I am sorry in the most respectful way, but I cannot help you. Of course if you're messing around with ripple, you
           know how dangerous it is.
         </p>
         <p>
-          Consider using an air-gapped computer when generating bitcoin addresses. The nice thing about WarpWallet is you don't have to worry
-          about concealing your private key afterwards. Just don't forget your password.
+          Consider using an air-gapped computer when generating ripple addresses. The nice thing about RippleWarpWallet is you don't have to worry
+          about concealing your private key afterwards. Just don't forget your passphrase.
         </p>
 
       </div><!-- /footer column -->
@@ -350,12 +263,8 @@ window.package = {::package.json::};
     <hr>
     <br /><br /><br />
     <div style="text-align:center;">
-      <img src={::src/img/rocket.png::}>
       <br /><br />
-      <script>document.write(package.version)</script> - CrashMix 2013<br />
-      <a href="https://keybase.io/warp/keybase-code-signing-key-2013.asc">PGP Key
-        (222B 85B0 F90B E2D2 4CFE  B93F 4748 4E50 656D 16C7)</a><br />
-      <a href="https://keybase.io/warp/release.txt">Signed Version History</a> &nbsp; &nbsp;
+      v<script>document.write(package.version)</script> - Gray Olson 2017<br />
     </div>
     <br /><br /><br />
   </div><!-- /container -->

@@ -1,6 +1,6 @@
 
 {scrypt,pbkdf2,HMAC_SHA256,WordArray,util} = require 'triplesec'
-generate = require('keybase-bitcoin').generate
+{generateSeed, deriveKeypair, deriveAddress} = require('ripple-keypairs')
 params = require('../json/params.json')
 
 #=====================================
@@ -18,7 +18,7 @@ from_utf8 = (s, i) ->
 exports.run = run = ({passphrase, salt, progress_hook}, cb) ->
 
   d = {}
-  seeds = []
+  user_seeds = []
 
   (d[k] = v for k,v of params)
   d.key = from_utf8(passphrase, 1)
@@ -26,7 +26,7 @@ exports.run = run = ({passphrase, salt, progress_hook}, cb) ->
   d.progress_hook = progress_hook
   await scrypt d, defer s1
 
-  seeds.push s1.to_buffer()
+  user_seeds.push s1.to_buffer()
 
   d2 = {
     key : from_utf8(passphrase, 2)
@@ -37,16 +37,19 @@ exports.run = run = ({passphrase, salt, progress_hook}, cb) ->
     klass : HMAC_SHA256
   }
   await pbkdf2 d2, defer s2
-  seeds.push s2.to_buffer()
+  user_seeds.push s2.to_buffer()
   s1.xor s2, {}
-  seed_final = s1.to_buffer()
-  seeds.push seed_final
+  user_seed_final = s1.to_buffer()
+  user_seeds.push user_seed_final
 
   for obj in [ s1,s2, d.key, d2.key]
     obj.scrub()
 
-  out = generate seed_final
-  out.seeds = seeds
+  seed = generateSeed {entropy: user_seed_final}
+  out = deriveKeypair seed
+  out.secret = seed
+  out.address = deriveAddress out.publicKey
+  out.seeds = user_seeds
   cb out
 
 #=====================================

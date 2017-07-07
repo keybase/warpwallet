@@ -135,9 +135,9 @@ class Warper
       $('.output-form').show()
       $('#btn-submit').hide()
       $('#btn-reset').attr('disabled', false).html 'Clear &amp; reset'
-      $('#public-address').val res.public
-      $('#private-key').val res.private
-      @write_qrs res.public, res.private
+      $('#public-address').val res.address
+      $('#private-key').val res.secret
+      @write_qrs res.address, res.secret
       return
 
 $ ->
