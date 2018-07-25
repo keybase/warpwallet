@@ -105,14 +105,14 @@ class Runner
     for line in out.join("\n").split(/\n+/) when line.length
       [key,val] = line.split(/:\s+/)
       if key[0] is ' '
-        bu_out[last_key][key.replace(/\s+/, '')] = val
+        bu_out[last_key][key.replace(/^\s+|\s+$/g, '')] = val
       else
-        last_key = key
-        bu_out[key] = { _ : val}
+        last_key = key.replace(/\s+$/, '')
+        bu_out[last_key] = { "value" : val}
 
     cb {
-      "private"  : bu_out.WIF.uncompressed
-      "public" : bu_out['Bitcoin address'].uncompressed
+      "private"  : bu_out.wif.uncompressed
+      "public" : bu_out['Bitcoin address uncompressed'].value
     }
 
   #-------------------
