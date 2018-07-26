@@ -136,7 +136,7 @@ h1 .second-half {
 .salt-summary {
   text-decoration: underline
 }
-#public-address, #private-key {
+#public-address, #private-key, #bip39-seed, #bip39-mnemonic {
   cursor:pointer;
   background-color: #fff
 }
