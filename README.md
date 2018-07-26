@@ -13,6 +13,7 @@ it does use npm to manage its dependencies
 $ sudo ln -s /usr/bin/nodejs /usr/bin/node
 $ sudo npm install -g iced-coffee-script
 $ npm install -d
+$ npm install bitcore-mnemonic
 $ icake build
 ```
 
