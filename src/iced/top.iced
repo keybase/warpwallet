@@ -48,7 +48,7 @@ exports.run = run = ({passphrase, salt, progress_hook}, cb) ->
 
   out = generate seed_final
   out.seeds = seeds
-  out.mnemonic = mnemonic.fromSeed(seed_final.slice(0,16), mnemonic.Words.ENGLISH).toString()
+  out.mnemonic = mnemonic.fromSeed(seed_final, mnemonic.Words.ENGLISH).toString()
   cb out
 
 #=====================================
