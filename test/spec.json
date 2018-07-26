@@ -1,6 +1,6 @@
 {
-    "generated": "Wed Nov 20 2013 09:32:05 GMT-0500 (EST)",
-    "version": "1.0.4",
+    "generated": "Thu Jul 26 2018 22:32:22 GMT+0200 (CEST)",
+    "version": "1.0.9",
     "params": {
         "N": 18,
         "p": 1,
@@ -20,7 +20,8 @@
             "keys": {
                 "private": "5JfEekYcaAexqcigtFAy4h2ZAY95vjKCvS1khAkSG8ATo1veQAD",
                 "public": "1J32CmwScqhwnNQ77cKv9q41JGwoZe2JYQ"
-            }
+            },
+            "mnemonic": "hundred clever reunion recycle claw valley meadow lounge glare split gravity cradle step goat ignore side small magic fantasy love ten pause nose unit"
         },
         {
             "passphrase": "YqIDBApDYME",
@@ -33,7 +34,8 @@
             "keys": {
                 "private": "5KUJA5iZ2zS7AXkU2S8BiBVY3xj6F8GspLfWWqL9V7CajXumBQV",
                 "public": "19aKBeXe2mi4NbQRpYUrCLZtRDHDUs9J7J"
-            }
+            },
+            "mnemonic": "sure again level enough like duck firm process hover early coffee prevent notable squirrel grab run ice client bounce riot label orphan bind evidence"
         },
         {
             "passphrase": "FPdAxCygMJg",
@@ -46,7 +48,8 @@
             "keys": {
                 "private": "5JBAonQ4iGKFJxENExZghDtAS6YB8BsCw5mwpHSvZvP3Q2UxmT1",
                 "public": "14Pqeo9XNRxjtKFFYd6TvRrJuZxVpciS81"
-            }
+            },
+            "mnemonic": "control fit hidden cream return million more orange else detect absurd orphan margin wheat depth lucky inform trim float cost rice exact sorry plug"
         },
         {
             "passphrase": "gdoyAj5Y+jA",
@@ -59,7 +62,8 @@
             "keys": {
                 "private": "5JWE9LBvFM5xRE9YCnq3FD35fDVgTPNBmksGwW2jj5fi6cSgHsC",
                 "public": "1KiiYhv9xkTZfcLYwqPhYHrSbvwJFFUgKv"
-            }
+            },
+            "mnemonic": "follow magic knock accident adult mimic orbit priority bounce animal scale myself case weird episode student attend festival priority canyon chronic laptop echo author"
         },
         {
             "passphrase": "bS7kqw6LDMJbvHwNFJiXlw",
@@ -72,7 +76,8 @@
             "keys": {
                 "private": "5KNA7T1peej9DwF5ZALUeqBq2xN4LHetaKvH9oRr8RHdTgwohd7",
                 "public": "17ZcmAbJ35QJzAbwqAj4evo4vL5PwA8e7C"
-            }
+            },
+            "mnemonic": "slot lion sting skirt age art half soda swift speed trend modify boy over spell ginger cover practice lady alcohol fruit story amused focus"
         },
         {
             "passphrase": "uyVkW5vKXX3RpvnUcj7U3Q",
@@ -85,7 +90,8 @@
             "keys": {
                 "private": "5Hpcw1rqoojG7LTHo4MrEHBwmBQBXQQmH6dEa89ayw5qMXvZmEZ",
                 "public": "1ACJ7MhCRRTPaEvr2utat6FQjsQgC6qpE6"
-            }
+            },
+            "mnemonic": "absorb author real burger glory differ neck over betray pipe vacant parade juice lab super ecology bus memory pioneer wait beauty dream spend jelly"
         },
         {
             "passphrase": "5HoGwwEMOgclQyzH72B9pQ",
@@ -98,7 +104,8 @@
             "keys": {
                 "private": "5J7Ag5fBArgKN9ocVJs4rcQw1chZjHrqAb4YRuny6YiieJc5iG3",
                 "public": "1Mtb2o7AsTRAR3vjtSYjq1rgB8Q6A76avD"
-            }
+            },
+            "mnemonic": "chaos picnic rose swing poverty honey hire doctor unable artist input bronze genuine hope rough inner unfold tower fluid act february pistol acquire team"
         },
         {
             "passphrase": "TUMBDBWh8ArOK0+jO5glcA",
@@ -111,7 +118,8 @@
             "keys": {
                 "private": "5KgG93ePJJ8HC2tnTerThNUnXbjyeBpUCBDRn5ZxMRB9GxiwJEK",
                 "public": "1B2VuTAHERd2GmBK522LFLUTwYWcW1vXH6"
-            }
+            },
+            "mnemonic": "vivid frozen sad push fortune treat frequent execute glass sort peasant recipe mushroom ski sniff snap shoulder tiny strong scare swift time canvas save"
         },
         {
             "passphrase": "rDrc5eIhSt2qP8pnpnSMu1u2/mP6KTqS",
@@ -124,7 +132,8 @@
             "keys": {
                 "private": "5HxwfzgQ2yem9uY5UxdiaKYPgUR251FCVHw1VuHC5bSW5NVLaok",
                 "public": "12XD7BtiU1gydRzQm3cAoui2RQjhVJfNPg"
-            }
+            },
+            "mnemonic": "beauty divide hockey current pipe liberty analyst advice remind local bring tobacco spin involve vault armed trap century regret tower rural giraffe history vast"
         },
         {
             "passphrase": "Brd8TB3EDhegSx2wy2ffW0oGNC29vkCo",
@@ -137,7 +146,8 @@
             "keys": {
                 "private": "5KF4ozGWXGZAqNydQg65JQ4XnJaUpBkU9g59C287GrbLfWVmYHL",
                 "public": "1CD93Tgj74uKh87dENR2GMWB1kpCidLZiS"
-            }
+            },
+            "mnemonic": "room ranch menu ginger allow photo lady emotion dwarf clap pluck village purity entry draft wrist remind adapt decrease foil butter govern mandate staff"
         },
         {
             "passphrase": "eYuYtFxU4KrePYrbHSi/8ncAKEb+KbNH",
@@ -150,7 +160,8 @@
             "keys": {
                 "private": "5KCK9EtgvjsQcPcZcfMoqcHwZKzA1MLfPUvDCYE1agiNf56CfAk",
                 "public": "18mugeQN8uecTBE9psW2uQrhRBXZJkhyB7"
-            }
+            },
+            "mnemonic": "remember quiz nice spike creek invest museum december essence receive pumpkin culture tray grant adapt retreat crawl chief strategy twist bridge mad act spoil"
         },
         {
             "passphrase": "TRGmdIHpnsSXjEnLc+U+MrRV3ryo8trG",
@@ -163,7 +174,8 @@
             "keys": {
                 "private": "5JhBaSsxgNBjvZWVfdVQsnMzYf4msHMQ7HRaHLvvMy1CEgsTstg",
                 "public": "19QCgqHnKw8vrJph7wWP3nKg9tFixqYwiB"
-            }
+            },
+            "mnemonic": "inform mass pelican force differ switch eager mistake debris soon diesel giggle catch spin often wet angry choice joke friend yard credit pact baby"
         }
     ]
 }
