@@ -4,7 +4,7 @@ SCRYPT_DIR=../../node_modules/triplesec/contrib/scrypt-1.1.6
 SCRYPT=${SCRYPT_DIR}/scrypt
 PBKDF2=./pbkdf2.py
 KU=py-venv/bin/ku
-MNEMONIC=./mnemonic.py
+MNEMONIC=./mnemonic/mnemonic.py
 
 build: build-scrypt build-python
 
