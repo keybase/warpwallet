@@ -27,12 +27,16 @@ class Warper
     $('#passphrase').on 'keyup',            => @any_change()
     $('#public-address').on 'click',        -> $(@).select()
     $('#private-key').on    'click',        -> $(@).select()
+    $('#bip39-seed').on     'click',        -> $(@).select()
+    $('#bip39-mnemonic').on 'click',        -> $(@).select()
     $('.what-salt').on      'click',        => $('.salt-explanation').toggle()
 
   any_change: ->
     $('.progress-form').hide()
     $('#private-key').val ''
     $('#public-address').val ''
+    $('#bip39-seed').val ''
+    $('#bip39-mnemonic').val ''
     $('#btn-submit').attr('disabled', false).show().html 'Generate'
     pp   = $('#passphrase').val()
     salt = $('#salt').val()
@@ -94,7 +98,7 @@ class Warper
 
   click_reset: ->
     $('#btn-submit').attr('disabled', false).show().html 'Please enter a passphrase'
-    $('#passphrase, #public-address, #private-key').val ''
+    $('#passphrase, #public-address, #private-key', '#bip39-seed', '#bip39-mnemonic').val ''
     if not window.SALT_DEFAULT?
       $('#salt').val ''
     $('#checkbox-salt-confirm').attr 'checked', false
@@ -137,6 +141,8 @@ class Warper
       $('#btn-reset').attr('disabled', false).html 'Clear &amp; reset'
       $('#public-address').val res.public
       $('#private-key').val res.private
+      $('#bip39-seed').val res.seeds[2].toString('hex')
+      $('#bip39-mnemonic').val res.mnemonic
       @write_qrs res.public, res.private
       return
 
