@@ -171,6 +171,18 @@ window.package = {::package.json::};
             </div>
           </div>
           <div class="form-group">
+		  <label for="bip39-seed" class="col-md-4 control-label">Bip39 Seed <span class="sub-label">(don't share)</span><span class="sub-label">(advanced use only)</span></label>
+            <div class="col-md-8">
+              <input id="bip39-seed" readonly class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+		  <label for="bip39-mnemonic" class="col-md-4 control-label">Bip39 Mnemonic <span class="sub-label">(don't share)</span><span class="sub-label">(advanced use only)</span></label>
+            <div class="col-md-8">
+              <textarea id="bip39-mnemonic" readonly class="form-control" rows="2" style="resize:none"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
             <div class="col-md-6">
               <h5>Public address QR Code</h5>
               <div id="public-address-qr"></div>

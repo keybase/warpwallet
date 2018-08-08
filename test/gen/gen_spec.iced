@@ -4,6 +4,7 @@ input = require './input.json'
 scrypt = process.argv[2]
 pbkdf2 = process.argv[3]
 bu = process.argv[4]
+mnemonic = process.argv[5]
 params = require '../../src/json/params.json'
 pkg = require '../../package.json'
 input = require './input.json'
@@ -21,7 +22,7 @@ class Runner
 
   #-------------------
 
-  constructor : ({@input, @scrypt, @pbkdf2, @bu, @params}) ->
+  constructor : ({@input, @scrypt, @pbkdf2, @bu, @mnemonic, @params}) ->
 
   #-------------------
 
@@ -105,15 +106,29 @@ class Runner
     for line in out.join("\n").split(/\n+/) when line.length
       [key,val] = line.split(/:\s+/)
       if key[0] is ' '
-        bu_out[last_key][key.replace(/\s+/, '')] = val
+        bu_out[last_key][key.replace(/^\s+|\s+$/g, '')] = val
       else
-        last_key = key
-        bu_out[key] = { _ : val}
+        last_key = key.replace(/\s+$/, '')
+        bu_out[last_key] = { "value" : val}
 
     cb {
-      "private"  : bu_out.WIF.uncompressed
-      "public" : bu_out['Bitcoin address'].uncompressed
+      "private"  : bu_out.wif.uncompressed
+      "public" : bu_out['Bitcoin address uncompressed'].value
     }
+
+  #-------------------
+
+  run_mnemonic : (seed, cb) ->
+    args = [ seed ]
+    opts = {
+      quiet : true
+      interp : @mnemonic
+    }
+    child = new Child args, opts
+    out = []
+    child.filter (l, which) -> out.push l
+    await child.run().wait defer status
+    cb out.join("\n").replace(/\s+$/, '')
 
   #-------------------
 
@@ -121,15 +136,17 @@ class Runner
     await @run_scrypt input, defer s1
     await @run_pbkdf2 input, s1, defer s2, s3
     await @run_bu s3, defer keys
+    await @run_mnemonic s3, defer wordlist
     out = {}
     (out[k] = v for k,v of input)
     out.seeds = [ s1, s2, s3 ]
     out.keys = keys
+    out.mnemonic = wordlist
     cb out
 
 ##=====================================================================
 
-r = new Runner { input, scrypt, pbkdf2, bu, params }
+r = new Runner { input, scrypt, pbkdf2, bu, mnemonic, params }
 await r.run defer out
 console.log JSON.stringify out, null, 4
 

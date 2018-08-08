@@ -15,6 +15,7 @@ run1 = (T, i, vec, cb) ->
     T.equal s.toString('hex'), vec.seeds[j], "v#{i}: seeds[#{j}] matches"
   T.equal ret.private, vec.keys.private, "v#{i}: private key matches"
   T.equal ret.public, vec.keys.public, "v#{i}: public key matches"
+  T.equal ret.mnemonic, vec.mnemonic, "v#{i}: mnemonic matches"
   cb()
 
 exports.test_spec = (T, cb) ->
