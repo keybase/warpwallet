@@ -1,19 +1,27 @@
-# warpwallet
+# WarpWallet
 
-A brain wallet generator that uses scrypt.
+A brain wallet generator that uses [scrypt](https://en.wikipedia.org/wiki/Scrypt) and
+[pbkdf2](https://en.wikipedia.org/wiki/PBKDF2) for key stretching.
+
 
 ## Install
 
 There's no npm module for WarpWallet since it's intended as a browser-only service.  However,
-it does use npm to manage its dependencies
+it does use npm to manage its dependencies.
 
 ## Build
 
 ```sh
-$ npm install -g iced-coffee-script
+$ sudo npm install -g iced-coffee-script
 $ npm install -d
+$ npm install bitcore-mnemonic
 $ icake build
 ```
+
+IcedCoffeeScript uses Node.js for the build. There is a naming conflict with the node package
+(Amateur Packet Radio Node Program), and the nodejs binary has been renamed from `node` to `nodejs`.
+You may need to symlink `/usr/bin/node` to `/usr/bin/nodejs` to get things work.
+Use: `sudo ln -s /usr/bin/nodejs /usr/bin/node`
 
 ## Test
 
